@@ -1,15 +1,27 @@
 Package: Datenreport2022
-Title: What the Package Does (One Line, Title Case)
+Title: Data Wrangling Functions for the Ninth Reporting Cycle for Teaching
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Richard",
+           family = "Meyer-Eppler",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "richard.meyer-eppler@uv.ruhr-uni-bochum.de")
+Description: Data wrangling functions transforming the incoming raw data
+    to the format expected by the RUBer package for parametric reporting.
+    The data is for the data reports 2022 used in the ninth reporting
+    cycle for teaching at the Ruhr-University Bochum.
 License: MIT + file LICENSE
+URL: https://github.com/RichardMeyer-Eppler/Datenreport2022
+BugReports: https://github.com/RichardMeyer-Eppler/Datenreport2022/issues
+Imports: 
+    dplyr,
+    forcats,
+    janitor,
+    magrittr,
+    readr,
+    stringr
 Encoding: UTF-8
+Language: en
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
