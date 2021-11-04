@@ -1,0 +1,599 @@
+---
+params: 
+    p_title:
+    p_author:
+    p_date:
+    p_df:
+title: "`r params$p_title`"
+author: "`r params$p_author`"
+date: "`r params$p_date`"
+lang: de
+output:
+  officedown::rdocx_document:
+    reference_docx: rub_reference_2021.docx
+    keep_md: true
+    toc: true
+    toc_depth: 2
+    page_size:
+      width: 8.3
+      height: 11.7
+      orient: "portrait"
+    page_margins:
+      bottom: 0.787402
+      top: 0.984252
+      right: 0.787402
+      left: 0.590551
+      header: 0.5
+      footer: 0.5
+      gutter: 0
+    tables:
+      style: Table
+      layout: autofit
+      width: 1.0
+      topcaption: true
+      caption:
+        style: Table Caption
+        pre: 'Tabelle '
+        sep: ': '
+    plots:
+      style: Normal
+      align: left
+      topcaption: true
+      caption:
+        style: Image Caption
+        pre: 'Abbildung '
+        sep: ': '
+    reference_num: false
+toc-title: "Inhaltsverzeichnis"
+---
+
+```{r setup, include=FALSE}
+library(bookdown)
+library(Datenreport2018)
+library(devEMF)
+library(dplyr)
+library(extrafont)
+library(flextable)
+library(ggplot2)
+library(here)
+library(knitr)
+library(magrittr)
+library(officer)
+library(purrr)
+library(RUBer)
+library(scales)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  dev = "emf",
+  dev.args = list(
+    emfPlus = TRUE,
+    emfPlusFont = TRUE,
+    emfPlusRaster = TRUE
+  ),
+  fig.width = 6.8,
+  fig.ext = "emf"
+)
+
+extrafont::loadfonts(
+  device = "win",
+  quiet = TRUE
+)
+```
+
+```{r data}
+# df <- as_tibble(readr::read_rds(here("data", "df.rds")))
+# df <- translate_df(df)
+# df <- RUB::sort_report(df)
+# df <- RUB::filter_report(df, 37)
+
+# df <- report_1
+
+df <- params$p_df
+
+# df <- df_fake_complete
+```
+
+# Abbildungsverzeichnis
+
+```{r}
+officer::block_toc(
+  style = "Image Caption"
+)
+```
+
+# Einleitung
+
+Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Informationsmanagement-Systems der RUB als auch Befragungsdaten der RUB und gibt Fakultäten und ZWE, die einen Studiengang verantworten, einen Überblick zu folgenden Themenbereichen:
+
+- Soziodemographische Zusammensetzung der Studierendenschaft
+- Übergang ins Studium
+- Beurteilung von Studienangeboten und -bedingungen
+- Studiendauer und Studienverläufe
+- Finanzierung des Studiums
+- Kompetenzerwerb im Studium
+- Internationalisierung
+- Praxis- und Berufsbezug im Studium
+- Übergang in ein weiteres Studium oder in den Beruf
+- Förderungen für Weiterentwicklung der Lehre
+
+Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich.
+
+## Informationen zu den Befragungsdaten des Datenreports
+
+### Inhalte der Befragungen der RUB in Kürze
+
+#### Studieneingangsbefragung der RUB
+
+Die Studieneingangsbefragung der RUB wird seit dem Wintersemester 2004/2005 jährlich durchgeführt. Befragt werden alle Studierenden im ersten Hochschulsemester. Die Inhalte der Befragung zielen insbesondere auf die soziodemographische Zusammensetzung der Studierenden, auf die Nutzung von Angeboten der RUB vor Studienbeginn und auf die Gründe für die Studienaufnahme.
+
+#### Studienverlaufsbefragung der RUB
+
+Die Studienverlaufsbefragung der RUB wird seit dem Sommersemester 2007 jährlich durchgeführt. Studierende, die die Abschlussarten Staatsexamen oder Magister Theologiae anstreben werden im fünften Fachsemester befragt, Masterstudierende im dritten Fachsemester. Die Studienverlaufsbefragung beinhaltet Fragen zum Studienverlauf, zur Finanzierung des Studiums sowie zur Beurteilung von Studienangeboten und -bedingungen und Problemen im Studium.
+
+#### Absolventinnen- und Absolventenbefragung der RUB
+
+Die Absolventinnen- und Absolventenbefragung der RUB wird seit dem Wintersemester 2007/2008 jährlich durchgeführt. Befragt werden alle Absolventinnen und Absolventen, die vor ein- bis eineinhalb Jahren ihr Studium an der RUB abgeschlossen haben. Die Absolventinnen- und Absolventenbefragung der RUB ist ein Kooperationsprojekt, an welchem sich etwa 60 Hochschulen beteiligen und das vom Institut für angewandte Statistik (istat) in Kassel durchgeführt wird. Neben der rückblickenden Beurteilung der Studienangebote und -bedingungen und der Darstellung der Studienverläufe geben die Ergebnisse der Absolventinnen- und Absolventenbefragung Auskunft über den Übergang in ein weiteres Studium bzw. in den Arbeitsmarkt.
+
+### Hinweise zu den Befragungsdaten im Datenreport
+
+Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolventinnen- und Absolventenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen die Studiengänge mit ein, für welche ausreichend Fallzahlen in den Befragungsdaten vorliegen. Dabei werden dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorlagen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
+
+Die Auswertungen erfolgen immer auf der Grundlage des Studienfaches, welches von den Befragten im Fragebogen als erstes Studienfach definiert wurde. Eine genaue Übersicht der in den Datenreports berücksichtigten Fach-Abschluss-Kombinationen inkl. der Fächergruppenzuordnung findet sich im Anhang.
+
+In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolventinnen- und Absolventenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Masterstudium beziehen, ausgewertet.
+
+Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^4] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach").
+
+[^1]: Sollte der vorliegende Datenreport aus einer oder mehreren Befragungen bzw. zu einigen Themenbereichen keine Auswertungen enthalten, war die Fallzahl zu gering, um Auswertungen auf Fakultäts-/ZWE-Ebene vornehmen zu können.
+[^2]: Weitere Daten zur Zusammensetzung der Stichprobe sind dem Anhang zu entnehmen.
+[^3]: Da nicht immer alle Befragten auf alle Fragen antworten, kann die Anzahl (n) von Frage zu Frage variieren.
+[^4]: Für Studienfächer die eine eigene Fächergruppe bilden (Kunstgeschichte, Medizin, Sportwissenschaft) oder für die keine vergleichbaren Studiengänge an der RUB vorhanden sind (Staatsexamen Rechtswissenschaften und Medizin), kann kein Fächergruppenvergleichswert ausgegeben werden.
+
+## Informationen zu den hochschulstatistischen Daten des Informationsmanagement-Systems der RUB
+
+Dieser Datenreport stellt einige ausgewählte hochschulstatistische Daten in Abbildungen zur Verfügung, die in Tabellenform jederzeit auch aus dem Informationsmanagement-System der RUB abrufbar sind. Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden sie in beiden Studienfächern gezählt. Dabei werden Auswertungen vorgenommen, wenn mindestens 20 Fälle vorliegen. Auch die hochschulstatistischen Daten werden anhand der Übersicht der berücksichtigten Fach-Abschluss-Kombinationen im Anhang zusammengestellt. Zudem werden zum Teil mehrere Semester bzw. Studienjahre zusammengefasst. Diese Information ist der Quellenangabe der jeweiligen Abbildung zu entnehmen.
+
+## Informationen zu den Förderungen für die Weiterentwicklung der Lehre
+
+Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE im Zeitraum vom Sommersemester 2016 bis zum Sommersemester 2018 eine Förderung aus wettbewerblicher Vergabe erhalten haben.
+
+```{r create-fig-template}
+map_parameters <- Datenreport2018::get_map_parameters(df)
+chunk_label <- dplyr::pull(map_parameters, chunk_label)
+function_parameters <- dplyr::pull(map_parameters, function_parameters)
+
+# Caution: This is knit_expand syntax and not curly curly from rlang!
+tpl_chunk_1 <- c(
+  "\n```{r prep-fig-{{label}}, include = FALSE}", "df_fig <- Datenreport2018::get_figure_df{{func}}",
+  "```"
+)
+
+tpl_chunk_2 <- c(
+  "\n```{r heading-fig-{{label}}, results= 'asis', eval = df_fig$is_heading[[1]]}",
+  "cat(paste(\"#\", df_fig$heading[[1]]))",
+  "```"
+)
+
+tpl_chunk_3 <- c(
+  "\n```{r subheading-fig-{{label}}, results= 'asis', eval = df_fig$is_subheading[[1]]}",
+  "cat(paste(\"##\", df_fig$subheading[[1]]))",
+  "```"
+)
+
+tpl_chunk_4 <- c(
+  "\n```{r fig{{label}}, fig.cap = df_fig$figure_caption[[1]], fig.height=df_fig$figure_height[[1]], warning = FALSE}",
+  "RUBer::plot_figure(df_fig)",
+  "```"
+)
+
+# tpl_chunk_5 <- c(
+#   "\n```{r question-fig{{label}}, results = 'asis', eval = !is.na(df_fig$question_txt[[1]])}",
+#   "cat(paste(\"######\", df_fig$question_txt[[1]]))",
+#   "```"
+# )
+
+tpl <- c(tpl_chunk_1, tpl_chunk_2, tpl_chunk_3, tpl_chunk_4 
+       #  ,tpl_chunk_5
+         )
+
+src <- purrr::map2(chunk_label, function_parameters, function(i, m) {
+  knitr::knit_expand(text = tpl, label = i, func = m)
+})
+
+src_unlisted <- unlist(src)
+
+con <- file(here::here("fig_template.Rmd"), encoding = "UTF-8")
+writeLines(text = src_unlisted, con = con)
+close(con)
+```
+
+```{r create-figures, include = FALSE}
+src <- readLines(
+  here::here("fig_template.Rmd"),
+  encoding = "UTF-8"
+)
+
+# knitr::pat_md()
+# knitr::render_markdown()
+
+out <- knitr::knit(
+  text = src
+)
+```
+
+```{r paste-figures, results = 'asis', echo = FALSE}
+cat(out, sep = '\n')
+```
+
+# Anhang
+
+## Zusammensetzung der Stichprobe der Befragungsdaten im Vergleich zur Grundgesamtheit der RUB
+
+```{r eingangsbefragung, tab.cap = "Zusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
+grey_fill <- "#ECECEC"
+
+survey_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2018",
+  "skeleton",
+  "survey.xlsx",
+  package = "RUBer"
+)
+
+studieneingang <- readxl::read_xlsx(
+  path = survey_path,
+  sheet = "data_eb"
+  ) %>%
+  dplyr::mutate(
+    row_id = dplyr::row_number()
+    )
+
+typology <- readxl::read_xlsx(
+  path = survey_path,
+  sheet = "typology_eb"
+  )
+
+headings <- c("Geschlecht", "Alter", "Abschlussart", "Fächergruppen", "Gesamtzahl berücksichtigter Fälle", "Rücklaufquote Studieneingangsbefragungen")
+
+rows_heading <- studieneingang %>%
+  filter(studieneingang %in% headings) %>%
+  pull(row_id)
+
+rows_no_heading <- studieneingang %>%
+  filter(studieneingang %in% headings == FALSE) %>%
+  pull(row_id)
+
+flextable::flextable(
+  studieneingang, 
+  col_keys = c("studieneingang", "koepfe_rub", "koepfe_rub_perc", "koepfe_bef", "koepfe_bef_perc")
+  ) %>%
+  set_header_df(mapping = typology, key = "col_keys") %>%
+  merge_h(part = "header") %>%
+  merge_v(part = "header") %>%
+  merge_h(part = "body", i = ~ koepfe_rub == "20,2 Jahre") %>%
+  merge_h(part = "body", 20) %>%
+  RUBer::rub_style_flextable() %>%
+  bold(part = "body", i = rows_heading) %>%
+  bg(part = "body", i = rows_heading, bg = grey_fill) %>%
+  set_formatter(
+    koepfe_rub = function(x) RUBer::rub_format_mixed(x),
+    koepfe_bef = function(x) RUBer::rub_format_mixed(x),
+    koepfe_rub_perc = function(x) RUBer::rub_format_percent(x),
+    koepfe_bef_perc = function(x) RUBer::rub_format_percent(x)
+  ) %>%
+  align(part = "header", j = 2:5, align = "center") %>%
+  align(part = "body", i = rows_no_heading, j = "studieneingang", align = "right") %>%
+  align(part = "body", i = rows_no_heading, j = 2:5, align = "right") %>%
+  align(part = "body", i = 19, j = 2:5, align = "right") %>%
+  align(part = "body", i = ~ koepfe_rub == "20,2 Jahre", j = 2:5, align = "center") %>%
+  align(part = "body", i = 20, j = 2, align = "center") %>%
+  width(j = 1, width = 2) %>%
+  width(j = 2:5, width = 1) %>% 
+  flextable::hrule(
+    rule = "exact",
+    part = "all"
+  ) %>% 
+  flextable::height(
+    height = .25
+  ) %>% 
+  flextable::height(
+    i = c(13, 17, 20),
+    height = .4
+  ) %>% 
+  flextable::set_table_properties(
+    layout = "fixed"
+  )
+```
+
+<br>
+  
+```{r studienverlauf, tab.cap = "Zusammensetzung Studienverlaufsbefragung", tab.id = "vb_tab", ft.align = "left"}
+grey_fill <- "#ECECEC"
+
+survey_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2018",
+  "skeleton",
+  "survey.xlsx",
+  package = "RUBer"
+)
+
+studienverlauf <- readxl::read_xlsx(
+  path = survey_path,
+  sheet = "data_vb"
+  ) %>%
+  dplyr::mutate(
+    row_id = dplyr::row_number()
+    )
+
+typology <- readxl::read_xlsx(
+  path = survey_path,
+  sheet = "typology_vb"
+  )
+
+headings <- c("Geschlecht", "Alter", "Abschlussart", "Fächergruppen", "Gesamtzahl berücksichtigter Fälle", "Rücklaufquote Studienverlaufsbefragungen")
+
+rows_heading <- studienverlauf %>%
+  filter(studienverlauf %in% headings) %>%
+  pull(row_id)
+
+rows_no_heading <- studienverlauf %>%
+  filter(studienverlauf %in% headings == FALSE) %>%
+  pull(row_id)
+
+flextable::flextable(studienverlauf, col_keys = c("studienverlauf", "koepfe_3fs_rub", "koepfe_3fs_rub_perc", "koepfe_3fs_bef", "koepfe_3fs_bef_perc", "koepfe_5fs_rub", "koepfe_5fs_rub_perc", "koepfe_5fs_bef", "koepfe_5fs_bef_perc")) %>%
+  set_header_df(mapping = typology, key = "col_keys") %>%
+  merge_h(part = "header") %>%
+  merge_v(part = "header") %>%
+  merge_h(part = "body", i = ~ koepfe_3fs_rub == "25,7 Jahre") %>%
+  merge_h(part = "body", 20) %>%
+  RUBer::rub_style_flextable() %>%
+  bold(part = "body", i = rows_heading) %>%
+  bg(part = "body", i = rows_heading, bg = grey_fill) %>%
+  align(part = "header", j = 2:9, align = "center") %>%
+  align(part = "body", i = rows_no_heading, j = "studienverlauf", align = "right") %>%
+  align(part = "body", i = rows_no_heading, j = 2:9, align = "right") %>%
+  align(part = "body", i = 19, j = 2:9, align = "right") %>%
+  align(part = "body", i = 20, j = 2:9, align = "center") %>%
+  align(part = "body", i = ~ koepfe_3fs_rub == "25,7 Jahre", j = 2:9, align = "center") %>%
+  set_formatter(
+    koepfe_3fs_rub = function(x) RUBer::rub_format_mixed(x),
+    koepfe_3fs_bef = function(x) RUBer::rub_format_mixed(x),
+    koepfe_5fs_rub = function(x) RUBer::rub_format_mixed(x),
+    koepfe_5fs_bef = function(x) RUBer::rub_format_mixed(x),
+    koepfe_3fs_rub_perc = function(x) RUBer::rub_format_percent(x),
+    koepfe_3fs_bef_perc = function(x) RUBer::rub_format_percent(x),
+    koepfe_5fs_rub_perc = function(x) RUBer::rub_format_percent(x),
+    koepfe_5fs_bef_perc = function(x) RUBer::rub_format_percent(x)
+  ) %>%
+  width(j = 1, width = 2) %>%
+  width(j = 2:9, width = 0.5)  %>% 
+  flextable::hrule(
+    rule = "exact",
+    part = "all"
+  ) %>% 
+  flextable::height(
+    height = .25
+  ) %>% 
+  flextable::height(
+    i = c(13, 17, 20),
+    height = .4
+  ) %>% 
+  flextable::set_table_properties(
+    layout = "fixed"
+  )
+```
+
+<br>
+
+```{r studienabschluss, tab.cap = "Zusammensetzung Absolventen- und Absolventinnenbefragung", tab.id = "ab_tab", ft.align = "left"}
+grey_fill <- "#ECECEC"
+
+survey_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2018",
+  "skeleton",
+  "survey.xlsx",
+  package = "RUBer"
+)
+
+studienabschluss <- readxl::read_xlsx(
+  path = survey_path,
+  sheet = "data_ab"
+  ) %>%
+  dplyr::mutate(
+    row_id = dplyr::row_number()
+    )
+
+typology <- readxl::read_xlsx(
+  path = survey_path,
+  sheet = "typology_ab"
+  )
+
+headings <- c("Geschlecht", "Alter", "Abschlussart", "Fächergruppen", "Gesamtzahl berücksichtigter Fälle", "Rücklaufquote Studienabschlussbefragungen")
+
+rows_heading <- studienabschluss %>%
+  filter(studienabschluss %in% headings) %>%
+  pull(row_id)
+
+rows_no_heading <- studienabschluss %>%
+  filter(studienabschluss %in% headings == FALSE) %>%
+  pull(row_id)
+
+flextable::flextable(studienabschluss, col_keys = c("studienabschluss", "koepfe_rub", "koepfe_rub_perc", "koepfe_bef", "koepfe_bef_perc")) %>%
+  set_header_df(mapping = typology, key = "col_keys") %>%
+  merge_h(part = "header") %>%
+  merge_v(part = "header") %>%
+  merge_h(part = "body", i = ~ koepfe_rub == "26,4 Jahre") %>%
+  merge_h(part = "body", 19) %>%
+  RUBer::rub_style_flextable() %>%
+  bold(part = "body", i = rows_heading) %>%
+  bg(part = "body", i = rows_heading, bg = grey_fill) %>%
+  align(part = "header", j = 2:5, align = "center") %>%
+  align(part = "body", i = rows_no_heading, j = "studienabschluss", align = "right") %>%
+  align(part = "body", i = rows_no_heading, j = 2:5, align = "right") %>%
+  align(part = "body", i = 18, j = 2:5, align = "right") %>%
+  align(part = "body", i = 19, j = 2:5, align = "center") %>%
+  align(part = "body", i = ~ koepfe_rub == "26,4 Jahre", j = 2:5, align = "center") %>%
+  set_formatter(
+    koepfe_rub = function(x) rub_format_mixed(x),
+    koepfe_bef = function(x) rub_format_mixed(x),
+    koepfe_rub_perc = function(x) rub_format_percent(x),
+    koepfe_bef_perc = function(x) rub_format_percent(x)
+  ) %>%
+  width(j = 1, width = 2) %>%
+  width(j = 2:5, width = 1)
+```
+
+## Berücksichtige Fächer je Datenreport und Fächergruppengliederung gemäß Fächersystematik des statistischen Bundesamtes
+
+Auslaufende Fach-Abschluss-Kombinationen und weiterbildende Studiengänge werden bei den Datenreports grundsätzlich nicht berücksichtigt. Für sehr neue Studiengänge liegen in der Regel weder Befragungsdaten noch aussagekräftige deskriptive Statistiken aus dem Informationsmanagement-System vor, weshalb diese ebenfalls nicht berücksichtigt werden.
+
+```{r studiengaenge, tab.cap = "Berücksichtigte Studiengänge", tab.id = "stg_tab", ft.align = "left"}
+grey_fill <- "#ECECEC"
+
+degree_programs_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2018",
+  "skeleton",
+  "degree_programs.xlsx",
+  package = "RUBer"
+)
+
+degree_programs <- readxl::read_xlsx(
+  path = degree_programs_path,
+  sheet = "included_programs"
+  ) %>%
+  mutate(
+    row_name = row_number()
+    ) %>%
+  dplyr::select(
+    row_name,
+    head1 = `Datenreport Nr.`,
+    head2 = `Fach-Abschluss-Kombinationen`,
+    head3 = `Fächergruppe`
+    )
+
+footnote_text <- "Im Datenreport Nr. 62 sind fächergruppenübergreifend alle Master of Education Studiengänge berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+
+rows_footnote <- degree_programs %>%
+  filter(head1 == 62) %>%
+  pull(row_name)
+
+flextable::flextable(degree_programs, col_keys = c("head1", "head2", "head3")) %>%
+  theme_zebra(odd_body=grey_fill) %>%
+  footnote(i = rows_footnote, value = as_paragraph(footnote_text), ref_symbols = "*", part = "body") %>%
+  colformat_int(j = "head1", big.mark = "") %>%
+  RUBer::rub_style_flextable() %>%
+  set_header_labels(head1 = "Datenreport Nr.", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
+  align(j = "head1", align = "center", part = "body") %>%
+  align(j = "head1", align = "center", part = "header") %>%
+  width(j = "head1", width = 1) %>%
+  width(j = "head2", width = 3.63) %>%
+  width(j = "head3", width = 2.25)
+```
+
+<br>
+
+```{r studiengaenge_ausgeschlossen, tab.cap = "Ausgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
+grey_fill <- "#ECECEC"
+
+degree_programs_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2018",
+  "skeleton",
+  "degree_programs.xlsx",
+  package = "RUBer"
+)
+
+excluded_programs <- readxl::read_xlsx(
+  path = degree_programs_path,
+  sheet = "excluded_programs"
+  ) %>%
+  dplyr::select(
+    head1 = `Ausschluss-grund`,
+    head2 = `Fach-Abschluss-Kombinationen`,
+    head3 = `Fächergruppe`
+    )
+
+flextable::flextable(excluded_programs, col_keys = c("head1", "head2", "head3")) %>%
+  theme_zebra(odd_body=grey_fill) %>%
+  set_header_labels(head1 = "Ausschluss-grund", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
+  width(j = "head1", width = 1) %>%
+  width(j = "head2", width = 3.63) %>%
+  width(j = "head3", width = 2.25) %>%
+  RUBer::rub_style_flextable()
+```
+
+## Definitionen zur Kohortenanalyse
+
+#### Was bedeutet eine Kohortenanalyse?
+
+Bei der Kohortenanalyse werden nach ausgewählten Kriterien Gruppen von Studierenden gebildet und diese über einen definierten Zeitraum betrachtet. Hierbei können die Veränderungen innerhalb der Kohorte näher betrachtet werden und Aussagen über die Studienerfolgsquote, Studienabbruchquote getroffen werden.
+
+Der Datensatz eines Studierenden wird in eine Kohorte über das Startsemester aufgenommen, wenn dieser erstmals oder erneut mit einer geänderten bzw. neuen Fach/Abschlusskombination für das gewählte Semester geliefert wird. Die Anzahl der Fach- oder Hochschulsemester und der Status der Studierenden werden zur Bildung der Kohorte nicht berücksichtigt.
+Damit ist die Basis für die Kohorte festgelegt worden und im weiteren Verlauf wird betrachtet, ob die Studierenden sich exmatrikulieren, das Fach wechseln/abbrechen oder erfolgreich als Absolvent abschließen.
+
+#### Studienanfänger
+
+Studienanfänger/innen sind entweder Studierende im ersten Hochschulsemester (Erstimmatrikulierte) oder im ersten Fachsemester eines bestimmten Studiengangs (Neuimmatrikulierte). Die Studierenden im 1. Fachsemester werden auch als Fachanfänger in einem Studiengang bezeichnet. Im Zusammenhang mit der Kohortenanalyse werden die Studienanfänger als Fachanfänger betrachtet.
+
+#### Startsemester
+
+Das Startsemester definiert den Startpunkt zu dem die Kohorte gebildet wird.
+
+#### Studierende
+
+Zu Beginn einer Kohortenbetrachtung sind dies die tatsächlichen Studienanfänger und in den folgenden Kohortensemestern die noch regulär als Studierende in einem Studiengang eingeschriebenen.
+
+#### Exmatrikulation ohne Abschluss
+
+Als Studienabbrecher werden hier Studierende verstanden die an der RUB ein Studium begonnen haben, aber sich ohne einen Abschluss wieder exmatrikuliert haben und die RUB verlassen haben. In diesen Fällen kann es sich sowohl um einen Hochschulwechsler handeln als auch um jemanden der insgesamt das Studium ohne Erfolg beendet hat.
+
+#### Fachwechsler
+
+Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie im aktuellen Semester noch NICHT studiert haben.
+
+#### Fachabbrecher
+
+Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie bereits im aktuellen Semester studiert haben. Dies sind keine Fachwechsler, sondern werden als Fachabbrecher bezeichnet.
+
+#### Absolventen
+
+Absolventen sind Studierende mit bestandener Abschlussprüfung, die im Berichtssemester mindestens einen Studiengang abgeschlossen haben.
+
+# Ansprechpartner und Kontakt
+
+Bei Fragen zum Datenreport und/oder für weitere Auswertungsinteressen können Sie uns gerne kontaktieren:
+
+#### Ansprechpartner hochschulstatistische Daten
+
+> **JENS TÜSELMANN**  
+> Tel.: 0234 - 32-29349  
+E-Mail: [jens.tueselmann@uv.rub.de](mailto:jens.tueselmann@uv.rub.de)
+
+[www.rub.de/dwh](www.rub.de/dwh)
+
+#### Ansprechpartnerin Befragungsdaten
+
+> **JENNIFER PÄTSCH**  
+> Tel.: 0234 - 32-28840  
+E-Mail: [jennifer.paetsch@uv.rub.de](mailto:jennifer.paetsch@uv.rub.de)
+
+[www.rub.de/studierendenmonitor](www.rub.de/studierendenmonitor)  
+[www.rub.de/absolventenstudie](www.rub.de/absolventenstudie)
+
+#### Ansprechpartnerin Förderungen für Weiterentwicklung der Lehre
+
+> **DR. JUDITH RICKEN**  
+> Tel.: 0234 - 32-23187  
+E-Mail: [judith.ricken@uv.rub.de](mailto:judith.ricken@uv.rub.de)
+
+[https://uni.ruhr-uni-bochum.de/de/lehre-der-ruhr-universitaet](https://uni.ruhr-uni-bochum.de/de/lehre-der-ruhr-universitaet)  
+[https://www.ruhr-uni-bochum.de/universitaetsprogramme](https://www.ruhr-uni-bochum.de/universitaetsprogramme)
