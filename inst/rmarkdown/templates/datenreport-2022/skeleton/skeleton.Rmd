@@ -165,7 +165,7 @@ function_parameters <- dplyr::pull(map_parameters, function_parameters)
 
 # Caution: This is knit_expand syntax and not curly curly from rlang!
 tpl_chunk_1 <- c(
-  "\n```{r prep-fig-{{label}}, include = FALSE}", "df_fig <- Datenreport2018::get_figure_df{{func}}",
+  "\n```{r prep-fig-{{label}}, include = FALSE}", "df_fig <- Datenreport2022::get_figure_df{{func}}",
   "```"
 )
 
