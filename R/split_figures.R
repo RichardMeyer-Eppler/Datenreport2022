@@ -83,7 +83,9 @@ split_figures <- function(df) {
         .x
       )
     ) %>%
-    dplyr::ungroup() %>%
+    dplyr::group_by(
+      report_nr
+    ) %>%
     dplyr::mutate(
       cumsum = cumsum(
         dplyr::coalesce(
