@@ -86,7 +86,19 @@ get_figure_height <- function(
     )
   ) %/% 70
 
+  if(
+    is.na(question_extra_rows)
+  ) {
+    question_extra_rows <- 0
+  }
+
   legend_unique <- as.character(unique(df[["fill_label"]]))
+
+  if(
+    is.na(legend_unique[1])
+  ) {
+    legend_unique <- as.character(unique(df[["fill"]]))
+  }
 
   legend_cols <- 1
 
