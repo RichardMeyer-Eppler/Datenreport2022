@@ -36,6 +36,7 @@ load_raw_csv <- function(
       FILE_NAME = readr::col_character(),
       FIGURE_FILTER_FLAG = readr::col_double(),
       AGGREGATION_SORT_1 = readr::col_double(),
+      ABBILDUNG_MAP_SORT = readr::col_double(),
       WERT_SORT = readr::col_double()
     )
   ) %>%

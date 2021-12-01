@@ -15,8 +15,125 @@ add_figure_height <- function(df) {
     ) %>%
     dplyr::group_modify(
       ~ get_figure_height(
-        .x
+        .x,
+        .y
       )
+    ) %>%
+    dplyr::ungroup()
+
+  return(df_height)
+}
+
+#' Add figure_height to data frame
+#'
+#' @param df
+#' @param keys
+#'
+#' @return Data frame with additional column figure_height
+#' @export
+#'
+#' @examples
+get_figure_height <- function(
+  df,
+  keys
+) {
+
+  if(
+    df[[1, "figure_type_id"]] %in% c(1L, 4L)
+  ) {
+    return(
+      df %>%
+        dplyr::mutate(
+          figure_height = 4.5
+        )
+    )
+  }
+
+  if(
+    df[[1, "figure_type_id"]] == 3L &
+      is.na(df[[1, "question_txt"]]) &
+      keys[[1, "report_nr"]] %in% c(72L, 74L)
+  ) {
+    return(
+      df %>%
+        dplyr::mutate(
+          figure_height = 9
+        )
+    )
+  }
+
+  # Number of unique facet labels
+  facet_count <- dplyr::n_distinct(
+    df[["facet"]]
+  )
+
+  df_plus_figure_height <- df %>%
+    dplyr::mutate(
+      figure_height = static_height + (variable_height * facet_count)
+    )
+
+  return(df_plus_figure_height)
+}
+
+#' Title
+#'
+#' @param df
+#'
+#' @return
+#' @export
+#'
+#' @examples
+add_variable_and_static_height <- function(
+  df
+) {
+  df_height <- df %>%
+  dplyr::mutate(
+    upper_bound = get_max_figure_height(
+      figure_caption = figure_caption,
+      heading = heading,
+      subheading = subheading,
+      is_heading = is_heading,
+      is_subheading = is_subheading
+    )
+  ) %>%
+    dplyr::group_by(
+      report_nr,
+      figure_count
+    ) %>%
+    dplyr::group_modify(
+      ~ get_static_height(.x)
+    ) %>%
+    dplyr::group_modify(
+      ~ get_variable_height(.x)
+    ) %>%
+    dplyr::group_by(
+      report_nr,
+      figure_count,
+      facet,
+      upper_bound
+    ) %>%
+    dplyr::mutate(
+      first_row_within_facet = dplyr::row_number() == 1L,
+      variable_height_first_row = dplyr::if_else(
+        first_row_within_facet,
+        variable_height,
+        0
+      ),
+      binding_upper_bound = (upper_bound - static_height)
+    ) %>%
+    dplyr::group_by(
+      report_nr,
+      figure_count
+    ) %>%
+    dplyr::arrange(
+      report_nr,
+      figure_count,
+      abbildung_map_sort,
+      aggregation_sort_1,
+      wert_sort
+    ) %>%
+    dplyr::mutate(
+      cumsum_variable_height = cumsum(variable_height_first_row)
     ) %>%
     dplyr::ungroup()
 
@@ -31,53 +148,142 @@ add_figure_height <- function(df) {
 #' @export
 #'
 #' @examples
-get_figure_height <- function(
+get_variable_height <- function(
   df
 ) {
 
-  if(df[[1, "figure_type_id"]] == 1L)  {
-    return(
-      df %>%
-        dplyr::mutate(
-          figure_height_uncapped = 4.5,
-          figure_height = 4.5
-        )
+  # Aktuell nur für ims_t3.csv exportiert, nicht aber für bef_t3.csv
+  df <- df %>%
+    dplyr::mutate(
+      aggregation_id_1 = dplyr::coalesce(
+        aggregation_id_1,
+        as.character(aggregation_sort_1)
     )
+  )
+
+  calculate_variable_height <- function(
+    rows_within_facet,
+    integer_division_facet_length,
+    binding_upper_bound
+  ) {
+
+    variable_height <- 0.5 +
+      rows_within_facet * 1.3 +
+      (integer_division_facet_length - 1) * 0.4 * 0.393701
+
+
+    variable_height <- dplyr::coalesce(
+      variable_height,
+      0
+    )
+
+    variable_height_capped <- pmin(
+      binding_upper_bound,
+      variable_height,
+      na.rm = TRUE
+    )
+
+    return(variable_height_capped)
   }
 
-  # browser()
-  # Number of unique facet labels
-  facet_count <- dplyr::n_distinct(
-    df[["facet"]]
+  df_height_per_facet <- df %>%
+  dplyr::group_by(
+    facet,
+    aggregation_id_1
+  )  %>%
+  dplyr::filter(
+    dplyr::row_number() == 1L
+  ) %>%
+  dplyr::group_by(
+    facet
+  ) %>%
+  dplyr::mutate(
+    rows_within_facet = dplyr::n()
+  ) %>%
+  dplyr::group_by(
+    aggregation_id_1,
+    .add = TRUE
+  ) %>%
+  dplyr::slice_head(
+    n = 1
+  ) %>%
+  dplyr::mutate(
+    facet_length = stringr::str_length(
+      facet
+    ),
+    cum_max_facet_length = cummax(
+      facet_length
+    ),
+    integer_division_facet_length = cum_max_facet_length %/% 80,
+    variable_height = calculate_variable_height(
+      rows_within_facet,
+      integer_division_facet_length,
+      binding_upper_bound = (upper_bound - static_height)
+    )
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::select(
+    facet,
+    aggregation_id_1,
+    variable_height
   )
 
+  df_variable_height <- df %>%
+    dplyr::left_join(
+      df_height_per_facet,
+      by = c(
+        "facet",
+        "aggregation_id_1"
+      )
+    )
+
   # Unique facet labels
-  facet_unique <- unique(
-    df[["facet"]]
-  )
+  # facet_unique <- unique(
+  #   df[["facet"]]
+  # )
 
   # Gets maximum number of rows (labels with more than 80 characters)
   # over all unique facet labels
-  facet_max_rows <- max(
-    stringr::str_length(
-      facet_unique
-    )
-  ) %/% 80
+  # facet_max_rows <- max(
+  #   stringr::str_length(
+  #     facet_unique
+  #   )
+  # ) %/% 80
 
-  # Counts number of unique y-Axis-Facet combinations
-  y_facet_count <- dplyr::n_distinct(
-    df %>%
-      dplyr::mutate(
-        y_facet = paste(
-          y,
-          facet,
-          sep = "_"
-        )
-      ) %>%
-      dplyr::pull(
-        y_facet
-      )
-  )
+  # Counts number of unique values on the y-axis
+  # y-values have n count specific to each facet, so helper column is used
+  # y_count <- dplyr::n_distinct(
+  #   df[["aggregation_id_1"]]
+  # )
+
+  # Basishöhe von 0.5 cm je Facet
+  # Jede zusätzliche Zeile auf der y-Achse 1.3 cm
+  # Falls das Facet Label mehr als eine Zeile hat, zusätzlich 0.4 cm je Zeile
+  # cm to inch 0.393701
+  # variable_height <- (0.5 +
+  #   y_count * 1.3 +
+  #   (facet_max_rows - 1) * 0.4
+  #   ) * 0.393701
+
+  # df_variable_height <- df %>%
+  #   dplyr::mutate(
+  #     variable_height = variable_height
+  #   )
+
+  return(df_variable_height)
+}
+
+#' Add figure_height to data frame
+#'
+#' @param df
+#'
+#' @return Data frame with additional column figure_height
+#' @export
+#'
+#' @examples
+get_static_height <- function(
+  df
+) {
 
   # Additional rows for the question text
   question_extra_rows <- stringr::str_length(
@@ -87,20 +293,30 @@ get_figure_height <- function(
   ) %/% 70
 
   if(
-    is.na(question_extra_rows)
+    is.na(
+      question_extra_rows
+    )
   ) {
     question_extra_rows <- 0
   }
 
-  legend_unique <- as.character(unique(df[["fill_label"]]))
+  legend_unique <- as.character(
+    unique(
+      df[["fill_label"]]
+    )
+  )
 
   if(
-    is.na(legend_unique[1])
+    is.na(
+      legend_unique[1]
+    )
   ) {
-    legend_unique <- as.character(unique(df[["fill"]]))
+    legend_unique <- as.character(
+      unique(
+        df[["fill"]]
+      )
+    )
   }
-
-  legend_cols <- 1
 
   legend_cols <- RUBer::get_legend_columns(
     legend_text = legend_unique,
@@ -111,63 +327,19 @@ get_figure_height <- function(
     length(legend_unique) / legend_cols
   )
 
-  if(df[[1, "figure_type_id"]] == 2)  {
-    y_facet_count <- 5 * facet_count
-  }
-
-  # Je Facet_label Zeile 0.5 cm + 0.3 cm je Zeile
-  # Je Fragetext Zeile 0.5 cm + 0.3 cm je Zeile
-  # Je zusätzlicher Zeile Legende + 0.5 cm
-  # inch to cm 2.54
+  # Jede zusätzliche Zeile Fragetext 0.9 cm
+  # Jede Zeile Legendentext 1.15 cm
   # cm to inch 0.393701
+  static_height <- (question_extra_rows * 0.9 +
+    legend_rows * 1.15
+    ) * 0.393701
 
-  height_calculated <- (y_facet_count * 1.3 * 0.393701) +
-    (facet_count * 0.5 * 0.393701) +
-    # If one facet has more than one row,
-    # all facets get scaled to more than one row
-    (facet_count * (facet_max_rows - 1) * 0.4 * 0.393701) +
-    (question_extra_rows * 0.9 * 0.393701) +
-    (legend_rows * 1.15 * 0.393701)
-
-  df_plus_figure_height <- df %>%
+  df_static_height <- df %>%
     dplyr::mutate(
-      # figure_caption = paste(
-      #   figure_caption,
-      #   round(height_calculated * 2.54, digits = 1)
-      # ),
-      figure_height_uncapped = height_calculated
+      static_height = static_height
     )
 
-  upper_bound <- get_max_figure_height(
-    figure_caption = df[[1, "figure_caption"]],
-    heading = df[[1, "heading"]],
-    subheading = df[[1, "subheading"]],
-    is_heading = df[[1, "is_heading"]],
-    is_subheading = df[[1, "is_subheading"]]
-  )
-
-  lower_bound <- 2
-  delta <- 0
-
-  if(length(upper_bound) == 0) {
-    browser()
-  }
-
-  if (height_calculated > upper_bound) {
-    delta <- height_calculated - upper_bound
-    height_calculated <- upper_bound
-  }
-
-  else if (height_calculated < lower_bound) {
-    height_calculated <- lower_bound
-  }
-
-  df_plus_figure_height <- df_plus_figure_height %>%
-    dplyr::mutate(
-      figure_height = height_calculated
-    )
-
-  return(df_plus_figure_height)
+  return(df_static_height)
 }
 
 
@@ -198,24 +370,26 @@ get_max_figure_height <- function(
   is_subheading
 ) {
 
-  rows_heading <- 0
-  rows_subheading <- 0
-
-  if(is_heading) {
-    rows_heading <- ceiling(
+  # https://stackoverflow.com/questions/4042413/vectorized-if-statement-in-r
+  rows_heading <- ifelse(
+    is_heading,
+    ceiling(
       stringr::str_length(
         heading
       ) / 55
-    )
-  }
+    ),
+    0
+  )
 
-  if(is_subheading) {
-    rows_subheading <- ceiling(
+  rows_subheading <- ifelse(
+    is_subheading,
+    ceiling(
       stringr::str_length(
         subheading
       ) / 70
-    )
-  }
+    ),
+    0
+  )
 
   rows_figure_caption <- ceiling(
     stringr::str_length(
@@ -223,10 +397,10 @@ get_max_figure_height <- function(
     ) / 70
   )
 
-  df_params <- dplyr::bind_cols(
-    rows_heading = rows_heading,
-    rows_subheading = rows_subheading,
-    rows_figure_caption = rows_figure_caption
+  df_params <- tibble::tibble(
+    rows_heading,
+    rows_subheading,
+    rows_figure_caption
   )
 
   df_max_height <- tibble::tribble(
@@ -248,9 +422,9 @@ get_max_figure_height <- function(
     0L,               2L,                   2L,         22.6
   )
 
-  max_height_cm <- df_max_height %>%
+  max_height_cm <- df_params %>%
     dplyr::inner_join(
-      df_params,
+      df_max_height,
       by = c(
         "rows_heading",
         "rows_subheading",
@@ -260,6 +434,20 @@ get_max_figure_height <- function(
     dplyr::pull(
       max_height
     )
+
+  ## Inner Join above should not change the number of rows. If it does,
+  # df_max_height does not have all required rows.
+  if(
+    length(max_height_cm) != length(figure_caption)
+  ) {
+    rlang::abort(
+      message = rlang::format_error_bullets(
+          c(
+          x = "Parameter values found in data have no prespecified match in df_max_height. Please update function body of get_max_figure_height with appropriate mappings."
+        )
+      )
+    )
+  }
 
   max_height <- max_height_cm * 0.393701
 

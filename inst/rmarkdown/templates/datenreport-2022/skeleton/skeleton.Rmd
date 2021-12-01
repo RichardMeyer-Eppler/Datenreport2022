@@ -49,7 +49,7 @@ toc-title: "Inhaltsverzeichnis"
 
 ```{r setup, include=FALSE}
 library(bookdown)
-library(Datenreport2018)
+library(Datenreport2022)
 library(devEMF)
 library(dplyr)
 library(extrafont)
@@ -129,21 +129,21 @@ Die Studieneingangsbefragung der RUB wird seit dem Wintersemester 2004/2005 jäh
 
 #### Studienverlaufsbefragung der RUB
 
-Die Studienverlaufsbefragung der RUB wird seit dem Sommersemester 2007 jährlich durchgeführt. Studierende, die die Abschlussarten Staatsexamen oder Magister Theologiae anstreben werden im fünften Fachsemester befragt, Masterstudierende im dritten Fachsemester. Die Studienverlaufsbefragung beinhaltet Fragen zum Studienverlauf, zur Finanzierung des Studiums sowie zur Beurteilung von Studienangeboten und -bedingungen und Problemen im Studium.
+Die Studienverlaufsbefragung der RUB wird seit dem Sommersemester 2007 jährlich durchgeführt. Studierende, die die Abschlussarten Staatsexamen oder Magister Theologiae anstreben werden im fünften Fachsemester befragt, Masterstudierende im zweiten Fachsemester. Die Studienverlaufsbefragung beinhaltet Fragen zum Studienverlauf, zur Finanzierung des Studiums sowie zur Beurteilung von Studienangeboten und -bedingungen und Problemen im Studium.
 
-#### Absolventinnen- und Absolventenbefragung der RUB
+#### Absolvent:innenbefragung der RUB
 
-Die Absolventinnen- und Absolventenbefragung der RUB wird seit dem Wintersemester 2007/2008 jährlich durchgeführt. Befragt werden alle Absolventinnen und Absolventen, die vor ein- bis eineinhalb Jahren ihr Studium an der RUB abgeschlossen haben. Die Absolventinnen- und Absolventenbefragung der RUB ist ein Kooperationsprojekt, an welchem sich etwa 60 Hochschulen beteiligen und das vom Institut für angewandte Statistik (istat) in Kassel durchgeführt wird. Neben der rückblickenden Beurteilung der Studienangebote und -bedingungen und der Darstellung der Studienverläufe geben die Ergebnisse der Absolventinnen- und Absolventenbefragung Auskunft über den Übergang in ein weiteres Studium bzw. in den Arbeitsmarkt.
+Die Absolvent:innenbefragung der RUB wird seit dem Wintersemester 2007/2008 jährlich durchgeführt. Befragt werden alle Absolventinnen und Absolventen, die vor ein- bis zwei Jahren ihr Studium an der RUB abgeschlossen haben. Die Absolvent:innenbefragung der RUB ist ein Kooperationsprojekt, an welchem sich etwa 60 Hochschulen beteiligen und das vom Institut für angewandte Statistik (istat) in Kassel durchgeführt wird. Neben der rückblickenden Beurteilung der Studienangebote und -bedingungen und der Darstellung der Studienverläufe geben die Ergebnisse der Absolvent:innenbefragung Auskunft über den Übergang in ein weiteres Studium bzw. in den Arbeitsmarkt.
 
 ### Hinweise zu den Befragungsdaten im Datenreport
 
-Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolventinnen- und Absolventenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen die Studiengänge mit ein, für welche ausreichend Fallzahlen in den Befragungsdaten vorliegen. Dabei werden dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorlagen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
+Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolvent:innenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen die Studiengänge mit ein, für welche ausreichend Fallzahlen in den Befragungsdaten vorliegen. Dabei werden dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorlagen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
 
-Die Auswertungen erfolgen immer auf der Grundlage des Studienfaches, welches von den Befragten im Fragebogen als erstes Studienfach definiert wurde. Eine genaue Übersicht der in den Datenreports berücksichtigten Fach-Abschluss-Kombinationen inkl. der Fächergruppenzuordnung findet sich im Anhang.
+Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden sie in beiden Studienfächern gezählt. Fragen die sich explizit auf das Studienfach beziehen, z.B. die Beurteilung der Studienangebote und –bedingungen, werden in den Fragebögen immer in Bezug auf das erste und das zweite Studienfach gestellt. Die Antworten in Bezug auf das zweite Fach werden bei Personen, die zwei Studienfächer studieren, in den Auswertungen im Datenreport berücksichtigt.
 
-In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolventinnen- und Absolventenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Masterstudium beziehen, ausgewertet.
+In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolvent:innenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Masterstudium beziehen, ausgewertet.
 
-Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^4] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach").
+Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^4] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach"). Wenn eine Person zwei Studienfächer in derselben Fächergruppe studiert, werden beide Studienfächer im Fächergruppenwert berücksichtigt.
 
 [^1]: Sollte der vorliegende Datenreport aus einer oder mehreren Befragungen bzw. zu einigen Themenbereichen keine Auswertungen enthalten, war die Fallzahl zu gering, um Auswertungen auf Fakultäts-/ZWE-Ebene vornehmen zu können.
 [^2]: Weitere Daten zur Zusammensetzung der Stichprobe sind dem Anhang zu entnehmen.
@@ -152,11 +152,11 @@ Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppe
 
 ## Informationen zu den hochschulstatistischen Daten des Informationsmanagement-Systems der RUB
 
-Dieser Datenreport stellt einige ausgewählte hochschulstatistische Daten in Abbildungen zur Verfügung, die in Tabellenform jederzeit auch aus dem Informationsmanagement-System der RUB abrufbar sind. Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden sie in beiden Studienfächern gezählt. Dabei werden Auswertungen vorgenommen, wenn mindestens 20 Fälle vorliegen. Auch die hochschulstatistischen Daten werden anhand der Übersicht der berücksichtigten Fach-Abschluss-Kombinationen im Anhang zusammengestellt. Zudem werden zum Teil mehrere Semester bzw. Studienjahre zusammengefasst. Diese Information ist der Quellenangabe der jeweiligen Abbildung zu entnehmen.
+Dieser Datenreport stellt einige ausgewählte hochschulstatistische Daten in Abbildungen zur Verfügung, die in Tabellenform jederzeit auch aus dem Informationsmanagement-System der RUB abrufbar sind. Auch hier werden Studienfälle berücksichtigt, so dass Personen die zwei Studienfächer studieren in beiden Studienfächern gezählt werden. Dabei werden Auswertungen vorgenommen, wenn mindestens 20 Fälle vorliegen. Auch die hochschulstatistischen Daten werden anhand der Übersicht der berücksichtigten Fach-Abschluss-Kombinationen im Anhang zusammengestellt. Zudem werden zum Teil mehrere Semester bzw. Studienjahre zusammengefasst. Diese Information ist der Quellenangabe der jeweiligen Abbildung zu entnehmen.
 
 ## Informationen zu den Förderungen für die Weiterentwicklung der Lehre
 
-Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE im Zeitraum vom Sommersemester 2016 bis zum Sommersemester 2018 eine Förderung aus wettbewerblicher Vergabe erhalten haben.
+Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE ab dem 1. April 2018 eine Förderung aus wettbewerblicher Vergabe erhalten haben.
 
 ```{r create-fig-template}
 map_parameters <- Datenreport2018::get_map_parameters(df)
@@ -187,19 +187,21 @@ tpl_chunk_4 <- c(
   "```"
 )
 
-# tpl_chunk_5 <- c(
-#   "\n```{r question-fig{{label}}, results = 'asis', eval = !is.na(df_fig$question_txt[[1]])}",
-#   "cat(paste(\"######\", df_fig$question_txt[[1]]))",
-#   "```"
-# )
+tpl <- c(
+  tpl_chunk_1, tpl_chunk_2, tpl_chunk_3, tpl_chunk_4
+)
 
-tpl <- c(tpl_chunk_1, tpl_chunk_2, tpl_chunk_3, tpl_chunk_4 
-       #  ,tpl_chunk_5
-         )
-
-src <- purrr::map2(chunk_label, function_parameters, function(i, m) {
-  knitr::knit_expand(text = tpl, label = i, func = m)
-})
+src <- purrr::map2(
+  chunk_label,
+  function_parameters,
+  function(i, m) {
+    knitr::knit_expand(
+      text = tpl,
+      label = i,
+      func = m
+    )
+  }
+)
 
 src_unlisted <- unlist(src)
 
@@ -459,35 +461,47 @@ grey_fill <- "#ECECEC"
 degree_programs_path <- system.file(
   "rmarkdown",
   "templates",
-  "datenreport-2018",
+  "datenreport-2022",
   "skeleton",
-  "degree_programs.xlsx",
-  package = "RUBer"
+  "included_programs.csv",
+  package = "Datenreport2022"
 )
 
-degree_programs <- readxl::read_xlsx(
-  path = degree_programs_path,
-  sheet = "included_programs"
-  ) %>%
-  mutate(
-    row_name = row_number()
+degree_programs <- readr::read_csv(
+  file = degree_programs_path,
+  col_types = readr::cols(
+    REPORT_NR = readr::col_double(),
+    SUBJECT_DEGREE = readr::col_character(),
+    SUBJECT_GROUP = readr::col_character()
+  )
+) %>%
+  dplyr::mutate(
+    row_name = dplyr::row_number()
     ) %>%
   dplyr::select(
     row_name,
-    head1 = `Datenreport Nr.`,
-    head2 = `Fach-Abschluss-Kombinationen`,
-    head3 = `Fächergruppe`
+    head1 = REPORT_NR,
+    head2 = SUBJECT_DEGREE,
+    head3 = SUBJECT_GROUP
     )
 
-footnote_text <- "Im Datenreport Nr. 62 sind fächergruppenübergreifend alle Master of Education Studiengänge berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+footnote_text_med <- "Im Datenreport Nr. 72 sind fächergruppenübergreifend alle Master of Education Studiengänge berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
 
-rows_footnote <- degree_programs %>%
-  filter(head1 == 62) %>%
-  pull(row_name)
+footnote_text_fgr <- "Im Datenreport Nr. 74 sind alle Studiengänge je Fächergruppe berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+
+rows_footnote_med <- degree_programs %>%
+  dplyr::filter(head1 %in% c(72)) %>%
+  dplyr::pull(row_name)
+
+
+rows_footnote_fgr <- degree_programs %>%
+  dplyr::filter(head1 %in% c(74)) %>%
+  dplyr::pull(row_name)
 
 flextable::flextable(degree_programs, col_keys = c("head1", "head2", "head3")) %>%
   theme_zebra(odd_body=grey_fill) %>%
-  footnote(i = rows_footnote, value = as_paragraph(footnote_text), ref_symbols = "*", part = "body") %>%
+  footnote(i = rows_footnote_med, value = as_paragraph(footnote_text_med), ref_symbols = "*", part = "body") %>%
+    footnote(i = rows_footnote_fgr, value = as_paragraph(footnote_text_fgr), ref_symbols = "**", part = "body") %>%
   colformat_int(j = "head1", big.mark = "") %>%
   RUBer::rub_style_flextable() %>%
   set_header_labels(head1 = "Datenreport Nr.", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
@@ -503,28 +517,32 @@ flextable::flextable(degree_programs, col_keys = c("head1", "head2", "head3")) %
 ```{r studiengaenge_ausgeschlossen, tab.cap = "Ausgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
-degree_programs_path <- system.file(
+excluded_programs_path <- system.file(
   "rmarkdown",
   "templates",
-  "datenreport-2018",
+  "datenreport-2022",
   "skeleton",
-  "degree_programs.xlsx",
-  package = "RUBer"
+  "excluded_programs.csv",
+  package = "Datenreport2022"
 )
 
-excluded_programs <- readxl::read_xlsx(
-  path = degree_programs_path,
-  sheet = "excluded_programs"
-  ) %>%
+excluded_programs <- readr::read_csv(
+  file = excluded_programs_path,
+  col_types = readr::cols(
+    EXCLUSION_CRITERION = readr::col_character(),
+    SUBJECT_DEGREE = readr::col_character(),
+    SUBJECT_GROUP = readr::col_character()
+  )
+) %>%
   dplyr::select(
-    head1 = `Ausschluss-grund`,
-    head2 = `Fach-Abschluss-Kombinationen`,
-    head3 = `Fächergruppe`
+    head1 = EXCLUSION_CRITERION,
+    head2 = SUBJECT_DEGREE,
+    head3 = SUBJECT_GROUP
     )
 
 flextable::flextable(excluded_programs, col_keys = c("head1", "head2", "head3")) %>%
   theme_zebra(odd_body=grey_fill) %>%
-  set_header_labels(head1 = "Ausschluss-grund", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
+  set_header_labels(head1 = "Ausschlussgrund", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
   width(j = "head1", width = 1) %>%
   width(j = "head2", width = 3.63) %>%
   width(j = "head3", width = 2.25) %>%
@@ -540,9 +558,9 @@ Bei der Kohortenanalyse werden nach ausgewählten Kriterien Gruppen von Studiere
 Der Datensatz eines Studierenden wird in eine Kohorte über das Startsemester aufgenommen, wenn dieser erstmals oder erneut mit einer geänderten bzw. neuen Fach/Abschlusskombination für das gewählte Semester geliefert wird. Die Anzahl der Fach- oder Hochschulsemester und der Status der Studierenden werden zur Bildung der Kohorte nicht berücksichtigt.
 Damit ist die Basis für die Kohorte festgelegt worden und im weiteren Verlauf wird betrachtet, ob die Studierenden sich exmatrikulieren, das Fach wechseln/abbrechen oder erfolgreich als Absolvent abschließen.
 
-#### Studienanfänger
+#### Studienanfänger:innen
 
-Studienanfänger/innen sind entweder Studierende im ersten Hochschulsemester (Erstimmatrikulierte) oder im ersten Fachsemester eines bestimmten Studiengangs (Neuimmatrikulierte). Die Studierenden im 1. Fachsemester werden auch als Fachanfänger in einem Studiengang bezeichnet. Im Zusammenhang mit der Kohortenanalyse werden die Studienanfänger als Fachanfänger betrachtet.
+Studienanfänger:innen sind entweder Studierende im ersten Hochschulsemester (Erstimmatrikulierte) oder im ersten Fachsemester eines bestimmten Studiengangs (Neuimmatrikulierte). Die Studierenden im 1. Fachsemester werden auch als Fachanfänger in einem Studiengang bezeichnet. Im Zusammenhang mit der Kohortenanalyse werden die Studienanfänger als Fachanfänger betrachtet.
 
 #### Startsemester
 
@@ -554,21 +572,21 @@ Zu Beginn einer Kohortenbetrachtung sind dies die tatsächlichen Studienanfänge
 
 #### Exmatrikulation ohne Abschluss
 
-Als Studienabbrecher werden hier Studierende verstanden die an der RUB ein Studium begonnen haben, aber sich ohne einen Abschluss wieder exmatrikuliert haben und die RUB verlassen haben. In diesen Fällen kann es sich sowohl um einen Hochschulwechsler handeln als auch um jemanden der insgesamt das Studium ohne Erfolg beendet hat.
+Als Studienabbrecher:innen werden hier Studierende verstanden die an der RUB ein Studium begonnen haben, aber sich ohne einen Abschluss wieder exmatrikuliert haben und die RUB verlassen haben. In diesen Fällen kann es sich sowohl um einen Hochschulwechsler handeln als auch um jemanden der insgesamt das Studium ohne Erfolg beendet hat.
 
-#### Fachwechsler
+#### Fachwechsler:innen
 
 Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie im aktuellen Semester noch NICHT studiert haben.
 
-#### Fachabbrecher
+#### Fachabbrecher:innen
 
 Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie bereits im aktuellen Semester studiert haben. Dies sind keine Fachwechsler, sondern werden als Fachabbrecher bezeichnet.
 
-#### Absolventen
+#### Absolvent:innen
 
-Absolventen sind Studierende mit bestandener Abschlussprüfung, die im Berichtssemester mindestens einen Studiengang abgeschlossen haben.
+Absolvent:innen sind Studierende mit bestandener Abschlussprüfung, die im Berichtssemester mindestens einen Studiengang abgeschlossen haben.
 
-# Ansprechpartner und Kontakt
+# Ansprechpersonen und Kontakt
 
 Bei Fragen zum Datenreport und/oder für weitere Auswertungsinteressen können Sie uns gerne kontaktieren:
 
@@ -591,9 +609,9 @@ E-Mail: [jennifer.paetsch@uv.rub.de](mailto:jennifer.paetsch@uv.rub.de)
 
 #### Ansprechpartnerin Förderungen für Weiterentwicklung der Lehre
 
-> **DR. JUDITH RICKEN**  
-> Tel.: 0234 - 32-23187  
-E-Mail: [judith.ricken@uv.rub.de](mailto:judith.ricken@uv.rub.de)
+> **MICHAEL WECKOP**  
+> Tel.: 0234 - 32-29008  
+E-Mail: [michael.weckop@uv.rub.de](mailto:michael.weckop@uv.rub.de)
 
 [https://uni.ruhr-uni-bochum.de/de/lehre-der-ruhr-universitaet](https://uni.ruhr-uni-bochum.de/de/lehre-der-ruhr-universitaet)  
 [https://www.ruhr-uni-bochum.de/universitaetsprogramme](https://www.ruhr-uni-bochum.de/universitaetsprogramme)
