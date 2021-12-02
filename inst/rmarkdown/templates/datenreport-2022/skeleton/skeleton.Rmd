@@ -4,6 +4,7 @@ params:
     p_author:
     p_date:
     p_df:
+    p_df_stg:
 title: "`r params$p_title`"
 author: "`r params$p_author`"
 date: "`r params$p_date`"
@@ -90,7 +91,9 @@ extrafont::loadfonts(
 # df <- report_1
 
 df <- params$p_df
-
+df_stg_null <- is.null(
+  params$p_df_stg
+) 
 # df <- df_fake_complete
 ```
 
@@ -140,6 +143,14 @@ Die Absolvent:innenbefragung der RUB wird seit dem Wintersemester 2007/2008 jäh
 Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolvent:innenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen die Studiengänge mit ein, für welche ausreichend Fallzahlen in den Befragungsdaten vorliegen. Dabei werden dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorlagen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
 
 Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden sie in beiden Studienfächern gezählt. Fragen die sich explizit auf das Studienfach beziehen, z.B. die Beurteilung der Studienangebote und –bedingungen, werden in den Fragebögen immer in Bezug auf das erste und das zweite Studienfach gestellt. Die Antworten in Bezug auf das zweite Fach werden bei Personen, die zwei Studienfächer studieren, in den Auswertungen im Datenreport berücksichtigt.
+
+```{r stg-cases, tab.cap = "Aufteilung der Studienfälle aus das erste und zweite Studienfach je Studiengang", tab.id = "stg-cases-tag", ft.align = "left", eval = !df_stg_null}
+
+RUBer::rub_table_stg(
+  params$p_df_stg
+)
+```
+
 
 In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolvent:innenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Masterstudium beziehen, ausgewertet.
 

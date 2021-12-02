@@ -167,9 +167,10 @@ get_variable_height <- function(
     binding_upper_bound
   ) {
 
-    variable_height <- 0.5 +
+    variable_height <- (0.5 +
       rows_within_facet * 1.3 +
-      (integer_division_facet_length - 1) * 0.4 * 0.393701
+      (integer_division_facet_length - 1) * 0.4
+      ) * 0.393701
 
 
     variable_height <- dplyr::coalesce(

@@ -44,3 +44,37 @@ load_raw_csv <- function(
 
   return(df)
 }
+
+#' Loads csv file with information on cases
+#'
+#' @param path Path to csv file with raw data
+#'
+#' @return Data frame
+#' @export
+#'
+#' @examples
+load_raw_studienfaelle <- function(
+  path
+) {
+
+  df_faelle <- readr::read_csv(
+    file = path,
+    col_types = readr::cols(
+      BERICHT_NR = readr::col_integer(),
+      BERICHT_TYP_ID = readr::col_character(),
+      BEFRAGUNG_TYP_DTXT = readr::col_character(),
+      ABSCHLUSS_ID = readr::col_character(),
+      ABSCHLUSS_KTXT = readr::col_character(),
+      ABSCHLUSS_DTXT = readr::col_character(),
+      FACH_ID = readr::col_character(),
+      FACH_RUB_KTXT = readr::col_character(),
+      FACH_RUB_DTXT = readr::col_character(),
+      STUDIENFACHZAEHLER = readr::col_integer()
+    )
+  ) %>%
+    janitor::clean_names(
+      .
+    )
+
+  return(df_faelle)
+}
