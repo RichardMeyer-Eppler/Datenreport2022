@@ -1,5 +1,6 @@
 ---
 params: 
+    p_report_nr:
     p_title:
     p_author:
     p_date:
@@ -12,7 +13,7 @@ lang: de
 output:
   officedown::rdocx_document:
     reference_docx: rub_reference_2021.docx
-    keep_md: true
+    keep_md: false
     toc: true
     toc_depth: 2
     page_size:
@@ -45,6 +46,8 @@ output:
         pre: 'Abbildung '
         sep: ': '
     reference_num: false
+bibliography: [packages.bib]
+link-citations: false
 toc-title: "Inhaltsverzeichnis"
 ---
 
@@ -66,6 +69,8 @@ library(scales)
 
 knitr::opts_chunk$set(
   echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
   dev = "emf",
   dev.args = list(
     emfPlus = TRUE,
@@ -93,21 +98,61 @@ extrafont::loadfonts(
 df <- params$p_df
 df_stg_null <- is.null(
   params$p_df_stg
-) 
+)
+
+label_ab <- "Absolvent:innenbefragung"
+label_eb <- "Studieneingangsbefragung"
+label_vb <- "Studienverlaufsbefragung"
+
+if(!df_stg_null) {
+  df_ab <- params$p_df_stg %>% 
+    dplyr::filter(
+      befragung_typ_dtxt == label_ab
+    )
+  
+  df_ab_flag <- nrow(df_ab) > 0
+  
+  df_eb <- params$p_df_stg %>% 
+    dplyr::filter(
+      befragung_typ_dtxt == label_eb
+    )
+  
+  df_eb_flag <- nrow(df_eb) > 0
+  
+  df_vb <- params$p_df_stg %>% 
+    dplyr::filter(
+      befragung_typ_dtxt == label_vb
+    )
+  
+  df_vb_flag <- nrow(df_vb) > 0
+}
+
 # df <- df_fake_complete
+
+# https://bookdown.org/yihui/bookdown/cross-references.html
 ```
 
 # Abbildungsverzeichnis
 
 ```{r}
 officer::block_toc(
+  level = 5,
   style = "Image Caption"
+)
+```
+
+# Tabellenverzeichnis
+
+```{r}
+officer::block_toc(
+  level = 6,
+  style = "Table Caption"
 )
 ```
 
 # Einleitung
 
-Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Informationsmanagement-Systems der RUB als auch Befragungsdaten der RUB und gibt Fakultäten und ZWE, die einen Studiengang verantworten, einen Überblick zu folgenden Themenbereichen:
+Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Informationsmanagement-Systems als auch Befragungsdaten der Ruhr-Universität Bochum (RUB) und gibt Fakultäten und ZWE, die einen Studiengang verantworten, einen Überblick zu folgenden Themenbereichen:
 
 - Soziodemographische Zusammensetzung der Studierendenschaft
 - Übergang ins Studium
@@ -120,7 +165,7 @@ Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Info
 - Übergang in ein weiteres Studium oder in den Beruf
 - Förderungen für Weiterentwicklung der Lehre
 
-Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich.
+Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
 ## Informationen zu den Befragungsdaten des Datenreports
 
@@ -136,30 +181,49 @@ Die Studienverlaufsbefragung der RUB wird seit dem Sommersemester 2007 jährlich
 
 #### Absolvent:innenbefragung der RUB
 
-Die Absolvent:innenbefragung der RUB wird seit dem Wintersemester 2007/2008 jährlich durchgeführt. Befragt werden alle Absolventinnen und Absolventen, die vor ein- bis zwei Jahren ihr Studium an der RUB abgeschlossen haben. Die Absolvent:innenbefragung der RUB ist ein Kooperationsprojekt, an welchem sich etwa 60 Hochschulen beteiligen und das vom Institut für angewandte Statistik (istat) in Kassel durchgeführt wird. Neben der rückblickenden Beurteilung der Studienangebote und -bedingungen und der Darstellung der Studienverläufe geben die Ergebnisse der Absolvent:innenbefragung Auskunft über den Übergang in ein weiteres Studium bzw. in den Arbeitsmarkt.
+Die Absolvent:innenbefragung der RUB wird seit dem Wintersemester 2007/2008 jährlich durchgeführt. Befragt werden alle Absolvent:innen, die vor ein- bis zwei Jahren ihr Studium an der RUB abgeschlossen haben. Die Absolvent:innenbefragung der RUB ist ein Kooperationsprojekt, an dem sich bundesweit etwa 60 Hochschulen beteiligen und das vom Institut für angewandte Statistik (istat) in Kassel durchgeführt wird. Neben der retrospektiven Beurteilung der Studienangebote und -bedingungen und der Darstellung der Studienverläufe geben die Ergebnisse der Absolvent:innenbefragung Auskunft über den Übergang in ein weiteres Studium bzw. in den Arbeitsmarkt.
 
 ### Hinweise zu den Befragungsdaten im Datenreport
 
-Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolvent:innenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen die Studiengänge mit ein, für welche ausreichend Fallzahlen in den Befragungsdaten vorliegen. Dabei werden dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorlagen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
+Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolvent:innenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen solche Studiengänge mit ein, für die ausreichend Fälle in den Befragungsdaten vorliegen. Dabei werden nur dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorliegen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen nur dann durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
 
-Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden sie in beiden Studienfächern gezählt. Fragen die sich explizit auf das Studienfach beziehen, z.B. die Beurteilung der Studienangebote und –bedingungen, werden in den Fragebögen immer in Bezug auf das erste und das zweite Studienfach gestellt. Die Antworten in Bezug auf das zweite Fach werden bei Personen, die zwei Studienfächer studieren, in den Auswertungen im Datenreport berücksichtigt.
+Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden deren Antworten auf fachübergreifende Fragen in beiden Studienfächern dargestellt. Antworten, die sich explizit nur auf das erste oder zweite Studienfach beziehen, z.B. die Beurteilung der Studienangebote und -bedingungen, werden nur bei dem jeweiligen Studienfach dargestellt.
 
-```{r stg-cases, tab.cap = "Aufteilung der Studienfälle aus das erste und zweite Studienfach je Studiengang", tab.id = "stg-cases-tag", ft.align = "left", eval = !df_stg_null}
+Die nachfolgenden Tabellen zeigen, wie sich die Studienfälle auf die einzelnen Studiengänge und auf das 1. und 2. Studienfach aufteilen.
+
+```{r stg-cases-ab, tab.cap = "PLACEHOLDER_TABVerteilung der Studienfälle auf das 1. und 2. Studienfach je Studiengang bei der Absolvent:innenbefragung", tab.id = "stg-cases-tag-ab", ft.align = "left", eval = df_ab_flag}
+
 
 RUBer::rub_table_stg(
-  params$p_df_stg
+  df = df_ab,
+  label = label_ab
 )
 ```
 
+```{r stg-cases-eb, tab.cap = "PLACEHOLDER_TABVerteilung der Studienfälle auf das 1. und 2. Studienfach je Studiengang bei der Studieneingangsbefragung", tab.id = "stg-cases-tag-eb", ft.align = "left", eval = df_eb_flag}
 
-In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolvent:innenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Masterstudium beziehen, ausgewertet.
+RUBer::rub_table_stg(
+  df = df_eb,
+  label = label_eb
+)
+```
 
-Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^4] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach"). Wenn eine Person zwei Studienfächer in derselben Fächergruppe studiert, werden beide Studienfächer im Fächergruppenwert berücksichtigt.
+```{r stg-cases-vb, tab.cap = "PLACEHOLDER_TABVerteilung der Studienfälle auf das 1. und 2. Studienfach je Studiengang bei der Studienverlaufsbefragung", tab.id = "stg-cases-tag-vb", ft.align = "left", eval = df_vb_flag}
+
+RUBer::rub_table_stg(
+  df = df_vb,
+  label = label_vb
+)
+```
+
+In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolvent:innenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Master-, Staatsexamens- oder Studium des Magisters Theologie beziehen, ausgewertet.
+
+Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^4] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach"). Wenn eine Person zwei Studienfächer in derselben Fächergruppe studiert, werden beide Studienfächer im Fächergruppenwert berücksichtigt  (s.o. Fallzählung).
 
 [^1]: Sollte der vorliegende Datenreport aus einer oder mehreren Befragungen bzw. zu einigen Themenbereichen keine Auswertungen enthalten, war die Fallzahl zu gering, um Auswertungen auf Fakultäts-/ZWE-Ebene vornehmen zu können.
 [^2]: Weitere Daten zur Zusammensetzung der Stichprobe sind dem Anhang zu entnehmen.
 [^3]: Da nicht immer alle Befragten auf alle Fragen antworten, kann die Anzahl (n) von Frage zu Frage variieren.
-[^4]: Für Studienfächer die eine eigene Fächergruppe bilden (Kunstgeschichte, Medizin, Sportwissenschaft) oder für die keine vergleichbaren Studiengänge an der RUB vorhanden sind (Staatsexamen Rechtswissenschaften und Medizin), kann kein Fächergruppenvergleichswert ausgegeben werden.
+[^4]: Für Studienfächer die eine eigene Fächergruppe bilden (Kunstgeschichte, Medizin, Sportwissenschaft) oder für die keine vergleichbaren Studiengänge an der RUB vorhanden sind (Staatsexamen Rechtswissenschaften und Medizin) entspricht der Vergleichswert dem des Studienfaches.
 
 ## Informationen zu den hochschulstatistischen Daten des Informationsmanagement-Systems der RUB
 
@@ -167,7 +231,7 @@ Dieser Datenreport stellt einige ausgewählte hochschulstatistische Daten in Abb
 
 ## Informationen zu den Förderungen für die Weiterentwicklung der Lehre
 
-Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE ab dem 1. April 2018 eine Förderung aus wettbewerblicher Vergabe erhalten haben.
+Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE, bzw. Lehrende dieser Einheiten, ab dem 1. April 2018 eine Förderung aus wettbewerblicher Vergabe erhalten haben.
 
 ```{r create-fig-template}
 map_parameters <- Datenreport2018::get_map_parameters(df)
@@ -193,7 +257,7 @@ tpl_chunk_3 <- c(
 )
 
 tpl_chunk_4 <- c(
-  "\n```{r fig{{label}}, fig.cap = df_fig$figure_caption[[1]], fig.height=df_fig$figure_height[[1]], warning = FALSE}",
+  "\n```{r fig{{label}}, fig.cap = paste0('PLACEHOLDER_TAB',df_fig$figure_caption[[1]]), fig.height=df_fig$figure_height[[1]], warning = FALSE}",
   "RUBer::plot_figure(df_fig)",
   "```"
 )
@@ -239,11 +303,109 @@ out <- knitr::knit(
 cat(out, sep = '\n')
 ```
 
+```{r funded-projects-data}
+funded_projects_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2022",
+  "skeleton",
+  "funded_projects.csv",
+  package = "Datenreport2022"
+)
+
+df_projects <- readr::read_csv(
+  file = funded_projects_path,
+  col_types = readr::cols(
+    report_nr = readr::col_double(),
+    forderzeitraum_von_datum_ab_01_04_2019 = readr::col_datetime(format = ""),
+    forderzeitraum_bis_datum_laufend = readr::col_datetime(format = ""),
+    programm = readr::col_character(),
+    projekttitel = readr::col_character(),
+    antragsteller_innen_verantwortliche_personen = readr::col_character()
+  ) 
+) %>% 
+  dplyr::filter(
+    report_nr == params$p_report_nr
+  )
+
+df_projects_flag <- nrow(df_projects) > 0
+```
+
+```{r funded-projects-heading, results= 'asis', eval = df_projects_flag}
+cat(
+  paste(
+    "#",
+    "Förderungen für Weiterentwicklung der Lehre"
+  )
+)
+```
+
+```{r funded-projects-table, tab.cap = "PLACEHOLDER_TABFörderungen für Weiterentwicklung der Lehre", tab.id = "projects_tab", ft.align = "left", eval = df_projects_flag}
+grey_fill <- "#ECECEC"
+
+flextable::flextable(
+  df_projects,
+  col_keys = names(df_projects)[2:6]
+) %>% 
+  flextable::set_header_labels(
+    values = list(
+      forderzeitraum_von_datum_ab_01_04_2019 = "Förderzeitraum von (Datum, ab 01.04.2019)",
+      forderzeitraum_bis_datum_laufend = "Förderzeitraum bis (Datum, laufend)",
+      programm = "Programm",
+      projekttitel = "Projekttitel",
+      antragsteller_innen_verantwortliche_personen = "Antragsteller*innen / Verantwortliche Personen"
+    )
+  ) %>% 
+  flextable::colformat_datetime(
+    fmt_date = "%d.%m.%Y"
+  ) %>% 
+  flextable::theme_zebra(
+    even_body = grey_fill,
+    odd_body = "transparent"
+  ) %>% 
+  RUBer::rub_style_flextable() %>% 
+  flextable::width(
+    j = 1,
+    width = 2.47,
+    unit = "cm"
+  ) %>%
+  flextable::width(
+    j = 2,
+    width = 2.47,
+    unit = "cm"
+  ) %>%
+  flextable::width(
+    j = 3,
+    width = 3.5,
+    unit = "cm"
+  ) %>% 
+  flextable::width(
+    j = 4,
+    width = 5.5,
+    unit = "cm"
+  ) %>% 
+  flextable::width(
+    j = 5,
+    width = 3.6,
+    unit = "cm"
+  ) 
+```
+
+# Technische Angaben zur Berichtserstellung
+
+Die Datenreporte, Abbildungen und Tabellen für die neunte Lehrberichterstattung 2020/21 wurden automatisiert mit der freien Programmiersprache R generiert [@pkgbase]. Für die parametrische Erstellung von Berichten im Corporate Design der RUB wurde das Package RUBer [@pkgRUBer] entwickelt, dessen Code unter der MIT-Lizenz veröffentlicht ist. Die technischen Voraussetzungen für das RUBer Package wurden durch eine Vielzahl weiterer Autor:innen und Packages geschaffen, von denen die wichtigsten hier dankend genannt werden: das Dokumentformat R Markdown [@pkgrmarkdown] in Verbindung mit [@pkgknitr], das die Kombination von dynamischem Code, Text, Tabellen und Abbildungen überhaupt erst ermöglicht, die Grafikbibliothek ggplot2 [@pkgggplot2] zur Erstellung der Abbildungen, flextable [@pkgflextable] für die Erstellung der Tabellen, officedown [@pkgofficedown] für die Erzeugung von Microsoft Word Dokumenten und devEMF [@pkgdevEMF] für die Ausgabe von Vektorgrafiken im proprietären Format von Microsoft.
+
+Anregungen und Rückfragen zur technischen Berichtserstellung sind ausdrücklich erwünscht (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
+
+# Quellenangaben
+
+<div id="refs"></div>
+
 # Anhang
 
 ## Zusammensetzung der Stichprobe der Befragungsdaten im Vergleich zur Grundgesamtheit der RUB
 
-```{r eingangsbefragung, tab.cap = "Zusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
+```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 survey_path <- system.file(
@@ -322,7 +484,7 @@ flextable::flextable(
 
 <br>
   
-```{r studienverlauf, tab.cap = "Zusammensetzung Studienverlaufsbefragung", tab.id = "vb_tab", ft.align = "left"}
+```{r studienverlauf, tab.cap = "PLACEHOLDER_TABZusammensetzung Studienverlaufsbefragung", tab.id = "vb_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 survey_path <- system.file(
@@ -402,7 +564,7 @@ flextable::flextable(studienverlauf, col_keys = c("studienverlauf", "koepfe_3fs_
 
 <br>
 
-```{r studienabschluss, tab.cap = "Zusammensetzung Absolventen- und Absolventinnenbefragung", tab.id = "ab_tab", ft.align = "left"}
+```{r studienabschluss, tab.cap = "PLACEHOLDER_TABZusammensetzung Absolventen- und Absolventinnenbefragung", tab.id = "ab_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 survey_path <- system.file(
@@ -466,7 +628,7 @@ flextable::flextable(studienabschluss, col_keys = c("studienabschluss", "koepfe_
 
 Auslaufende Fach-Abschluss-Kombinationen und weiterbildende Studiengänge werden bei den Datenreports grundsätzlich nicht berücksichtigt. Für sehr neue Studiengänge liegen in der Regel weder Befragungsdaten noch aussagekräftige deskriptive Statistiken aus dem Informationsmanagement-System vor, weshalb diese ebenfalls nicht berücksichtigt werden.
 
-```{r studiengaenge, tab.cap = "Berücksichtigte Studiengänge", tab.id = "stg_tab", ft.align = "left"}
+```{r studiengaenge, tab.cap = "PLACEHOLDER_TABBerücksichtigte Studiengänge", tab.id = "stg_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 degree_programs_path <- system.file(
@@ -509,13 +671,19 @@ rows_footnote_fgr <- degree_programs %>%
   dplyr::filter(head1 %in% c(74)) %>%
   dplyr::pull(row_name)
 
-flextable::flextable(degree_programs, col_keys = c("head1", "head2", "head3")) %>%
-  theme_zebra(odd_body=grey_fill) %>%
-  footnote(i = rows_footnote_med, value = as_paragraph(footnote_text_med), ref_symbols = "*", part = "body") %>%
-    footnote(i = rows_footnote_fgr, value = as_paragraph(footnote_text_fgr), ref_symbols = "**", part = "body") %>%
-  colformat_int(j = "head1", big.mark = "") %>%
+flextable::flextable(
+    degree_programs,
+    col_keys = c("head1", "head2", "head3")
+  ) %>%
+  flextable::theme_zebra(
+    even_body = grey_fill,
+    odd_body = "transparent"
+  ) %>%
+  flextable::footnote(i = rows_footnote_med, value = as_paragraph(footnote_text_med), ref_symbols = "*", part = "body") %>%
+    flextable::footnote(i = rows_footnote_fgr, value = as_paragraph(footnote_text_fgr), ref_symbols = "**", part = "body") %>%
+  flextable::colformat_int(j = "head1", big.mark = "") %>%
   RUBer::rub_style_flextable() %>%
-  set_header_labels(head1 = "Datenreport Nr.", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
+  flextable::set_header_labels(head1 = "Datenreport Nr.", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
   align(j = "head1", align = "center", part = "body") %>%
   align(j = "head1", align = "center", part = "header") %>%
   width(j = "head1", width = 1) %>%
@@ -525,7 +693,7 @@ flextable::flextable(degree_programs, col_keys = c("head1", "head2", "head3")) %
 
 <br>
 
-```{r studiengaenge_ausgeschlossen, tab.cap = "Ausgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
+```{r studiengaenge_ausgeschlossen, tab.cap = "PLACEHOLDER_TABAusgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 excluded_programs_path <- system.file(
@@ -547,16 +715,22 @@ excluded_programs <- readr::read_csv(
 ) %>%
   dplyr::select(
     head1 = EXCLUSION_CRITERION,
-    head2 = SUBJECT_DEGREE,
-    head3 = SUBJECT_GROUP
+    head2 = SUBJECT_GROUP,
+    head3 = SUBJECT_DEGREE
     )
 
-flextable::flextable(excluded_programs, col_keys = c("head1", "head2", "head3")) %>%
-  theme_zebra(odd_body=grey_fill) %>%
-  set_header_labels(head1 = "Ausschlussgrund", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
-  width(j = "head1", width = 1) %>%
-  width(j = "head2", width = 3.63) %>%
-  width(j = "head3", width = 2.25) %>%
+flextable::flextable(
+    excluded_programs,
+    col_keys = c("head1", "head2", "head3")
+  ) %>%
+  flextable::theme_zebra(
+    even_body = grey_fill,
+    odd_body = "transparent"
+  ) %>%
+  set_header_labels(head1 = "Ausschlussgrund", head2 = "Fächergruppe", head3 = "Fach-Abschluss-Kombinationen") %>%
+  width(j = "head1", width = 1.1) %>%
+  width(j = "head2", width = 2.15) %>%
+  width(j = "head3", width = 3.63) %>%
   RUBer::rub_style_flextable()
 ```
 
@@ -597,7 +771,7 @@ Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie b
 
 Absolvent:innen sind Studierende mit bestandener Abschlussprüfung, die im Berichtssemester mindestens einen Studiengang abgeschlossen haben.
 
-# Ansprechpersonen und Kontakt
+# Ansprechpersonen und Kontakt {#Kontakt}
 
 Bei Fragen zum Datenreport und/oder für weitere Auswertungsinteressen können Sie uns gerne kontaktieren:
 
@@ -607,7 +781,8 @@ Bei Fragen zum Datenreport und/oder für weitere Auswertungsinteressen können S
 > Tel.: 0234 - 32-29349  
 E-Mail: [jens.tueselmann@uv.rub.de](mailto:jens.tueselmann@uv.rub.de)
 
-[www.rub.de/dwh](www.rub.de/dwh)
+[https://www.rub.de/qm-lehre](www.rub.de/qm-lehre)  
+[https://www.rub.de/dwh](www.rub.de/dwh)
 
 #### Ansprechpartnerin Befragungsdaten
 
@@ -615,14 +790,24 @@ E-Mail: [jens.tueselmann@uv.rub.de](mailto:jens.tueselmann@uv.rub.de)
 > Tel.: 0234 - 32-28840  
 E-Mail: [jennifer.paetsch@uv.rub.de](mailto:jennifer.paetsch@uv.rub.de)
 
-[www.rub.de/studierendenmonitor](www.rub.de/studierendenmonitor)  
-[www.rub.de/absolventenstudie](www.rub.de/absolventenstudie)
+[https://www.rub.de/qm-lehre](www.rub.de/qm-lehre)  
+[https://www.rub.de/studierendenmonitor](www.rub.de/studierendenmonitor)  
+[https://www.rub.de/absolventenstudie](www.rub.de/absolventenstudie)
 
-#### Ansprechpartnerin Förderungen für Weiterentwicklung der Lehre
+#### Ansprechpartner Technische Berichtserstellung
+
+> **RICHARD MEYER-EPPLER**  
+> Tel.: 0234 - 32-29456  
+E-Mail: [richard.meyer-eppler@uv.rub.de](mailto:richard.meyer-eppler@uv.rub.de)
+
+[https://www.rub.de/qm-lehre](www.rub.de/qm-lehre)  
+[https://richardmeyer-eppler.github.io/RUBer](RUBer Package auf GitHub)
+
+#### Ansprechpartner Förderungen für Weiterentwicklung der Lehre
 
 > **MICHAEL WECKOP**  
 > Tel.: 0234 - 32-29008  
 E-Mail: [michael.weckop@uv.rub.de](mailto:michael.weckop@uv.rub.de)
 
 [https://uni.ruhr-uni-bochum.de/de/lehre-der-ruhr-universitaet](https://uni.ruhr-uni-bochum.de/de/lehre-der-ruhr-universitaet)  
-[https://www.ruhr-uni-bochum.de/universitaetsprogramme](https://www.ruhr-uni-bochum.de/universitaetsprogramme)
+[www.ruhr-uni-bochum.de/universitaetsprogramme](www.ruhr-uni-bochum.de/universitaetsprogramme)

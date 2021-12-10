@@ -33,7 +33,7 @@ get_figure_df <- function(df, figure_count) {
 #' }
 set_factors <- function(df) {
 
-  if(df[[1, "figure_type_id"]] %in% c(1,4)) {
+  if(df[[1, "figure_type_id"]] %in% c(1,2,4)) {
 
     df[["x"]] <- factor(
       df[["x"]],

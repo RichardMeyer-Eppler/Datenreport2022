@@ -37,7 +37,8 @@ update_figure_count <- function(
     ) %>%
     dplyr::mutate(
       figure_caption = dplyr::if_else(
-        split_flag,
+        split_flag &
+          figure_type_id == 3,
         glue::glue(
           "{figure_caption} ({shard + 1}/{max_shard + 1})"
         ),
@@ -107,6 +108,36 @@ split_figures <- function(
         max_shard = 0,
 
       )
+    return(df)
+  }
+
+  # Return data frame if figure_type_id == 2L (hard coded values)
+  if(
+    2L %in% unique(df[["figure_type_id"]])
+  ) {
+
+    degree_groups <- unique(df[["abbildung_map_sort"]])
+
+    df <- df %>%
+      dplyr::mutate(
+        shard = dplyr::dense_rank(
+          abbildung_map_sort
+        ) - 1,
+        split_flag = dplyr::dense_rank(
+          abbildung_map_sort
+        ) != 0,
+        max_shard = length(degree_groups),
+      ) %>%
+      dplyr::group_by(
+        shard
+      ) %>%
+      dplyr::mutate(
+        figure_height = 4 * dplyr::n_distinct(
+          aggregation_id_1
+        )
+      ) %>%
+      dplyr::ungroup()
+
     return(df)
   }
 

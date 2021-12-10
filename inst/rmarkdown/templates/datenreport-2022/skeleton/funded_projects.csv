@@ -1,0 +1,636 @@
+report_nr,forderzeitraum_von_datum_ab_01_04_2019,forderzeitraum_bis_datum_laufend,programm,projekttitel,antragsteller_innen_verantwortliche_personen
+1,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Interkulturelle Bibelhermeneutiken. Kontextuelle Exegese im theologisch-interdisziplinären Diskurs,"Alena Höfer, Malte Cramer"
+1,2019-10-01T00:00:00Z,2020-07-31T00:00:00Z,Forschendes Lernen,Migration lokal denken. Begegnungen mit religiösen Gemeinschaften in NRW,"Prof. Dr. Claudia Jahnel, Dr. Claudia Rammelt"
+1,2021-04-01T00:00:00Z,2021-12-31T00:00:00Z,Forschendes Lernen,Traumatheologie: Kritische Bibellektüre anhand von Leiderfahrungen.  Entwicklung eines Tagungs- und Seminarkonzepts mit Studierenden zur angewandten wissenschaftlichen Exegese von Bibeltexten.,Prof. Dr. Peter Wick
+1,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,"Religiöse Pluralität entdecken, reflektieren und diskutierend sichtbar machen","Prof. Dr. Claudia Jahnel, Dr. Claudia Rammelt"
+1,2020-06-01T00:00:00Z,2021-09-30T00:00:00Z,interLECTURE,Globale Christentümer: Theologische und religionswissenschaftliche Perspektiven,"Vertr.-Prof. Dr. Martin Radermacher, Prof. Dr. Cladia Jahnel, Prof. Dr.Bernhard Grümme, Dr. Jens Schlamelcher, Dr. Claudia Rammelt, Dr. habil. Kristin Platt"
+2,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Together in (RUB-)Town – Proseminar mit Gamification anreichern,"Aleksandra Brand, Prof. Dr. Thomas Söding"
+2,2020-06-01T00:00:00Z,2021-09-30T00:00:00Z,interLECTURE,Globale Christentümer: Theologische und religionswissenschaftliche Perspektiven,"Vertr.-Prof. Dr. Martin Radermacher, Prof. Dr. Cladia Jahnel, Prof. Dr.Bernhard Grümme, Dr. Jens Schlamelcher, Dr. Claudia Rammelt, Dr. habil. Kristin Platt"
+3,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,LAMPE - Learning About Methods with Personalized E-Learning-Tools,"Dr. Katja Serova, Cosima Quirl, Inga Lotte Limpinsel, Bernadette Hagen"
+3,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Theorien verstehen am CASE durch Collaboration, Anwendung, Situiertheit und Elaboration","Dr. Valentina Nachtigall, Berke Kücük, Prof. Dr. Nikol Rummel"
+3,2021-01-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Grow - Mit der Grounded Theory-Methodologie gemeinsam im Forschen wachsen,"Olga Neuberger, Inga Lotta Limpinsel, Raphaela Gilles, Prof. Dr. Sandra Aßmann"
+3,2020-04-01T00:00:00Z,2022-09-30T00:00:00Z,Forschendes Lernen,"KEVIN - Kooperative EValuationsforschung einer INformatik-Vorlesung
+","Dr. Katja Serova, Selina Yek"
+3,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+3,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Dr. Sticker",Prof. Dr. Corinna Mieth
+3,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Araujo",Prof. Dr. Corinna Mieth
+3,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Moolio",Prof. Dr. Corinna Mieth
+3,2020-10-01T00:00:00Z,2021-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Pinzani",Prof. Dr. Corinna Mieth
+4,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,LAMPE - Learning About Methods with Personalized E-Learning-Tools,"Dr. Katja Serova, Cosima Quirl, Inga Lotte Limpinsel, Bernadette Hagen"
+4,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Theorien verstehen am CASE durch Collaboration, Anwendung, Situiertheit und Elaboration","Dr. Valentina Nachtigall, Berke Kücük, Prof. Dr. Nikol Rummel"
+4,2021-01-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Grow - Mit der Grounded Theory-Methodologie gemeinsam im Forschen wachsen,"Olga Neuberger, Inga Lotta Limpinsel, Raphaela Gilles, Prof. Dr. Sandra Aßmann"
+4,2020-04-01T00:00:00Z,2022-09-30T00:00:00Z,Forschendes Lernen,"KEVIN - Kooperative EValuationsforschung einer INformatik-Vorlesung
+","Dr. Katja Serova, Selina Yek"
+4,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+4,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Dr. Sticker",Prof. Dr. Corinna Mieth
+4,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Araujo",Prof. Dr. Corinna Mieth
+4,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Moolio",Prof. Dr. Corinna Mieth
+4,2020-10-01T00:00:00Z,2021-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Pinzani",Prof. Dr. Corinna Mieth
+5,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,LAMPE - Learning About Methods with Personalized E-Learning-Tools,"Dr. Katja Serova, Cosima Quirl, Inga Lotte Limpinsel, Bernadette Hagen"
+5,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Theorien verstehen am CASE durch Collaboration, Anwendung, Situiertheit und Elaboration","Dr. Valentina Nachtigall, Berke Kücük, Prof. Dr. Nikol Rummel"
+5,2021-01-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Grow - Mit der Grounded Theory-Methodologie gemeinsam im Forschen wachsen,"Olga Neuberger, Inga Lotta Limpinsel, Raphaela Gilles, Prof. Dr. Sandra Aßmann"
+5,2020-04-01T00:00:00Z,2022-09-30T00:00:00Z,Forschendes Lernen,"KEVIN - Kooperative EValuationsforschung einer INformatik-Vorlesung
+","Dr. Katja Serova, Selina Yek"
+5,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+5,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Dr. Sticker",Prof. Dr. Corinna Mieth
+5,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Araujo",Prof. Dr. Corinna Mieth
+5,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Moolio",Prof. Dr. Corinna Mieth
+5,2020-10-01T00:00:00Z,2021-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Pinzani",Prof. Dr. Corinna Mieth
+6,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,#history – Geschichte(n) erzählen mit dem Smartphone,Mia Berg
+6,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,EDIT – gEschichte DIgiTal produzieren,"Jun.-Prof. Dr. Christian Bunnenberg, Theresa Hiller, Elena Lewers"
+6,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Lehrsammlungen in Bewegung,Dr. Soi Agelidis
+6,2019-10-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Außer Spesen nichts gewesen? - Schulden und öffentliche Haushalte im Mittelalter am Beispiel der Stadtrechnungen von Kalkar.,Dr. Jens Lieven
+6,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Ausstellungen eigenständig gestalten im Masterstudiengang Public History,Jun.-Prof. Dr. Christian Bunnenberg
+6,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Landschaftsarchäologie begreifen. Entwicklung eigenständiger Forschungsansätze im Rahmen der Feldforschungsprojekte der Ur- und Frühgeschichte,"Jun.-Prof. Dr. Constance von Rüden, Prof. Dr. Thomas Stöllner, Dr. des. Aydin Abar"
+6,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,Making History: Thematische und methodische Einblicke in die Erstellung von geschichtswissenschaftlichen Bachelorarbeiten,"Anna Victoria Breidenbach, Robert Queckenberg, Prof. Dr. Christian Wendt, Jun.-Prof. Dr. Tim Neu, Jun.-Prof. Dr. Juliane Czierpka"
+6,2021-04-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Von der Neugier zur Publikation. Einblicke in die Projektentwicklung und die Durchführung archäologischer Feldforschung in den tridentiner Alpen (Italien),Dr. des. Aydin Abar
+6,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",DigiAttika 2.0: Analytische Ansätze zu einem digitalen Repositorium,Dr. phil. Barbora Weissova
+6,2020-10-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science","Interaktivierung eines Staubfängers:
+Das Potential archivarischer Daten entdecken und mit Data Science erschließen",Dr. Barbora Weissova
+6,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+6,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernen Durch Erinnern,"Sebastian Döpp, Thorben Pieper, Luise Mohr, Chris Buchholz, Jano Meyer, Janina Schäuffele"
+7,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,#history – Geschichte(n) erzählen mit dem Smartphone,Mia Berg
+7,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,EDIT – gEschichte DIgiTal produzieren,"Jun.-Prof. Dr. Christian Bunnenberg, Theresa Hiller, Elena Lewers"
+7,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Lehrsammlungen in Bewegung,Dr. Soi Agelidis
+7,2019-10-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Außer Spesen nichts gewesen? - Schulden und öffentliche Haushalte im Mittelalter am Beispiel der Stadtrechnungen von Kalkar.,Dr. Jens Lieven
+7,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Ausstellungen eigenständig gestalten im Masterstudiengang Public History,Jun.-Prof. Dr. Christian Bunnenberg
+7,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Landschaftsarchäologie begreifen. Entwicklung eigenständiger Forschungsansätze im Rahmen der Feldforschungsprojekte der Ur- und Frühgeschichte,"Jun.-Prof. Dr. Constance von Rüden, Prof. Dr. Thomas Stöllner, Dr. des. Aydin Abar"
+7,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,Making History: Thematische und methodische Einblicke in die Erstellung von geschichtswissenschaftlichen Bachelorarbeiten,"Anna Victoria Breidenbach, Robert Queckenberg, Prof. Dr. Christian Wendt, Jun.-Prof. Dr. Tim Neu, Jun.-Prof. Dr. Juliane Czierpka"
+7,2021-04-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Von der Neugier zur Publikation. Einblicke in die Projektentwicklung und die Durchführung archäologischer Feldforschung in den tridentiner Alpen (Italien),Dr. des. Aydin Abar
+7,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",DigiAttika 2.0: Analytische Ansätze zu einem digitalen Repositorium,Dr. phil. Barbora Weissova
+7,2020-10-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science","Interaktivierung eines Staubfängers:
+Das Potential archivarischer Daten entdecken und mit Data Science erschließen",Dr. Barbora Weissova
+7,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+7,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernen Durch Erinnern,"Sebastian Döpp, Thorben Pieper, Luise Mohr, Chris Buchholz, Jano Meyer, Janina Schäuffele"
+8,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,#history – Geschichte(n) erzählen mit dem Smartphone,Mia Berg
+8,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,EDIT – gEschichte DIgiTal produzieren,"Jun.-Prof. Dr. Christian Bunnenberg, Theresa Hiller, Elena Lewers"
+8,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Lehrsammlungen in Bewegung,Dr. Soi Agelidis
+8,2019-10-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Außer Spesen nichts gewesen? - Schulden und öffentliche Haushalte im Mittelalter am Beispiel der Stadtrechnungen von Kalkar.,Dr. Jens Lieven
+8,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Ausstellungen eigenständig gestalten im Masterstudiengang Public History,Jun.-Prof. Dr. Christian Bunnenberg
+8,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Landschaftsarchäologie begreifen. Entwicklung eigenständiger Forschungsansätze im Rahmen der Feldforschungsprojekte der Ur- und Frühgeschichte,"Jun.-Prof. Dr. Constance von Rüden, Prof. Dr. Thomas Stöllner, Dr. des. Aydin Abar"
+8,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,Making History: Thematische und methodische Einblicke in die Erstellung von geschichtswissenschaftlichen Bachelorarbeiten,"Anna Victoria Breidenbach, Robert Queckenberg, Prof. Dr. Christian Wendt, Jun.-Prof. Dr. Tim Neu, Jun.-Prof. Dr. Juliane Czierpka"
+8,2021-04-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Von der Neugier zur Publikation. Einblicke in die Projektentwicklung und die Durchführung archäologischer Feldforschung in den tridentiner Alpen (Italien),Dr. des. Aydin Abar
+8,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",DigiAttika 2.0: Analytische Ansätze zu einem digitalen Repositorium,Dr. phil. Barbora Weissova
+8,2020-10-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science","Interaktivierung eines Staubfängers:
+Das Potential archivarischer Daten entdecken und mit Data Science erschließen",Dr. Barbora Weissova
+8,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+8,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernen Durch Erinnern,"Sebastian Döpp, Thorben Pieper, Luise Mohr, Chris Buchholz, Jano Meyer, Janina Schäuffele"
+9,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,#history – Geschichte(n) erzählen mit dem Smartphone,Mia Berg
+9,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,EDIT – gEschichte DIgiTal produzieren,"Jun.-Prof. Dr. Christian Bunnenberg, Theresa Hiller, Elena Lewers"
+9,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Lehrsammlungen in Bewegung,Dr. Soi Agelidis
+9,2019-10-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Außer Spesen nichts gewesen? - Schulden und öffentliche Haushalte im Mittelalter am Beispiel der Stadtrechnungen von Kalkar.,Dr. Jens Lieven
+9,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Ausstellungen eigenständig gestalten im Masterstudiengang Public History,Jun.-Prof. Dr. Christian Bunnenberg
+9,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Landschaftsarchäologie begreifen. Entwicklung eigenständiger Forschungsansätze im Rahmen der Feldforschungsprojekte der Ur- und Frühgeschichte,"Jun.-Prof. Dr. Constance von Rüden, Prof. Dr. Thomas Stöllner, Dr. des. Aydin Abar"
+9,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,Making History: Thematische und methodische Einblicke in die Erstellung von geschichtswissenschaftlichen Bachelorarbeiten,"Anna Victoria Breidenbach, Robert Queckenberg, Prof. Dr. Christian Wendt, Jun.-Prof. Dr. Tim Neu, Jun.-Prof. Dr. Juliane Czierpka"
+9,2021-04-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Von der Neugier zur Publikation. Einblicke in die Projektentwicklung und die Durchführung archäologischer Feldforschung in den tridentiner Alpen (Italien),Dr. des. Aydin Abar
+9,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",DigiAttika 2.0: Analytische Ansätze zu einem digitalen Repositorium,Dr. phil. Barbora Weissova
+9,2020-10-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science","Interaktivierung eines Staubfängers:
+Das Potential archivarischer Daten entdecken und mit Data Science erschließen",Dr. Barbora Weissova
+9,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+9,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernen Durch Erinnern,"Sebastian Döpp, Thorben Pieper, Luise Mohr, Chris Buchholz, Jano Meyer, Janina Schäuffele"
+10,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+10,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+10,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+10,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+10,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+10,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+10,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+10,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+10,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+10,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+10,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+10,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+10,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+10,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+10,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+10,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+10,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+10,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+12,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+12,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+12,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+12,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+12,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+12,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+12,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+12,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+12,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+12,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+12,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+12,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+12,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+12,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+12,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+12,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+12,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+12,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+13,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+13,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+13,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+13,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+13,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+13,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+13,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+13,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+13,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+13,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+13,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+13,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+13,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+13,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+13,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+13,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+13,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+13,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+14,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+14,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+14,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+14,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+14,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+14,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+14,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+14,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+14,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+14,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+14,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+14,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+14,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+14,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+14,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+14,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+14,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+14,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+15,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+15,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+15,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+15,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+15,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+15,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+15,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+15,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+15,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+15,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+15,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+15,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+15,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+15,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+15,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+15,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+15,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+15,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+16,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+16,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+16,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+16,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+16,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+16,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+16,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+16,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+16,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+16,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+16,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+16,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+16,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+16,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+16,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+16,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+16,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+16,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+17,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+17,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+17,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+17,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+17,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+17,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+17,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+17,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+17,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+17,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+17,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+17,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+17,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+17,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+17,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+17,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+17,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+17,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+18,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+18,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+18,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+18,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+18,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+18,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+18,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+18,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+18,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+18,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+18,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+18,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+18,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+18,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+18,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+18,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+18,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+18,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+19,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+19,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+19,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+19,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+19,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+19,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+19,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+19,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+19,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+19,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+19,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+19,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+19,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+19,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+19,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+19,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+19,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+19,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+20,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Gründungsbausteine - Micro Degrees für Entrepreneure,Prof. Dr. Nicola Werbeck
+20,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Im Ra(h)men des Möglichen – ein digitales Lehrkonzept zur kombinierten Anwendung abwechslungsreicher e-Learning Tools,"Robin Stetzka, Melissa Kistner, Elka Thevanesan"
+20,2020-06-01T00:00:00Z,2020-11-30T00:00:00Z,Forschendes Lernen,Data Analytics in Accounting,Prof. Dr. Devrimi Kaya
+20,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,"Forschendes Lernen: Datengetriebene, agenten-basierte Modellierung im Team (jeweils BSc und MSc Modul)","Dr. Frederik Schaff, Said Benjamin Bonakdar"
+20,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science in Finance,"Prof. Dr. Stephan Paul, Doron Reichmann"
+20,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Innovationsmanagement,Prof. Dr. Matthias Weiss
+20,2019-04-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Digital Marketing in Practice,"Anna Klötzer, Lisa Hartmann"
+21,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Gründungsbausteine - Micro Degrees für Entrepreneure,Prof. Dr. Nicola Werbeck
+21,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Im Ra(h)men des Möglichen – ein digitales Lehrkonzept zur kombinierten Anwendung abwechslungsreicher e-Learning Tools,"Robin Stetzka, Melissa Kistner, Elka Thevanesan"
+21,2020-06-01T00:00:00Z,2020-11-30T00:00:00Z,Forschendes Lernen,Data Analytics in Accounting,Prof. Dr. Devrimi Kaya
+21,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,"Forschendes Lernen: Datengetriebene, agenten-basierte Modellierung im Team (jeweils BSc und MSc Modul)","Dr. Frederik Schaff, Said Benjamin Bonakdar"
+21,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science in Finance,"Prof. Dr. Stephan Paul, Doron Reichmann"
+21,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Innovationsmanagement,Prof. Dr. Matthias Weiss
+21,2019-04-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Digital Marketing in Practice,"Anna Klötzer, Lisa Hartmann"
+22,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Gründungsbausteine - Micro Degrees für Entrepreneure,Prof. Dr. Nicola Werbeck
+22,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Im Ra(h)men des Möglichen – ein digitales Lehrkonzept zur kombinierten Anwendung abwechslungsreicher e-Learning Tools,"Robin Stetzka, Melissa Kistner, Elka Thevanesan"
+22,2020-06-01T00:00:00Z,2020-11-30T00:00:00Z,Forschendes Lernen,Data Analytics in Accounting,Prof. Dr. Devrimi Kaya
+22,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,"Forschendes Lernen: Datengetriebene, agenten-basierte Modellierung im Team (jeweils BSc und MSc Modul)","Dr. Frederik Schaff, Said Benjamin Bonakdar"
+22,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science in Finance,"Prof. Dr. Stephan Paul, Doron Reichmann"
+22,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Innovationsmanagement,Prof. Dr. Matthias Weiss
+22,2019-04-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Digital Marketing in Practice,"Anna Klötzer, Lisa Hartmann"
+23,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Gründungsbausteine - Micro Degrees für Entrepreneure,Prof. Dr. Nicola Werbeck
+23,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Im Ra(h)men des Möglichen – ein digitales Lehrkonzept zur kombinierten Anwendung abwechslungsreicher e-Learning Tools,"Robin Stetzka, Melissa Kistner, Elka Thevanesan"
+23,2020-06-01T00:00:00Z,2020-11-30T00:00:00Z,Forschendes Lernen,Data Analytics in Accounting,Prof. Dr. Devrimi Kaya
+23,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,"Forschendes Lernen: Datengetriebene, agenten-basierte Modellierung im Team (jeweils BSc und MSc Modul)","Dr. Frederik Schaff, Said Benjamin Bonakdar"
+23,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science in Finance,"Prof. Dr. Stephan Paul, Doron Reichmann"
+23,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Innovationsmanagement,Prof. Dr. Matthias Weiss
+23,2019-04-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Digital Marketing in Practice,"Anna Klötzer, Lisa Hartmann"
+24,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Gründungsbausteine - Micro Degrees für Entrepreneure,Prof. Dr. Nicola Werbeck
+24,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Im Ra(h)men des Möglichen – ein digitales Lehrkonzept zur kombinierten Anwendung abwechslungsreicher e-Learning Tools,"Robin Stetzka, Melissa Kistner, Elka Thevanesan"
+24,2020-06-01T00:00:00Z,2020-11-30T00:00:00Z,Forschendes Lernen,Data Analytics in Accounting,Prof. Dr. Devrimi Kaya
+24,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,"Forschendes Lernen: Datengetriebene, agenten-basierte Modellierung im Team (jeweils BSc und MSc Modul)","Dr. Frederik Schaff, Said Benjamin Bonakdar"
+24,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science in Finance,"Prof. Dr. Stephan Paul, Doron Reichmann"
+24,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Innovationsmanagement,Prof. Dr. Matthias Weiss
+24,2019-04-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Digital Marketing in Practice,"Anna Klötzer, Lisa Hartmann"
+25,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+25,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+25,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+25,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+25,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+25,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+25,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+25,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+25,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+25,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+26,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+26,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+26,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+26,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+26,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+26,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+26,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+26,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+26,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+26,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+27,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+27,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+27,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+27,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+27,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+27,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+27,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+27,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+27,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+27,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+28,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+28,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+28,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+28,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+28,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+28,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+28,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+28,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+28,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+28,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+29,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+29,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+29,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+29,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+29,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+29,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+29,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+29,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+29,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+29,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+30,2022-02-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Sprache 4.0 — Digitale Kompetenzen für China,Rüdiger Breuer
+30,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,"Shouki – Lernen mit Smartphone, Videos und Anki","Prof. Dr. Christian Schwermann, Mi Liu"
+30,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Lena Liefke
+31,2022-02-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Sprache 4.0 — Digitale Kompetenzen für China,Rüdiger Breuer
+31,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,"Shouki – Lernen mit Smartphone, Videos und Anki","Prof. Dr. Christian Schwermann, Mi Liu"
+31,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Lena Liefke
+32,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Diagnostik-Szenarios in der Sportmedizin (Diagnostik-Spomed),Prof. Dr. Petra Platen
+32,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Fit & smart? Fitness Apps in der Sportwissenschaft auf dem Prüfstand,Dr. Sarah Jakowski
+32,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Mach Dich auf: Dein W(BT)eg zum erfolgreichen Projektmanagement,"Dominic Habenstein, Dr. Arno Krombholz"
+32,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sporternährung für Prävention und Rehabilitation – der Wissenschaftspodcast,Marius Kirmse
+32,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sportpsychologie auf Abstand hautnah erleben,"Dr. Jahan Heidari, Ewald Bormann"
+32,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Virtual Reality in der Vorlesung Sportmedizin (VR-Spomed),"Prof. Dr. Petra Platen, Dr. David Wiesche, Dominic Habenstein"
+32,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Sport Science goes Open Source: Entwicklung einer frei verfügbaren Softwarebibliothek für Lehre und Wissenschaft,"Robin Schäfer, Dr. Markus Reichert, Prof. Dr. Laurenz Wiskott, Pablo Nolte"
+33,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Diagnostik-Szenarios in der Sportmedizin (Diagnostik-Spomed),Prof. Dr. Petra Platen
+33,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Fit & smart? Fitness Apps in der Sportwissenschaft auf dem Prüfstand,Dr. Sarah Jakowski
+33,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Mach Dich auf: Dein W(BT)eg zum erfolgreichen Projektmanagement,"Dominic Habenstein, Dr. Arno Krombholz"
+33,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sporternährung für Prävention und Rehabilitation – der Wissenschaftspodcast,Marius Kirmse
+33,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sportpsychologie auf Abstand hautnah erleben,"Dr. Jahan Heidari, Ewald Bormann"
+33,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Virtual Reality in der Vorlesung Sportmedizin (VR-Spomed),"Prof. Dr. Petra Platen, Dr. David Wiesche, Dominic Habenstein"
+33,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Sport Science goes Open Source: Entwicklung einer frei verfügbaren Softwarebibliothek für Lehre und Wissenschaft,"Robin Schäfer, Dr. Markus Reichert, Prof. Dr. Laurenz Wiskott, Pablo Nolte"
+34,2021-02-01T00:00:00Z,2022-04-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science for Psychologists - Integration von Machine Learning in das Modul Multivariate Verfahren,"Dr. Till Kaiser, Prof. Dr. Maike Luhmann"
+35,2021-02-01T00:00:00Z,2022-04-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science for Psychologists - Integration von Machine Learning in das Modul Multivariate Verfahren,"Dr. Till Kaiser, Prof. Dr. Maike Luhmann"
+36,2021-02-01T00:00:00Z,2022-04-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science for Psychologists - Integration von Machine Learning in das Modul Multivariate Verfahren,"Dr. Till Kaiser, Prof. Dr. Maike Luhmann"
+37,2021-02-01T00:00:00Z,2022-04-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science for Psychologists - Integration von Machine Learning in das Modul Multivariate Verfahren,"Dr. Till Kaiser, Prof. Dr. Maike Luhmann"
+38,2021-02-01T00:00:00Z,2022-04-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science for Psychologists - Integration von Machine Learning in das Modul Multivariate Verfahren,"Dr. Till Kaiser, Prof. Dr. Maike Luhmann"
+39,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Nachhaltigkeitsforschung in der Praxis – Die RUB als lebendes Labor für die Entwicklung und Umsetzung von Nachhaltigkeitsmaßnahmen über eine kooperative Einbindung in Forschung und Lehre,"Dr.-Ing. Christian Jolk, Prof. Dr. Harro Stolpe,Prof. Dr.-Ing. Martin Radenberg, Ina Schwarz, Matthias Thome, Johannes Gerwers, Dr. Ulrike Schulte"
+39,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,"""Blue Engineering“ - Soziale und ökologische Verantwortung von Ingenieurinnen und Ingenieuren","Prof. Dr. Harro Stolpe, M.Sc. Marvin Nöller, Kiara Stein"
+39,2019-04-01T00:00:00Z,2020-06-30T00:00:00Z,Studentische Initiativprojekte,Nachhaltiges Bauen und Wohnen am Beispiel Tiny House,"Ulrike Emonds, Marvin Nöller"
+40,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Nachhaltigkeitsforschung in der Praxis – Die RUB als lebendes Labor für die Entwicklung und Umsetzung von Nachhaltigkeitsmaßnahmen über eine kooperative Einbindung in Forschung und Lehre,"Dr.-Ing. Christian Jolk, Prof. Dr. Harro Stolpe,Prof. Dr.-Ing. Martin Radenberg, Ina Schwarz, Matthias Thome, Johannes Gerwers, Dr. Ulrike Schulte"
+40,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,"""Blue Engineering“ - Soziale und ökologische Verantwortung von Ingenieurinnen und Ingenieuren","Prof. Dr. Harro Stolpe, M.Sc. Marvin Nöller, Kiara Stein"
+40,2019-04-01T00:00:00Z,2020-06-30T00:00:00Z,Studentische Initiativprojekte,Nachhaltiges Bauen und Wohnen am Beispiel Tiny House,"Ulrike Emonds, Marvin Nöller"
+41,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Nachhaltigkeitsforschung in der Praxis – Die RUB als lebendes Labor für die Entwicklung und Umsetzung von Nachhaltigkeitsmaßnahmen über eine kooperative Einbindung in Forschung und Lehre,"Dr.-Ing. Christian Jolk, Prof. Dr. Harro Stolpe,Prof. Dr.-Ing. Martin Radenberg, Ina Schwarz, Matthias Thome, Johannes Gerwers, Dr. Ulrike Schulte"
+41,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,"""Blue Engineering“ - Soziale und ökologische Verantwortung von Ingenieurinnen und Ingenieuren","Prof. Dr. Harro Stolpe, M.Sc. Marvin Nöller, Kiara Stein"
+41,2019-04-01T00:00:00Z,2020-06-30T00:00:00Z,Studentische Initiativprojekte,Nachhaltiges Bauen und Wohnen am Beispiel Tiny House,"Ulrike Emonds, Marvin Nöller"
+42,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Maschinelles Lernen im Maschinenbau,Univ.-Prof. Dr.-Ing. Detlef Gerhard
+42,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,4 for U: Nachhaltige digitale Begleitung im internationalen Studiengang,"Jun.-Prof. Dr. Anna Grünebohm, Jutta Kellermann, Dr. Manuel Piacenza"
+42,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,eLanUm - Der ePfad durch die Lande der Umweltchemie,Prof. Dr. Thomas Müller
+42,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Werkstoffkunde für Studierende in der Studieneingangsphase neu gedacht - Entwicklung einer forschenden werkstoffkundlichen Lehre unter Berücksichtigung nachhaltiger Entwicklungsziele,Prof. Dr. Sebastian Weber
+42,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,KIbox - Kickbox-unterstützte Lösung von Nachhaltigkeits Challenges durch den Einsatz künstlicher Intelligenz,"Prof. Dr. Jens Pöppelbuß, Prof. Dr. Christian Meske"
+42,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,Sustainable Product and Business Development,"Prof. Dr.-Ing. Sebastian Weber, M.A. Tina Boes"
+42,2019-10-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Sales Challenge,"Marco Schneider, Nadine Lipka"
+43,NA,NA,NA,NA,NA
+44,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Maschinelles Lernen im Maschinenbau,Univ.-Prof. Dr.-Ing. Detlef Gerhard
+44,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,4 for U: Nachhaltige digitale Begleitung im internationalen Studiengang,"Jun.-Prof. Dr. Anna Grünebohm, Jutta Kellermann, Dr. Manuel Piacenza"
+44,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,eLanUm - Der ePfad durch die Lande der Umweltchemie,Prof. Dr. Thomas Müller
+44,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Werkstoffkunde für Studierende in der Studieneingangsphase neu gedacht - Entwicklung einer forschenden werkstoffkundlichen Lehre unter Berücksichtigung nachhaltiger Entwicklungsziele,Prof. Dr. Sebastian Weber
+44,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,KIbox - Kickbox-unterstützte Lösung von Nachhaltigkeits Challenges durch den Einsatz künstlicher Intelligenz,"Prof. Dr. Jens Pöppelbuß, Prof. Dr. Christian Meske"
+44,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,Sustainable Product and Business Development,"Prof. Dr.-Ing. Sebastian Weber, M.A. Tina Boes"
+44,2019-10-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Sales Challenge,"Marco Schneider, Nadine Lipka"
+46,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Big Data in der Windenergietechnik,"Prof. Dr.-Ing. Constantinos Sourkounis, Philip Krajinski"
+46,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+46,2020-10-01T00:00:00Z,2021-07-30T00:00:00Z,Innovative Praxisprojekte,Praxis-Startup - von der theoretischen Grundlagenveranstaltung zur innovativen Lösung praktischer Anwendungsprobleme,Prof. Dr. Martin Hofmann; Dr. Corinna Heldt
+47,NA,NA,NA,NA,NA
+48,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Online-Praktikumsversuch „Pulsarbeobachtungen bei langen Wellenlängen“,"Dr. Björn Adebahr, Dr. Peter Kamphuis"
+49,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Online-Praktikumsversuch „Pulsarbeobachtungen bei langen Wellenlängen“,"Dr. Björn Adebahr, Dr. Peter Kamphuis"
+50,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Digifit - Digital Geology meets Inclusive Field Training,"Prof. Dr. Tobias Backers, Samira Ahmadnia, Dr. Mandy Duda"
+50,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Blended Learning in der Grundwassermodellierung,Dr. Thomas Heinze
+50,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Eigenregie – Geländepraktikum selbst inszeniert,Dr. Sara Waßmann
+50,2022-03-01T00:00:00Z,2023-05-31T00:00:00Z,Erasmus Mundus Design Measures (EMDM),Re-Designing Post-Industrial Cities (joint Master),Prof. Dr. Thomas Feldhoff
+50,2019-10-01T00:00:00Z,2020-06-30T00:00:00Z,Forschendes Lernen,"Durch die Übernahme gesellschaftlicher Verantwortung lernen: ""Soziale Ungleichheit, Armut und Wohnen"" - ein Service-Learning Projekt am Geographischen Institut",Janine Bittner
+51,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Digifit - Digital Geology meets Inclusive Field Training,"Prof. Dr. Tobias Backers, Samira Ahmadnia, Dr. Mandy Duda"
+51,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Blended Learning in der Grundwassermodellierung,Dr. Thomas Heinze
+51,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Eigenregie – Geländepraktikum selbst inszeniert,Dr. Sara Waßmann
+51,2022-03-01T00:00:00Z,2023-05-31T00:00:00Z,Erasmus Mundus Design Measures (EMDM),Re-Designing Post-Industrial Cities (joint Master),Prof. Dr. Thomas Feldhoff
+51,2019-10-01T00:00:00Z,2020-06-30T00:00:00Z,Forschendes Lernen,"Durch die Übernahme gesellschaftlicher Verantwortung lernen: ""Soziale Ungleichheit, Armut und Wohnen"" - ein Service-Learning Projekt am Geographischen Institut",Janine Bittner
+52,2022-05-01T00:00:00Z,2023-04-30T00:00:00Z,Digitalisierung der Lehre,E-Teaching Biochemie – Vorbereitend.Begleitend.Kooperativ.,"Prof. Dr. Thomas Günther-Pomorski, Dr. Daniel Tapken"
+52,2020-05-01T00:00:00Z,2021-12-01T00:00:00Z,Innovative Praxisprojekte,Kollaboration im B2B Wertschöpfungsnetzwerk - Nutzung von Laborerfahrung für den Transfer zu Praxispartnern (Exploiting the Collaboration Space),"Prof. Dr. Uta Wilkens, Prof. Dr. Kristina Tschulik"
+53,2022-05-01T00:00:00Z,2023-04-30T00:00:00Z,Digitalisierung der Lehre,E-Teaching Biochemie – Vorbereitend.Begleitend.Kooperativ.,"Prof. Dr. Thomas Günther-Pomorski, Dr. Daniel Tapken"
+53,2020-05-01T00:00:00Z,2021-12-01T00:00:00Z,Innovative Praxisprojekte,Kollaboration im B2B Wertschöpfungsnetzwerk - Nutzung von Laborerfahrung für den Transfer zu Praxispartnern (Exploiting the Collaboration Space),"Prof. Dr. Uta Wilkens, Prof. Dr. Kristina Tschulik"
+54,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Statistik for you,Dr. Nina Minkley
+55,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Statistik for you,Dr. Nina Minkley
+56,2021-11-01T00:00:00Z,2022-12-31T00:00:00Z,Digitalisierung der Lehre,Digital-Modular-Learning-In-Surgery (DMLIS),"Dr. med. cand. habil Sebastian Brinkmann, Professor Dr. med. Dirk Bausch"
+56,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+56,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+56,2020-12-01T00:00:00Z,2021-02-28T00:00:00Z,Visiting Professors Linie 2,Gastdozentur Prof.Mazzolini,Prof. Dr. Thomas Feldhoff
+57,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+57,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Sport Science goes Open Source: Entwicklung einer frei verfügbaren Softwarebibliothek für Lehre und Wissenschaft,"Robin Schäfer, Dr. Markus Reichert, Prof. Dr. Laurenz Wiskott, Pablo Nolte"
+58,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Big Data in der Windenergietechnik,"Prof. Dr.-Ing. Constantinos Sourkounis, Philip Krajinski"
+58,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+58,2020-10-01T00:00:00Z,2021-07-30T00:00:00Z,Innovative Praxisprojekte,Praxis-Startup - von der theoretischen Grundlagenveranstaltung zur innovativen Lösung praktischer Anwendungsprobleme,Prof. Dr. Martin Hofmann; Dr. Corinna Heldt
+59,NA,NA,NA,NA,NA
+60,NA,NA,NA,NA,NA
+61,2021-01-01T00:00:00Z,2022-06-30T00:00:00Z,Forschendes Lernen,Begleitkurs zur Masterarbeit: Qualitative Methoden in der Krisenforschung,"Dr. Dennis Dijkzeul, Rafael Bohlen, Dr. habil. Christian Gudehus, Dr. Katrin Radtke"
+61,2019-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Online Enzyklopädie – Praktiken der Gewalt,Dr. Christian Gudehus
+61,2020-09-01T00:00:00Z,NA,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Douhan",Prof. Dr. Pierre Thielbörger
+61,2020-03-01T00:00:00Z,2020-08-31T00:00:00Z,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Hauser (1)",Prof. Dr. Pierre Thielbörger
+61,2019-09-01T00:00:00Z,2020-02-29T00:00:00Z,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Mälksoo",Prof. Dr. Pierre Thielbörger
+61,2020-03-01T00:00:00Z,2020-08-31T00:00:00Z,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Oberleitner",Prof. Dr. Pierre Thielbörger
+61,2021-09-01T00:00:00Z,2022-01-31T00:00:00Z,Visiting Professors Linie 3,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Hauser (2)",Prof. Dr. Pierre Thielbörger
+62,2020-11-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Religionskontakt zwischen Ost und West: Zeitgenössische Phänomene und ihre antiken Hintergründe,Dr. Rosel Pientka-Hinz
+62,2020-04-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Zwischen Bilderflut und Bildersturm: Zur Rolle von Bildern in Religion und Gesellschaft (2.0),"Dr. Martin Radermacher, Dr. Patrick F. Krüger, Dr. Jens Schlamelcher, FSR Religionswissenschaft"
+62,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Digitales Museum,"Stefanie Kramer, Jens Schlamelcher"
+62,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Frederik Elwert
+62,2020-06-01T00:00:00Z,2021-09-30T00:00:00Z,interLECTURE,Globale Christentümer: Theologische und religionswissenschaftliche Perspektiven,"Vertr.-Prof. Dr. Martin Radermacher, Prof. Dr. Cladia Jahnel, Prof. Dr.Bernhard Grümme, Dr. Jens Schlamelcher, Dr. Claudia Rammelt, Dr. habil. Kristin Platt"
+63,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+63,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,KIbox - Kickbox-unterstützte Lösung von Nachhaltigkeits Challenges durch den Einsatz künstlicher Intelligenz,"Prof. Dr. Jens Pöppelbuß, Prof. Dr. Christian Meske"
+63,2020-05-01T00:00:00Z,2021-12-01T00:00:00Z,Innovative Praxisprojekte,Kollaboration im B2B Wertschöpfungsnetzwerk - Nutzung von Laborerfahrung für den Transfer zu Praxispartnern (Exploiting the Collaboration Space),"Prof. Dr. Uta Wilkens, Prof. Dr. Kristina Tschulik"
+64,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Big Data in der Windenergietechnik,"Prof. Dr.-Ing. Constantinos Sourkounis, Philip Krajinski"
+64,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+64,2020-10-01T00:00:00Z,2021-07-30T00:00:00Z,Innovative Praxisprojekte,Praxis-Startup - von der theoretischen Grundlagenveranstaltung zur innovativen Lösung praktischer Anwendungsprobleme,Prof. Dr. Martin Hofmann; Dr. Corinna Heldt
+70,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,Unternehmensnachfolge,Prof. Dr. Katharina Uffmann
+71,2021-11-01T00:00:00Z,2022-12-31T00:00:00Z,Digitalisierung der Lehre,Digital-Modular-Learning-In-Surgery (DMLIS),"Dr. med. cand. habil Sebastian Brinkmann, Professor Dr. med. Dirk Bausch"
+71,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+71,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+71,2020-12-01T00:00:00Z,2021-02-28T00:00:00Z,Visiting Professors Linie 2,Gastdozentur Prof.Mazzolini,Prof. Dr. Thomas Feldhoff
+72,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Digifit - Digital Geology meets Inclusive Field Training,"Prof. Dr. Tobias Backers, Samira Ahmadnia, Dr. Mandy Duda"
+72,2022-05-01T00:00:00Z,2023-04-30T00:00:00Z,Digitalisierung der Lehre,E-Teaching Biochemie – Vorbereitend.Begleitend.Kooperativ.,"Prof. Dr. Thomas Günther-Pomorski, Dr. Daniel Tapken"
+72,2022-02-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Sprache 4.0 — Digitale Kompetenzen für China,Rüdiger Breuer
+72,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,#history – Geschichte(n) erzählen mit dem Smartphone,Mia Berg
+72,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Blended Learning in der Grundwassermodellierung,Dr. Thomas Heinze
+72,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+72,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Diagnostik-Szenarios in der Sportmedizin (Diagnostik-Spomed),Prof. Dr. Petra Platen
+72,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+72,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,EDIT – gEschichte DIgiTal produzieren,"Jun.-Prof. Dr. Christian Bunnenberg, Theresa Hiller, Elena Lewers"
+72,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Eigenregie – Geländepraktikum selbst inszeniert,Dr. Sara Waßmann
+72,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Fit & smart? Fitness Apps in der Sportwissenschaft auf dem Prüfstand,Dr. Sarah Jakowski
+72,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,LAMPE - Learning About Methods with Personalized E-Learning-Tools,"Dr. Katja Serova, Cosima Quirl, Inga Lotte Limpinsel, Bernadette Hagen"
+72,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+72,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Lehrsammlungen in Bewegung,Dr. Soi Agelidis
+72,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Mach Dich auf: Dein W(BT)eg zum erfolgreichen Projektmanagement,"Dominic Habenstein, Dr. Arno Krombholz"
+72,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+72,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Online-Praktikumsversuch „Pulsarbeobachtungen bei langen Wellenlängen“,"Dr. Björn Adebahr, Dr. Peter Kamphuis"
+72,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+72,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,"Shouki – Lernen mit Smartphone, Videos und Anki","Prof. Dr. Christian Schwermann, Mi Liu"
+72,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sporternährung für Prävention und Rehabilitation – der Wissenschaftspodcast,Marius Kirmse
+72,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sportpsychologie auf Abstand hautnah erleben,"Dr. Jahan Heidari, Ewald Bormann"
+72,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Statistik for you,Dr. Nina Minkley
+72,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Theorien verstehen am CASE durch Collaboration, Anwendung, Situiertheit und Elaboration","Dr. Valentina Nachtigall, Berke Kücük, Prof. Dr. Nikol Rummel"
+72,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Together in (RUB-)Town – Proseminar mit Gamification anreichern,"Aleksandra Brand, Prof. Dr. Thomas Söding"
+72,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Virtual Reality in der Vorlesung Sportmedizin (VR-Spomed),"Prof. Dr. Petra Platen, Dr. David Wiesche, Dominic Habenstein"
+72,2022-03-01T00:00:00Z,2023-05-31T00:00:00Z,Erasmus Mundus Design Measures (EMDM),Re-Designing Post-Industrial Cities (joint Master),Prof. Dr. Thomas Feldhoff
+72,2019-10-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Außer Spesen nichts gewesen? - Schulden und öffentliche Haushalte im Mittelalter am Beispiel der Stadtrechnungen von Kalkar.,Dr. Jens Lieven
+72,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Ausstellungen eigenständig gestalten im Masterstudiengang Public History,Jun.-Prof. Dr. Christian Bunnenberg
+72,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+72,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+72,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+72,2019-10-01T00:00:00Z,2020-06-30T00:00:00Z,Forschendes Lernen,"Durch die Übernahme gesellschaftlicher Verantwortung lernen: ""Soziale Ungleichheit, Armut und Wohnen"" - ein Service-Learning Projekt am Geographischen Institut",Janine Bittner
+72,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+72,2021-01-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Grow - Mit der Grounded Theory-Methodologie gemeinsam im Forschen wachsen,"Olga Neuberger, Inga Lotta Limpinsel, Raphaela Gilles, Prof. Dr. Sandra Aßmann"
+72,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Interkulturelle Bibelhermeneutiken. Kontextuelle Exegese im theologisch-interdisziplinären Diskurs,"Alena Höfer, Malte Cramer"
+72,2020-04-01T00:00:00Z,2022-09-30T00:00:00Z,Forschendes Lernen,"KEVIN - Kooperative EValuationsforschung einer INformatik-Vorlesung
+","Dr. Katja Serova, Selina Yek"
+72,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Landschaftsarchäologie begreifen. Entwicklung eigenständiger Forschungsansätze im Rahmen der Feldforschungsprojekte der Ur- und Frühgeschichte,"Jun.-Prof. Dr. Constance von Rüden, Prof. Dr. Thomas Stöllner, Dr. des. Aydin Abar"
+72,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+72,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,Making History: Thematische und methodische Einblicke in die Erstellung von geschichtswissenschaftlichen Bachelorarbeiten,"Anna Victoria Breidenbach, Robert Queckenberg, Prof. Dr. Christian Wendt, Jun.-Prof. Dr. Tim Neu, Jun.-Prof. Dr. Juliane Czierpka"
+72,2019-10-01T00:00:00Z,2020-07-31T00:00:00Z,Forschendes Lernen,Migration lokal denken. Begegnungen mit religiösen Gemeinschaften in NRW,"Prof. Dr. Claudia Jahnel, Dr. Claudia Rammelt"
+72,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+72,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+72,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+72,2021-04-01T00:00:00Z,2021-12-31T00:00:00Z,Forschendes Lernen,Traumatheologie: Kritische Bibellektüre anhand von Leiderfahrungen.  Entwicklung eines Tagungs- und Seminarkonzepts mit Studierenden zur angewandten wissenschaftlichen Exegese von Bibeltexten.,Prof. Dr. Peter Wick
+72,2021-04-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Von der Neugier zur Publikation. Einblicke in die Projektentwicklung und die Durchführung archäologischer Feldforschung in den tridentiner Alpen (Italien),Dr. des. Aydin Abar
+72,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+72,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",DigiAttika 2.0: Analytische Ansätze zu einem digitalen Repositorium,Dr. phil. Barbora Weissova
+72,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+72,2020-10-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science","Interaktivierung eines Staubfängers:
+Das Potential archivarischer Daten entdecken und mit Data Science erschließen",Dr. Barbora Weissova
+72,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+72,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+72,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Sport Science goes Open Source: Entwicklung einer frei verfügbaren Softwarebibliothek für Lehre und Wissenschaft,"Robin Schäfer, Dr. Markus Reichert, Prof. Dr. Laurenz Wiskott, Pablo Nolte"
+72,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+72,2020-05-01T00:00:00Z,2021-12-01T00:00:00Z,Innovative Praxisprojekte,Kollaboration im B2B Wertschöpfungsnetzwerk - Nutzung von Laborerfahrung für den Transfer zu Praxispartnern (Exploiting the Collaboration Space),"Prof. Dr. Uta Wilkens, Prof. Dr. Kristina Tschulik"
+72,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,"Religiöse Pluralität entdecken, reflektieren und diskutierend sichtbar machen","Prof. Dr. Claudia Jahnel, Dr. Claudia Rammelt"
+72,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+72,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+72,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+72,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Lena Liefke
+72,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+72,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+72,2020-06-01T00:00:00Z,2021-09-30T00:00:00Z,interLECTURE,Globale Christentümer: Theologische und religionswissenschaftliche Perspektiven,"Vertr.-Prof. Dr. Martin Radermacher, Prof. Dr. Cladia Jahnel, Prof. Dr.Bernhard Grümme, Dr. Jens Schlamelcher, Dr. Claudia Rammelt, Dr. habil. Kristin Platt"
+72,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+72,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+72,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+72,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+72,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+72,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernen Durch Erinnern,"Sebastian Döpp, Thorben Pieper, Luise Mohr, Chris Buchholz, Jano Meyer, Janina Schäuffele"
+72,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+72,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Dr. Sticker",Prof. Dr. Corinna Mieth
+72,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Araujo",Prof. Dr. Corinna Mieth
+72,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Moolio",Prof. Dr. Corinna Mieth
+72,2020-10-01T00:00:00Z,2021-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Pinzani",Prof. Dr. Corinna Mieth
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Digifit - Digital Geology meets Inclusive Field Training,"Prof. Dr. Tobias Backers, Samira Ahmadnia, Dr. Mandy Duda"
+74,2021-11-01T00:00:00Z,2022-12-31T00:00:00Z,Digitalisierung der Lehre,Digital-Modular-Learning-In-Surgery (DMLIS),"Dr. med. cand. habil Sebastian Brinkmann, Professor Dr. med. Dirk Bausch"
+74,2022-05-01T00:00:00Z,2023-04-30T00:00:00Z,Digitalisierung der Lehre,E-Teaching Biochemie – Vorbereitend.Begleitend.Kooperativ.,"Prof. Dr. Thomas Günther-Pomorski, Dr. Daniel Tapken"
+74,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Gründungsbausteine - Micro Degrees für Entrepreneure,Prof. Dr. Nicola Werbeck
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Digitalisierung der Lehre,Maschinelles Lernen im Maschinenbau,Univ.-Prof. Dr.-Ing. Detlef Gerhard
+74,2022-02-01T00:00:00Z,2023-03-31T00:00:00Z,Digitalisierung der Lehre,Sprache 4.0 — Digitale Kompetenzen für China,Rüdiger Breuer
+74,2021-10-01T00:00:00Z,2022-12-31T00:00:00Z,DiversiTEACH (MKW),DiversiTEACH,Dr. Henning Feldmann
+74,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,#history – Geschichte(n) erzählen mit dem Smartphone,Mia Berg
+74,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,4 for U: Nachhaltige digitale Begleitung im internationalen Studiengang,"Jun.-Prof. Dr. Anna Grünebohm, Jutta Kellermann, Dr. Manuel Piacenza"
+74,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Blended Learning in der Grundwassermodellierung,Dr. Thomas Heinze
+74,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Campus im Fokus – Feldforschung nach dem Lockdown,"Dr. Nino Aivazishvili-Gehne, Seda Sönmeztürk"
+74,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Diagnostik-Szenarios in der Sportmedizin (Diagnostik-Spomed),Prof. Dr. Petra Platen
+74,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Doing Health in a digitized world – (Digitale) Gesundheitskompetenz aus praxeologischer Perspektive,Prof. Dr. Sebastian Merkel
+74,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,EDIT – gEschichte DIgiTal produzieren,"Jun.-Prof. Dr. Christian Bunnenberg, Theresa Hiller, Elena Lewers"
+74,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Eigenregie – Geländepraktikum selbst inszeniert,Dr. Sara Waßmann
+74,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,eLanUm - Der ePfad durch die Lande der Umweltchemie,Prof. Dr. Thomas Müller
+74,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Fit & smart? Fitness Apps in der Sportwissenschaft auf dem Prüfstand,Dr. Sarah Jakowski
+74,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Im Ra(h)men des Möglichen – ein digitales Lehrkonzept zur kombinierten Anwendung abwechslungsreicher e-Learning Tools,"Robin Stetzka, Melissa Kistner, Elka Thevanesan"
+74,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,LAMPE - Learning About Methods with Personalized E-Learning-Tools,"Dr. Katja Serova, Cosima Quirl, Inga Lotte Limpinsel, Bernadette Hagen"
+74,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Learning Hubs – das Smartphone als e-Learning Tool und Analysegegenstand im Bereich der Virtual Reality,Janou Feikens
+74,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Lehrsammlungen in Bewegung,Dr. Soi Agelidis
+74,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Mach Dich auf: Dein W(BT)eg zum erfolgreichen Projektmanagement,"Dominic Habenstein, Dr. Arno Krombholz"
+74,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Mediävistisches Varieté: Eine Bühne für die mittelalterliche Sprache und Literatur,PD Dr. Michael Ralf Ott
+74,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Online-Praktikumsversuch „Pulsarbeobachtungen bei langen Wellenlängen“,"Dr. Björn Adebahr, Dr. Peter Kamphuis"
+74,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Ready, Set, Play! Game based Learning und Blended Learning in der Medienwissenschaft",Janou Feikens
+74,2021-08-19T00:00:00Z,2022-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,"Shouki – Lernen mit Smartphone, Videos und Anki","Prof. Dr. Christian Schwermann, Mi Liu"
+74,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sporternährung für Prävention und Rehabilitation – der Wissenschaftspodcast,Marius Kirmse
+74,2020-08-19T00:00:00Z,2021-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Sportpsychologie auf Abstand hautnah erleben,"Dr. Jahan Heidari, Ewald Bormann"
+74,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Statistik for you,Dr. Nina Minkley
+74,2020-02-19T00:00:00Z,2020-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,"Theorien verstehen am CASE durch Collaboration, Anwendung, Situiertheit und Elaboration","Dr. Valentina Nachtigall, Berke Kücük, Prof. Dr. Nikol Rummel"
+74,2021-03-04T00:00:00Z,2021-09-30T00:00:00Z,eLearning-Wettbewerb 5x5000,Together in (RUB-)Town – Proseminar mit Gamification anreichern,"Aleksandra Brand, Prof. Dr. Thomas Söding"
+74,2019-08-06T00:00:00Z,2020-03-31T00:00:00Z,eLearning-Wettbewerb 5x5000,Virtual Reality in der Vorlesung Sportmedizin (VR-Spomed),"Prof. Dr. Petra Platen, Dr. David Wiesche, Dominic Habenstein"
+74,2022-03-01T00:00:00Z,2023-05-31T00:00:00Z,Erasmus Mundus Design Measures (EMDM),Re-Designing Post-Industrial Cities (joint Master),Prof. Dr. Thomas Feldhoff
+74,2021-08-01T00:00:00Z,2021-08-31T00:00:00Z,Extra-Zeit zum Lernen (MSB),FerienUNiversität,"Dr. Henning Feldmann, Dr. Carolin Kull"
+74,2019-10-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Außer Spesen nichts gewesen? - Schulden und öffentliche Haushalte im Mittelalter am Beispiel der Stadtrechnungen von Kalkar.,Dr. Jens Lieven
+74,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Ausstellungen eigenständig gestalten im Masterstudiengang Public History,Jun.-Prof. Dr. Christian Bunnenberg
+74,2021-01-01T00:00:00Z,2022-06-30T00:00:00Z,Forschendes Lernen,Begleitkurs zur Masterarbeit: Qualitative Methoden in der Krisenforschung,"Dr. Dennis Dijkzeul, Rafael Bohlen, Dr. habil. Christian Gudehus, Dr. Katrin Radtke"
+74,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Bildanalysen zu ""Corona""",Dr. Silke Müller
+74,2020-06-01T00:00:00Z,2020-11-30T00:00:00Z,Forschendes Lernen,Data Analytics in Accounting,Prof. Dr. Devrimi Kaya
+74,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Der künstliche Text. Eine Editionswerkstatt zu Konrads von Würzburgs 'Engelhard'.,Dr. phil. Lina Herz
+74,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Digitale Methoden in der Klassischen Philologie: „Dyskolos“ digital,Julia Jennifer Beine
+74,2019-10-01T00:00:00Z,2020-06-30T00:00:00Z,Forschendes Lernen,"Durch die Übernahme gesellschaftlicher Verantwortung lernen: ""Soziale Ungleichheit, Armut und Wohnen"" - ein Service-Learning Projekt am Geographischen Institut",Janine Bittner
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Eintauchen in (post-)migrantische Lebenswelten. Praxisnahe und reflexive Forschung in Bochum,"Prof. Dr. Dieter Haller, Prof. Dr. Jürgen Straub, Dr. Nino Aivazishvili-Gehne"
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,"Forschendes Lernen: Datengetriebene, agenten-basierte Modellierung im Team (jeweils BSc und MSc Modul)","Dr. Frederik Schaff, Said Benjamin Bonakdar"
+74,2021-01-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Grow - Mit der Grounded Theory-Methodologie gemeinsam im Forschen wachsen,"Olga Neuberger, Inga Lotta Limpinsel, Raphaela Gilles, Prof. Dr. Sandra Aßmann"
+74,2021-10-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Interkulturelle Bibelhermeneutiken. Kontextuelle Exegese im theologisch-interdisziplinären Diskurs,"Alena Höfer, Malte Cramer"
+74,2020-04-01T00:00:00Z,2022-09-30T00:00:00Z,Forschendes Lernen,"KEVIN - Kooperative EValuationsforschung einer INformatik-Vorlesung
+","Dr. Katja Serova, Selina Yek"
+74,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,Landschaftsarchäologie begreifen. Entwicklung eigenständiger Forschungsansätze im Rahmen der Feldforschungsprojekte der Ur- und Frühgeschichte,"Jun.-Prof. Dr. Constance von Rüden, Prof. Dr. Thomas Stöllner, Dr. des. Aydin Abar"
+74,NA,NA,Forschendes Lernen,Lernreise - innovative Schulkonzepte entdecken und erforschen,"Prof. Dr. Gabriele Bellenberg, Nadine Ponto"
+74,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Forschendes Lernen,"Literarische Topographie. Erstellung einer interaktiven Online-Karte zu Ernst Jüngers Roman ""Heliopolis""",Dr. Manuel Mackasare
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Forschendes Lernen,Making History: Thematische und methodische Einblicke in die Erstellung von geschichtswissenschaftlichen Bachelorarbeiten,"Anna Victoria Breidenbach, Robert Queckenberg, Prof. Dr. Christian Wendt, Jun.-Prof. Dr. Tim Neu, Jun.-Prof. Dr. Juliane Czierpka"
+74,2019-10-01T00:00:00Z,2020-07-31T00:00:00Z,Forschendes Lernen,Migration lokal denken. Begegnungen mit religiösen Gemeinschaften in NRW,"Prof. Dr. Claudia Jahnel, Dr. Claudia Rammelt"
+74,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Nachhaltigkeitsforschung in der Praxis – Die RUB als lebendes Labor für die Entwicklung und Umsetzung von Nachhaltigkeitsmaßnahmen über eine kooperative Einbindung in Forschung und Lehre,"Dr.-Ing. Christian Jolk, Prof. Dr. Harro Stolpe,Prof. Dr.-Ing. Martin Radenberg, Ina Schwarz, Matthias Thome, Johannes Gerwers, Dr. Ulrike Schulte"
+74,2019-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Online Enzyklopädie – Praktiken der Gewalt,Dr. Christian Gudehus
+74,2020-10-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Pergament und Mikrofon: Ein Mediävistischer Podcast,"Holger Kahle, Anika Meißner"
+74,2020-11-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Religionskontakt zwischen Ost und West: Zeitgenössische Phänomene und ihre antiken Hintergründe,Dr. Rosel Pientka-Hinz
+74,2019-04-01T00:00:00Z,2020-03-31T00:00:00Z,Forschendes Lernen,Sozialer Statuswandel in Migrationsbiographien - Biographische Analyse sozialer Positionierungsprozesse von Geflüchteten mit Gewalterfahrung und/oder prekärem Aufenthaltsstatus,Christian Schramm
+74,2019-06-01T00:00:00Z,2019-08-31T00:00:00Z,Forschendes Lernen,Sprache - Literatur - Kultur: Chile im Spanischunterricht,"Jun.-Prof. Dr. Yasmin Temelli, Prof. Dr. Christian Grünnagel, Prof. Dr. Judith Visser"
+74,2021-04-01T00:00:00Z,2021-12-31T00:00:00Z,Forschendes Lernen,Traumatheologie: Kritische Bibellektüre anhand von Leiderfahrungen.  Entwicklung eines Tagungs- und Seminarkonzepts mit Studierenden zur angewandten wissenschaftlichen Exegese von Bibeltexten.,Prof. Dr. Peter Wick
+74,2021-04-01T00:00:00Z,2021-10-31T00:00:00Z,Forschendes Lernen,Von der Neugier zur Publikation. Einblicke in die Projektentwicklung und die Durchführung archäologischer Feldforschung in den tridentiner Alpen (Italien),Dr. des. Aydin Abar
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Forschendes Lernen,Werkstoffkunde für Studierende in der Studieneingangsphase neu gedacht - Entwicklung einer forschenden werkstoffkundlichen Lehre unter Berücksichtigung nachhaltiger Entwicklungsziele,Prof. Dr. Sebastian Weber
+74,2020-04-01T00:00:00Z,2021-09-30T00:00:00Z,Forschendes Lernen,Zwischen Bilderflut und Bildersturm: Zur Rolle von Bildern in Religion und Gesellschaft (2.0),"Dr. Martin Radermacher, Dr. Patrick F. Krüger, Dr. Jens Schlamelcher, FSR Religionswissenschaft"
+74,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Big Data in der Windenergietechnik,"Prof. Dr.-Ing. Constantinos Sourkounis, Philip Krajinski"
+74,2021-02-01T00:00:00Z,2022-04-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science for Psychologists - Integration von Machine Learning in das Modul Multivariate Verfahren,"Dr. Till Kaiser, Prof. Dr. Maike Luhmann"
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Data Science in Finance,"Prof. Dr. Stephan Paul, Doron Reichmann"
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Datenkompetenz im Gesundheitsbereich am praktischen Beispiel ausgewählter Gesundheitsapps,"Birgit Zeyer-Gliozzo, Dr. Barbara Emons, Prof. Dr. Thorsten Schäfer, Prof. Dr. Markus Dürmuth"
+74,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",DigiAttika 2.0: Analytische Ansätze zu einem digitalen Repositorium,Dr. phil. Barbora Weissova
+74,2021-10-01T00:00:00Z,2022-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Digitale Analyse großer Textkorpora,"Dr. Stephanie Heimgartner, Jun.-Prof. Dr. Tatjana Scheffler, Prof. Dr. Stefanie Dipper, Prof. Dr. Judith Visser"
+74,2020-10-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science","Interaktivierung eines Staubfängers:
+Das Potential archivarischer Daten entdecken und mit Data Science erschließen",Dr. Barbora Weissova
+74,2020-02-01T00:00:00Z,2021-09-30T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Interdisziplinär mit digitalen Daten forschen,"Prof. Dr. Estrid Sørensen, Dipl.-Biol. Kerstin Kallweit"
+74,2020-09-01T00:00:00Z,2021-08-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",LIMELDAS: Linguistische Methoden: Linguistic Data Science,"Prof. Dr. Eva Belke, Jun.-Prof. Dr. Agata Renans, Prof. Dr. Stefanie Dipper, Prof. Dr. Tanja Anstatt, Prof. Dr. Judith Visser, Prof. Dr. Lena Heine, Prof. Dr. Eric Fuß, Prof. Dr. Karin Pittner, Jun.-Prof. Dr. Tatjana Scheffler"
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,"Forschendes Lernen, Schwerpunkt Data Science",Sport Science goes Open Source: Entwicklung einer frei verfügbaren Softwarebibliothek für Lehre und Wissenschaft,"Robin Schäfer, Dr. Markus Reichert, Prof. Dr. Laurenz Wiskott, Pablo Nolte"
+74,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,"""Blue Engineering“ - Soziale und ökologische Verantwortung von Ingenieurinnen und Ingenieuren","Prof. Dr. Harro Stolpe, M.Sc. Marvin Nöller, Kiara Stein"
+74,2020-08-15T00:00:00Z,2021-08-15T00:00:00Z,Innovative Praxisprojekte,Den Campus mitgestalten! Gründung eines Zentrums für simulationsbasierte Lehre (ZSBL) an der RUB,"Prof. Dr. Joachim Wirth, Prof. Dr. Uta Wilkens, Prof. Dr. Thorsten Schäfer"
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Digitales Museum,"Stefanie Kramer, Jens Schlamelcher"
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Innovationsmanagement,Prof. Dr. Matthias Weiss
+74,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,KIbox - Kickbox-unterstützte Lösung von Nachhaltigkeits Challenges durch den Einsatz künstlicher Intelligenz,"Prof. Dr. Jens Pöppelbuß, Prof. Dr. Christian Meske"
+74,2020-05-01T00:00:00Z,2021-12-01T00:00:00Z,Innovative Praxisprojekte,Kollaboration im B2B Wertschöpfungsnetzwerk - Nutzung von Laborerfahrung für den Transfer zu Praxispartnern (Exploiting the Collaboration Space),"Prof. Dr. Uta Wilkens, Prof. Dr. Kristina Tschulik"
+74,2020-10-01T00:00:00Z,2021-07-30T00:00:00Z,Innovative Praxisprojekte,Praxis-Startup - von der theoretischen Grundlagenveranstaltung zur innovativen Lösung praktischer Anwendungsprobleme,Prof. Dr. Martin Hofmann; Dr. Corinna Heldt
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,"Religiöse Pluralität entdecken, reflektieren und diskutierend sichtbar machen","Prof. Dr. Claudia Jahnel, Dr. Claudia Rammelt"
+74,2022-04-01T00:00:00Z,2023-03-31T00:00:00Z,Innovative Praxisprojekte,Sustainable Product and Business Development,"Prof. Dr.-Ing. Sebastian Weber, M.A. Tina Boes"
+74,2021-04-01T00:00:00Z,2022-03-31T00:00:00Z,Innovative Praxisprojekte,Technikzukünfte in der deutschsprachigen Science-Fiction-Literatur. Literaturwissenschaft als soziale Praxis,"Prof. Dr. Ralph Köhnen, Markus Tillmann"
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,Unternehmensnachfolge,Prof. Dr. Katharina Uffmann
+74,2020-09-01T00:00:00Z,2021-03-31T00:00:00Z,Innovative Praxisprojekte,WORTWORTWORT. Begleitung eines Literaturfestivals,Dr. Stephanie Heimgartner
+74,2020-10-01T00:00:00Z,2020-12-31T00:00:00Z,inSTUDIES/Forschendes Lernen hoch 3,Gelebte Kritik. Gesellschaftliche Utopien im individuellen Handeln,"Prof. Dr. Jürgen Straub, Rebecca Thrun"
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Frederik Elwert
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Lena Liefke
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Dr. Stephanie Heimgartner
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Sebastian Gerhartz
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,„tl;dr“ Too long; didn’t read (?) Große Textmengen computergestützt analysieren,Stefan Reiners
+74,2020-04-01T00:00:00Z,2021-03-31T00:00:00Z,inSTUDIES/Summer Schools,Digitalisierung macht Schule,Dr. Henning Feldmann
+74,2020-06-01T00:00:00Z,2021-09-30T00:00:00Z,interLECTURE,Globale Christentümer: Theologische und religionswissenschaftliche Perspektiven,"Vertr.-Prof. Dr. Martin Radermacher, Prof. Dr. Cladia Jahnel, Prof. Dr.Bernhard Grümme, Dr. Jens Schlamelcher, Dr. Claudia Rammelt, Dr. habil. Kristin Platt"
+74,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,interLECTURE,No-Go-Areas erfoschren: Aspekte räumlicher Begrenzung und ihrer Medialisierung,"Dr. Stephanie Heimgartner, Dr. Hilde Hoffmann, Dr. Olena Petrenko,"
+74,2019-04-17T00:00:00Z,2021-09-30T00:00:00Z,Landesmasterprogramm,Inklusionsorientierte Ausbildungsanteile M.Ed.,"Prof. Dr. Judith Visser, Dr. Henning Feldmann"
+74,2021-01-01T00:00:00Z,2024-12-31T00:00:00Z,Lehramt.International (DAAD),PiStE,"Prof. Dr. Björn Rothstein, Prof. Dr. Judith Visser, Dr. Henning Feldmann"
+74,2019-04-01T00:00:00Z,2021-06-30T00:00:00Z,MERCUR,StuP digital,"Prof. Dr. Gabriele Bellenberg, Dr. Henning Feldmann"
+74,2020-03-01T00:00:00Z,2023-12-31T00:00:00Z,Qualitätsoffensive Lehrerbildung,DiAL:OGe,"Prof. Dr. Gabriele Bellenberg, Dr. Henning Feldmann"
+74,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Studentische Initiativprojekte,Die Sprache der Dinge,"Samira Kleinschmidt, Clara Stolz"
+74,2019-04-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Digital Marketing in Practice,"Anna Klötzer, Lisa Hartmann"
+74,2019-10-01T00:00:00Z,2020-12-31T00:00:00Z,Studentische Initiativprojekte,Fake News,"Jennifer Haas, Julia Schmidt, Christina Lammering"
+74,2019-04-01T00:00:00Z,NA,Studentische Initiativprojekte,HERMAION 3.0,"Robert Queckenberg, Carina Liebel, Kristina Ahrens"
+74,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Studentische Initiativprojekte,Leben Verstehen,Emre Ünal
+74,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernen Durch Erinnern,"Sebastian Döpp, Thorben Pieper, Luise Mohr, Chris Buchholz, Jano Meyer, Janina Schäuffele"
+74,2019-10-01T00:00:00Z,2021-03-31T00:00:00Z,Studentische Initiativprojekte,Lernreise,"Hanna Wilming, Karina Mauksch, Nadine Ponto, Archun Rajaratnam"
+74,2019-04-01T00:00:00Z,2020-06-30T00:00:00Z,Studentische Initiativprojekte,Nachhaltiges Bauen und Wohnen am Beispiel Tiny House,"Ulrike Emonds, Marvin Nöller"
+74,2019-10-01T00:00:00Z,2020-07-31T00:00:00Z,Studentische Initiativprojekte,Sales Challenge,"Marco Schneider, Nadine Lipka"
+74,2019-04-01T00:00:00Z,2020-09-30T00:00:00Z,Studentische Initiativprojekte,Ungebunden. Projekt Literaturagentur,"Nina Kullmann, Lisa Brammertz, Marlon Brand"
+74,2020-04-01T00:00:00Z,2020-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Dr. Sticker",Prof. Dr. Corinna Mieth
+74,2019-10-01T00:00:00Z,2020-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Araujo",Prof. Dr. Corinna Mieth
+74,2019-04-01T00:00:00Z,2019-09-30T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Moolio",Prof. Dr. Corinna Mieth
+74,2020-10-01T00:00:00Z,2021-03-31T00:00:00Z,Visiting Professors Linie 1,"EELP-Gastlehrstuhl, Gastdoz. Prof. Pinzani",Prof. Dr. Corinna Mieth
+74,2020-09-01T00:00:00Z,NA,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Douhan",Prof. Dr. Pierre Thielbörger
+74,2020-03-01T00:00:00Z,2020-08-31T00:00:00Z,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Hauser (1)",Prof. Dr. Pierre Thielbörger
+74,2019-09-01T00:00:00Z,2020-02-29T00:00:00Z,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Mälksoo",Prof. Dr. Pierre Thielbörger
+74,2020-03-01T00:00:00Z,2020-08-31T00:00:00Z,Visiting Professors Linie 1,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Oberleitner",Prof. Dr. Pierre Thielbörger
+74,2020-12-01T00:00:00Z,2021-02-28T00:00:00Z,Visiting Professors Linie 2,Gastdozentur Prof.Mazzolini,Prof. Dr. Thomas Feldhoff
+74,2021-09-01T00:00:00Z,2022-01-31T00:00:00Z,Visiting Professors Linie 3,"IFHV-Gastlehrstuhl, Gastdoz. Prof. Hauser (2)",Prof. Dr. Pierre Thielbörger
