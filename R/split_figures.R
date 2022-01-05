@@ -132,8 +132,13 @@ split_figures <- function(
         shard
       ) %>%
       dplyr::mutate(
-        figure_height = 4 * dplyr::n_distinct(
-          aggregation_id_1
+        figure_height = 4 + (
+          # Every additional facet only 80% of original height of 4
+          (
+            dplyr::n_distinct(
+              aggregation_id_1
+            ) - 1
+          ) * 3.2
         )
       ) %>%
       dplyr::ungroup()
