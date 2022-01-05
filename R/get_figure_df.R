@@ -13,7 +13,14 @@ get_figure_df <- function(df, figure_count) {
   figure_df <- dplyr::filter(
     df,
     figure_count == {{ figure_count }}
-  )
+  ) %>%
+    dplyr::arrange(
+      report_nr,
+      figure_count,
+      aggregation_sort_1,
+      abbildung_map_sort,
+      wert_sort
+    )
 
   figure_df <- set_factors(figure_df)
 
