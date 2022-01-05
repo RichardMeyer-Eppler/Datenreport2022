@@ -333,7 +333,7 @@ get_static_height <- function(
   # Abbildungsbeschriftung / Quellenangabe 1.1 cm
   # cm to inch 0.393701
   static_height <- (question_extra_rows * 0.9 +
-    legend_rows * 1 +
+    legend_rows * 0.8 +
     1.1
     ) * 0.393701
 
