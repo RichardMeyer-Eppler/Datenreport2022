@@ -13,7 +13,7 @@ lang: de
 output:
   officedown::rdocx_document:
     reference_docx: rub_reference_2021.docx
-    keep_md: false
+    keep_md: true
     toc: true
     toc_depth: 2
     page_size:
@@ -96,6 +96,18 @@ extrafont::loadfonts(
 # df <- report_1
 
 df <- params$p_df
+
+n_items <- 8L
+
+df_item <- Datenreport2022::get_item_df(
+  df,
+  n_items = n_items
+)
+
+df_item_flag <- nrow(
+  df_item
+) >= n_items
+
 df_stg_null <- is.null(
   params$p_df_stg
 )
@@ -128,8 +140,40 @@ if(!df_stg_null) {
 }
 
 # df <- df_fake_complete
-
 # https://bookdown.org/yihui/bookdown/cross-references.html
+```
+
+```{r metrics-data}
+df_metrics <- readRDS(
+  "df_metrics.Rds"
+)
+
+metric_image_path <- function(file_name) {
+  system.file(
+    "rmarkdown",
+    "templates",
+    "datenreport-2022",
+    "skeleton",
+    file_name,
+    package = "Datenreport2022"
+  )
+}
+
+metrics_images <- purrr::map_chr(
+  df_metrics$metrics_images,
+  metric_image_path
+)
+
+metrics_text <- df_metrics[["metrics_text"]]
+
+df_metrics <- tibble::tribble(
+  ~col1, ~col2, ~col3, ~col4, ~col5, ~col6,
+  metrics_images[1], metrics_text[1], metrics_text[1], metrics_text[1], NA_character_, NA_character_,
+  metrics_text[2], metrics_text[2], metrics_text[2], metrics_text[2], metrics_text[2], metrics_images[2],
+  metrics_images[3], metrics_text[3], metrics_text[3], metrics_text[3], NA_character_, NA_character_,
+  NA_character_, NA_character_, metrics_text[4], metrics_text[4], metrics_text[4], metrics_images[4],
+  metrics_images[5], metrics_text[5], metrics_text[5], metrics_text[5], metrics_text[5], NA_character_
+)
 ```
 
 # Abbildungsverzeichnis
@@ -167,6 +211,24 @@ Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Info
 
 Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
+```{r pagebreak-metrics-before}
+officer::run_pagebreak()
+```
+
+```{r metrics, tab.cap = "PLACEHOLDER_TABDie Daten der Lehrberichtserstattung 2021/2022 im Kurzüberblick[^icons]", tab.id = "metrics_tab", ft.align = "left"}
+
+RUBer::rub_table_metrics(
+  df_metrics
+)
+
+```
+
+[^icons]: Die freien Icons (Pie Line Graph, Team Meeting Message Men, List Numbers, Analytics Bars Horizontal, People Man Graduate) wurden von [https://streamlinehq.com](https://streamlinehq.com) mit einer Attributionslizenz heruntergeladen.
+
+```{r pagebreak-metrics-after}
+officer::run_pagebreak()
+```
+
 ## Informationen zu den Befragungsdaten des Datenreports
 
 ### Inhalte der Befragungen der RUB in Kürze
@@ -185,20 +247,15 @@ Die Absolvent:innenbefragung der RUB wird seit dem Wintersemester 2007/2008 jäh
 
 ### Hinweise zu den Befragungsdaten im Datenreport
 
-Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolvent:innenbefragung der RUB in Abbildungen dargestellt.[^1] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^2] Die Ergebnisse des Datenreports beziehen solche Studiengänge mit ein, für die ausreichend Fälle in den Befragungsdaten vorliegen. Dabei werden nur dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorliegen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen nur dann durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^3] 
+Im Datenreport werden Ergebnisse des Studierendenmonitors der RUB (Studieneingangs- und Studienverlaufsbefragung) und Ergebnisse der Absolvent:innenbefragung der RUB in Abbildungen dargestellt.[^fallzahl] Um möglichst differenzierte Ergebnisse auf Studiengangebene  zu erhalten, werden die Befragungsdaten mehrerer Jahrgänge zusammengefasst, die jeweils der Quellenangabe zu entnehmen sind.[^stichprobe] Die Ergebnisse des Datenreports beziehen solche Studiengänge mit ein, für die ausreichend Fälle in den Befragungsdaten vorliegen. Dabei werden nur dann Auswertungen vorgenommen, wenn zu Faktenfragen mit zwei Antwortmöglichkeiten mindestens Antworten von zehn Befragten vorliegen (z.B.: Abschluss des Studiums in der Regelstudienzeit, Antwort: „ja“ oder „nein“). Bei allen anderen Fragen werden Auswertungen nur dann durchgeführt, wenn mindestens fünfzehn Befragte geantwortet haben. Die Anzahl der jeweiligen Antworten ist den Abbildungen zu entnehmen (z.B.: n=25).[^antworten] 
 
-Die Auswertungen berücksichtigen Studienfälle, d.h. wenn Personen zwei Studienfächer studieren, werden deren Antworten auf fachübergreifende Fragen in beiden Studienfächern dargestellt. Antworten, die sich explizit nur auf das erste oder zweite Studienfach beziehen, z.B. die Beurteilung der Studienangebote und -bedingungen, werden nur bei dem jeweiligen Studienfach dargestellt.
+[^fallzahl]: Sollte der vorliegende Datenreport aus einer oder mehreren Befragungen bzw. zu einigen Themenbereichen keine Auswertungen enthalten, war die Fallzahl zu gering, um Auswertungen auf Fakultäts-/ZWE-Ebene vornehmen zu können.
+[^stichprobe]: Weitere Daten zur Zusammensetzung der Stichprobe sind dem Anhang zu entnehmen.
+[^antworten]: Da nicht immer alle Befragten auf alle Fragen antworten, kann die Anzahl (n) von Frage zu Frage variieren.
 
-Die nachfolgenden Tabellen zeigen, wie sich die Studienfälle auf die einzelnen Studiengänge und auf das 1. und 2. Studienfach aufteilen.
+In der Lehrberichtserstattung 2021/2022 werden erstmalig Studienfälle statt Köpfe betrachtet. Dies bedeutet, dass die Antworten von Studierenden in Kombinationsstudiengängen (Bachelor 2-Fächer, Master 2-Fächer, Master of Education) in Bezug auf das erste und zweite Studienfach ausgewertet werden. Dadurch ergeben sich für die Kombinationsstudiengänge deutlich höhere Fallzahlen als in der Vergangenheit, wo nur die Antworten im ersten Studienfach berücksichtigt wurden.
 
-```{r stg-cases-ab, tab.cap = "PLACEHOLDER_TABVerteilung der Studienfälle auf das 1. und 2. Studienfach je Studiengang bei der Absolvent:innenbefragung", tab.id = "stg-cases-tag-ab", ft.align = "left", eval = df_ab_flag}
-
-
-RUBer::rub_table_stg(
-  df = df_ab,
-  label = label_ab
-)
-```
+Die nachfolgenden Tabellen zeigen je Befragung, wie sich die Studienfälle auf die einzelnen Studiengänge und auf das 1. und 2. Studienfach aufteilen. Dabei werden alle Studienfälle berücksichtigt, die auf mindestens eine Frage eine gültige Antwort gegeben haben.
 
 ```{r stg-cases-eb, tab.cap = "PLACEHOLDER_TABVerteilung der Studienfälle auf das 1. und 2. Studienfach je Studiengang bei der Studieneingangsbefragung", tab.id = "stg-cases-tag-eb", ft.align = "left", eval = df_eb_flag}
 
@@ -216,22 +273,34 @@ RUBer::rub_table_stg(
 )
 ```
 
+```{r stg-cases-ab, tab.cap = "PLACEHOLDER_TABVerteilung der Studienfälle auf das 1. und 2. Studienfach je Studiengang bei der Absolvent:innenbefragung", tab.id = "stg-cases-tag-ab", ft.align = "left", eval = df_ab_flag}
+
+
+RUBer::rub_table_stg(
+  df = df_ab,
+  label = label_ab
+)
+```
+
 In der Studieneingangsbefragung werden Studierende im ersten Hochschulsemester befragt, so dass hier in gestuften Studiengängen lediglich Auswertungen für das Bachelorstudium vorliegen. Bei der Studienverlaufs- sowie bei der Absolvent:innenbefragung werden bei ausreichend großer Fallzahl auch die Antworten, die sich auf das Master-, Staatsexamens- oder Studium des Magisters Theologie beziehen, ausgewertet.
 
-Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^4] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach"). Wenn eine Person zwei Studienfächer in derselben Fächergruppe studiert, werden beide Studienfächer im Fächergruppenwert berücksichtigt  (s.o. Fallzählung).
+Als Vergleichswert werden für alle Befragungen die Ergebnisse auf Fächergruppen nach der Gliederung des statistischen Bundesamtes aggregiert.[^faechergruppe] Der jeweilige Fächergruppenwert der RUB wird, differenziert nach Abschlussart in den Abbildungen ausgewiesen (abgekürzt z.B.: „FG Bachelor 1-Fach"). Wenn eine Person zwei Studienfächer in derselben Fächergruppe studiert, werden beide Studienfächer im Fächergruppenwert berücksichtigt  (s.o. Fallzählung).
 
-[^1]: Sollte der vorliegende Datenreport aus einer oder mehreren Befragungen bzw. zu einigen Themenbereichen keine Auswertungen enthalten, war die Fallzahl zu gering, um Auswertungen auf Fakultäts-/ZWE-Ebene vornehmen zu können.
-[^2]: Weitere Daten zur Zusammensetzung der Stichprobe sind dem Anhang zu entnehmen.
-[^3]: Da nicht immer alle Befragten auf alle Fragen antworten, kann die Anzahl (n) von Frage zu Frage variieren.
-[^4]: Für Studienfächer die eine eigene Fächergruppe bilden (Kunstgeschichte, Medizin, Sportwissenschaft) oder für die keine vergleichbaren Studiengänge an der RUB vorhanden sind (Staatsexamen Rechtswissenschaften und Medizin) entspricht der Vergleichswert dem des Studienfaches.
+[^faechergruppe]: Für Studienfächer die eine eigene Fächergruppe bilden (Kunstgeschichte, Medizin, Sportwissenschaft) oder für die keine vergleichbaren Studiengänge an der RUB vorhanden sind (Staatsexamen Rechtswissenschaften und Medizin) entspricht der Vergleichswert dem des Studienfaches.
 
 ## Informationen zu den hochschulstatistischen Daten des Informationsmanagement-Systems der RUB
 
-Dieser Datenreport stellt einige ausgewählte hochschulstatistische Daten in Abbildungen zur Verfügung, die in Tabellenform jederzeit auch aus dem Informationsmanagement-System der RUB abrufbar sind. Auch hier werden Studienfälle berücksichtigt, so dass Personen die zwei Studienfächer studieren in beiden Studienfächern gezählt werden. Dabei werden Auswertungen vorgenommen, wenn mindestens 20 Fälle vorliegen. Auch die hochschulstatistischen Daten werden anhand der Übersicht der berücksichtigten Fach-Abschluss-Kombinationen im Anhang zusammengestellt. Zudem werden zum Teil mehrere Semester bzw. Studienjahre zusammengefasst. Diese Information ist der Quellenangabe der jeweiligen Abbildung zu entnehmen.
+Neben den Befragungsdaten werden in diesem Report auch ausgewählte hochschulstatistische Daten dargestellt., z.B. zu der Entwicklung der Studierendenzahlen und der Absolvent:innen, der Kohortenanalyse, der Einhaltung der Regelstudienzeit und der Geschlechtszusammensetzung. Teilweise werden die abgebildeten Merkmale auch in den Befragungen erfasst. Die Verwendung der hochschulstatistischen Daten ist aber sinnvoller, weil dort Angaben zu allen Studierenden verfügbar sind und nicht nur für die Teilmenge der Befragten mit gültigen Fragebögen. Zwischen den Befragungsdaten und den hochschulstatistischen Daten ist auf Individualebene kein Bezug herstellbar, da die Befragungsdaten anonym erhoben werden.
+
+Angaben zu den Studierenden beziehen sich auf die Stichtagsdaten, Angaben zu den Absolvent:innen auf die amtliche Prüfungsstatistik. Analog zur Auswertung der Befragungsdaten werden Studienfälle und nicht Köpfe betrachtet. Dies bedeutet, dass die Antworten von Studierenden in Kombinationsstudiengängen (Bachelor 2-Fächer, Master 2-Fächer, Master of Education) in Bezug auf das erste und zweite Studienfach ausgewertet werden. Der Quellenangabe jeder Abbildung ist zu entnehmen, ob die Daten aus dem Informationsmanagement-System entstammen und welches Semester bzw. Studienjahr betrachtet wurde.
+
+Abweichend zur Auswertung der Befragungsdaten werden Abbildungen mit hochschulstatistischen Daten immer ausgegeben, unabhängig davon, ob eine bestimmte Mindestanzahl von Studienfällen vorliegt. Einzige Ausnahme hiervon bildet die Kohortenanalyse, wo Auswertungen nur dann vorgenommen werden, wenn die Kohorte eine Mindestgröße von sechs Studienfällen erreicht. Welche Startsemester und wie viele Kohortensemester betrachtet werden, orientiert sich grob an der anderthalbfachen Regelstudienzeit in dem jeweiligen Studiengang bzw. den jeweiligen Studiengängen. Die betrachteten Startsemester wurden so gewählt, dass bei Bachelor-Studiengängen 10 Kohortensemester, bei Master-Studiengängen 8 Kohortensemester und bei Staatsexamens- und Magister Theologiae-Studiengängen 12 Kohortensemester betrachtet werden können.[^staatsexamen] Die wichtigsten fachlichen Konzepte der Kohortenanalyse sind im Anhang ausführlich erläutert (vgl. [Definitionen zur Kohortenanalyse](#Kohorte)).
+
+[^staatsexamen]: In den Staatsexamens-Studiengängen der Medizin ist die Kohortenanalyse technisch leider nicht möglich, beim Staatsexamensstudiengang der Rechtswissenschaft gibt es die Einschränkung, dass nicht zwischen Absolvent:innen und Exmatrikulationen ohne Abschluss differenziert werden kann. Dies liegt in der fehlenden Informationsweitergabe durch die staatlichen Prüfungsämter begründet.
 
 ## Informationen zu den Förderungen für die Weiterentwicklung der Lehre
 
-Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE, bzw. Lehrende dieser Einheiten, ab dem 1. April 2018 eine Förderung aus wettbewerblicher Vergabe erhalten haben.
+Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE, bzw. Lehrende oder Studierende dieser Einheiten, ab dem 1. April 2019 eine Förderung aus wettbewerblicher Vergabe erhalten haben. Die Lehrförderungen wurden bis zum 1. Dezember 2021 von den jeweiligen Programmverantwortlichen an das Dezernat 1 geliefert.
 
 ```{r create-fig-template}
 map_parameters <- Datenreport2018::get_map_parameters(df)
@@ -313,12 +382,18 @@ funded_projects_path <- system.file(
   package = "Datenreport2022"
 )
 
+# params$p_report_nr <- 2
+
 df_projects <- readr::read_csv(
   file = funded_projects_path,
   col_types = readr::cols(
     report_nr = readr::col_double(),
-    forderzeitraum_von_datum_ab_01_04_2019 = readr::col_datetime(format = ""),
-    forderzeitraum_bis_datum_laufend = readr::col_datetime(format = ""),
+    forderzeitraum_von = readr::col_datetime(
+      format = ""
+    ),
+    forderzeitraum_bis = readr::col_datetime(
+      format = ""
+    ),
     programm = readr::col_character(),
     projekttitel = readr::col_character(),
     antragsteller_innen_verantwortliche_personen = readr::col_character()
@@ -326,7 +401,20 @@ df_projects <- readr::read_csv(
 ) %>% 
   dplyr::filter(
     report_nr == params$p_report_nr
-  )
+  ) %>% 
+  dplyr::mutate(
+    rn = dplyr::row_number()
+  ) %>% 
+  dplyr::group_by(
+    report_nr,
+    programm
+  ) %>% 
+  dplyr::mutate(
+    is_last_row = dplyr::row_number() == max(
+      dplyr::row_number()
+    )
+  ) %>% 
+  dplyr::ungroup()
 
 df_projects_flag <- nrow(df_projects) > 0
 ```
@@ -341,59 +429,29 @@ cat(
 ```
 
 ```{r funded-projects-table, tab.cap = "PLACEHOLDER_TABFörderungen für Weiterentwicklung der Lehre", tab.id = "projects_tab", ft.align = "left", eval = df_projects_flag}
-grey_fill <- "#ECECEC"
 
-flextable::flextable(
-  df_projects,
-  col_keys = names(df_projects)[2:6]
-) %>% 
-  flextable::set_header_labels(
-    values = list(
-      forderzeitraum_von_datum_ab_01_04_2019 = "Förderzeitraum von (Datum, ab 01.04.2019)",
-      forderzeitraum_bis_datum_laufend = "Förderzeitraum bis (Datum, laufend)",
-      programm = "Programm",
-      projekttitel = "Projekttitel",
-      antragsteller_innen_verantwortliche_personen = "Antragsteller*innen / Verantwortliche Personen"
-    )
-  ) %>% 
-  flextable::colformat_datetime(
-    fmt_date = "%d.%m.%Y"
-  ) %>% 
-  flextable::theme_zebra(
-    even_body = grey_fill,
-    odd_body = "transparent"
-  ) %>% 
-  RUBer::rub_style_flextable() %>% 
-  flextable::width(
-    j = 1,
-    width = 2.47,
-    unit = "cm"
-  ) %>%
-  flextable::width(
-    j = 2,
-    width = 2.47,
-    unit = "cm"
-  ) %>%
-  flextable::width(
-    j = 3,
-    width = 3.5,
-    unit = "cm"
-  ) %>% 
-  flextable::width(
-    j = 4,
-    width = 5.5,
-    unit = "cm"
-  ) %>% 
-  flextable::width(
-    j = 5,
-    width = 3.6,
-    unit = "cm"
-  ) 
+RUBer::rub_table_programs(
+  df = df_projects
+)
+```
+
+```{r items-child, child = if(df_item_flag) "items.Rmd"}
+```
+
+```{r pagebreak-items-table, eval = df_item_flag}
+officer::run_pagebreak()
+```
+
+```{r items-table, tab.cap = "PLACEHOLDER_TABAcht Items je Abschlussart mit besonders großen Abweichungen zur Fächergruppe", tab.id = "items_tab", ft.align = "left", eval = df_item_flag}
+
+RUBer::rub_table_item(
+  df = df_item
+)
 ```
 
 # Technische Angaben zur Berichtserstellung
 
-Die Datenreporte, Abbildungen und Tabellen für die neunte Lehrberichterstattung 2020/21 wurden automatisiert mit der freien Programmiersprache R generiert [@pkgbase]. Für die parametrische Erstellung von Berichten im Corporate Design der RUB wurde das Package RUBer [@pkgRUBer] entwickelt, dessen Code unter der MIT-Lizenz veröffentlicht ist. Die technischen Voraussetzungen für das RUBer Package wurden durch eine Vielzahl weiterer Autor:innen und Packages geschaffen, von denen die wichtigsten hier dankend genannt werden: das Dokumentformat R Markdown [@pkgrmarkdown] in Verbindung mit [@pkgknitr], das die Kombination von dynamischem Code, Text, Tabellen und Abbildungen überhaupt erst ermöglicht, die Grafikbibliothek ggplot2 [@pkgggplot2] zur Erstellung der Abbildungen, flextable [@pkgflextable] für die Erstellung der Tabellen, officedown [@pkgofficedown] für die Erzeugung von Microsoft Word Dokumenten und devEMF [@pkgdevEMF] für die Ausgabe von Vektorgrafiken im proprietären Format von Microsoft.
+Die Datenreporte, Abbildungen und Tabellen für die neunte Lehrberichterstattung 2020/21 wurden automatisiert mit der freien Programmiersprache R generiert [@pkgbase]. Für die parametrische Erstellung von Berichten im Corporate Design der RUB wurde das Package RUBer [@pkgRUBer] entwickelt, dessen Code unter der MIT-Lizenz veröffentlicht ist. Die technischen Voraussetzungen für das RUBer Package wurden durch eine Vielzahl weiterer Autor:innen und Packages geschaffen, von denen die wichtigsten hier dankend genannt werden: das Dokumentformat R Markdown [@pkgrmarkdown] in Verbindung mit knitr [@pkgknitr], das die Kombination von dynamischem Code, Text, Tabellen und Abbildungen überhaupt erst ermöglicht, die Grafikbibliothek ggplot2 [@pkgggplot2] zur Erstellung der Abbildungen, flextable [@pkgflextable] für die Erstellung der Tabellen, officedown [@pkgofficedown] für die Erzeugung von Microsoft Word Dokumenten und devEMF [@pkgdevEMF] für die Ausgabe von Vektorgrafiken im proprietären Format von Microsoft.
 
 Anregungen und Rückfragen zur technischen Berichtserstellung sind ausdrücklich erwünscht (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
@@ -403,18 +461,17 @@ Anregungen und Rückfragen zur technischen Berichtserstellung sind ausdrücklich
 
 # Anhang
 
-## Zusammensetzung der Stichprobe der Befragungsdaten im Vergleich zur Grundgesamtheit der RUB
+## Zusammensetzung der Befragten mit gültigen Fragebögen im Vergleich zur Grundgesamtheit der angeschriebenen Personen
 
 ```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
-grey_fill <- "#ECECEC"
 
 survey_path <- system.file(
   "rmarkdown",
   "templates",
-  "datenreport-2018",
+  "datenreport-2022",
   "skeleton",
   "survey.xlsx",
-  package = "RUBer"
+  package = "Datenreport2022"
 )
 
 studieneingang <- readxl::read_xlsx(
@@ -422,78 +479,43 @@ studieneingang <- readxl::read_xlsx(
   sheet = "data_eb"
   ) %>%
   dplyr::mutate(
-    row_id = dplyr::row_number()
+    row_id = dplyr::row_number(),
+    dplyr::across(
+      where(
+        is.numeric
+      ),
+      round,
+      digits = 2
     )
+  )
 
 typology <- readxl::read_xlsx(
   path = survey_path,
   sheet = "typology_eb"
   )
 
-headings <- c("Geschlecht", "Alter", "Abschlussart", "Fächergruppen", "Gesamtzahl berücksichtigter Fälle", "Rücklaufquote Studieneingangsbefragungen")
+headings <- c("Geschlecht", "Abschlussart", "Fächergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Studierende / gültige Fragebögen", "Rücklaufquote Studieneingangsbefragungen")
 
-rows_heading <- studieneingang %>%
-  filter(studieneingang %in% headings) %>%
-  pull(row_id)
-
-rows_no_heading <- studieneingang %>%
-  filter(studieneingang %in% headings == FALSE) %>%
-  pull(row_id)
-
-flextable::flextable(
-  studieneingang, 
-  col_keys = c("studieneingang", "koepfe_rub", "koepfe_rub_perc", "koepfe_bef", "koepfe_bef_perc")
-  ) %>%
-  set_header_df(mapping = typology, key = "col_keys") %>%
-  merge_h(part = "header") %>%
-  merge_v(part = "header") %>%
-  merge_h(part = "body", i = ~ koepfe_rub == "20,2 Jahre") %>%
-  merge_h(part = "body", 20) %>%
-  RUBer::rub_style_flextable() %>%
-  bold(part = "body", i = rows_heading) %>%
-  bg(part = "body", i = rows_heading, bg = grey_fill) %>%
-  set_formatter(
-    koepfe_rub = function(x) RUBer::rub_format_mixed(x),
-    koepfe_bef = function(x) RUBer::rub_format_mixed(x),
-    koepfe_rub_perc = function(x) RUBer::rub_format_percent(x),
-    koepfe_bef_perc = function(x) RUBer::rub_format_percent(x)
-  ) %>%
-  align(part = "header", j = 2:5, align = "center") %>%
-  align(part = "body", i = rows_no_heading, j = "studieneingang", align = "right") %>%
-  align(part = "body", i = rows_no_heading, j = 2:5, align = "right") %>%
-  align(part = "body", i = 19, j = 2:5, align = "right") %>%
-  align(part = "body", i = ~ koepfe_rub == "20,2 Jahre", j = 2:5, align = "center") %>%
-  align(part = "body", i = 20, j = 2, align = "center") %>%
-  width(j = 1, width = 2) %>%
-  width(j = 2:5, width = 1) %>% 
-  flextable::hrule(
-    rule = "exact",
-    part = "all"
-  ) %>% 
-  flextable::height(
-    height = .25
-  ) %>% 
-  flextable::height(
-    i = c(13, 17, 20),
-    height = .4
-  ) %>% 
-  flextable::set_table_properties(
-    layout = "fixed"
-  )
+RUBer::rub_table_eb(
+  df = studieneingang,
+  typolog = typology,
+  headings = headings
+)
 ```
 
-<br>
-  
+```{r pagebreak-eb}
+officer::run_pagebreak()
+```
+
 ```{r studienverlauf, tab.cap = "PLACEHOLDER_TABZusammensetzung Studienverlaufsbefragung", tab.id = "vb_tab", ft.align = "left"}
-grey_fill <- "#ECECEC"
 
 survey_path <- system.file(
   "rmarkdown",
   "templates",
-  "datenreport-2018",
+  "datenreport-2022",
   "skeleton",
   "survey.xlsx",
-  package = "RUBer"
+  package = "Datenreport2022"
 )
 
 studienverlauf <- readxl::read_xlsx(
@@ -501,79 +523,43 @@ studienverlauf <- readxl::read_xlsx(
   sheet = "data_vb"
   ) %>%
   dplyr::mutate(
-    row_id = dplyr::row_number()
+    row_id = dplyr::row_number(),
+    dplyr::across(
+      where(
+        is.numeric
+      ),
+      round,
+      digits = 2
     )
+  )
 
 typology <- readxl::read_xlsx(
   path = survey_path,
   sheet = "typology_vb"
   )
 
-headings <- c("Geschlecht", "Alter", "Abschlussart", "Fächergruppen", "Gesamtzahl berücksichtigter Fälle", "Rücklaufquote Studienverlaufsbefragungen")
+headings <- c("Geschlecht", "Abschlussart", "Fächergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Studierende / gültige Fragebögen", "Rücklaufquote Studienverlaufsbefragungen")
 
-rows_heading <- studienverlauf %>%
-  filter(studienverlauf %in% headings) %>%
-  pull(row_id)
-
-rows_no_heading <- studienverlauf %>%
-  filter(studienverlauf %in% headings == FALSE) %>%
-  pull(row_id)
-
-flextable::flextable(studienverlauf, col_keys = c("studienverlauf", "koepfe_3fs_rub", "koepfe_3fs_rub_perc", "koepfe_3fs_bef", "koepfe_3fs_bef_perc", "koepfe_5fs_rub", "koepfe_5fs_rub_perc", "koepfe_5fs_bef", "koepfe_5fs_bef_perc")) %>%
-  set_header_df(mapping = typology, key = "col_keys") %>%
-  merge_h(part = "header") %>%
-  merge_v(part = "header") %>%
-  merge_h(part = "body", i = ~ koepfe_3fs_rub == "25,7 Jahre") %>%
-  merge_h(part = "body", 20) %>%
-  RUBer::rub_style_flextable() %>%
-  bold(part = "body", i = rows_heading) %>%
-  bg(part = "body", i = rows_heading, bg = grey_fill) %>%
-  align(part = "header", j = 2:9, align = "center") %>%
-  align(part = "body", i = rows_no_heading, j = "studienverlauf", align = "right") %>%
-  align(part = "body", i = rows_no_heading, j = 2:9, align = "right") %>%
-  align(part = "body", i = 19, j = 2:9, align = "right") %>%
-  align(part = "body", i = 20, j = 2:9, align = "center") %>%
-  align(part = "body", i = ~ koepfe_3fs_rub == "25,7 Jahre", j = 2:9, align = "center") %>%
-  set_formatter(
-    koepfe_3fs_rub = function(x) RUBer::rub_format_mixed(x),
-    koepfe_3fs_bef = function(x) RUBer::rub_format_mixed(x),
-    koepfe_5fs_rub = function(x) RUBer::rub_format_mixed(x),
-    koepfe_5fs_bef = function(x) RUBer::rub_format_mixed(x),
-    koepfe_3fs_rub_perc = function(x) RUBer::rub_format_percent(x),
-    koepfe_3fs_bef_perc = function(x) RUBer::rub_format_percent(x),
-    koepfe_5fs_rub_perc = function(x) RUBer::rub_format_percent(x),
-    koepfe_5fs_bef_perc = function(x) RUBer::rub_format_percent(x)
-  ) %>%
-  width(j = 1, width = 2) %>%
-  width(j = 2:9, width = 0.5)  %>% 
-  flextable::hrule(
-    rule = "exact",
-    part = "all"
-  ) %>% 
-  flextable::height(
-    height = .25
-  ) %>% 
-  flextable::height(
-    i = c(13, 17, 20),
-    height = .4
-  ) %>% 
-  flextable::set_table_properties(
-    layout = "fixed"
-  )
+RUBer::rub_table_vb(
+  df = studienverlauf,
+  typolog = typology,
+  headings = headings
+)
 ```
 
-<br>
+```{r pagebreak-vb}
+officer::run_pagebreak()
+```
 
-```{r studienabschluss, tab.cap = "PLACEHOLDER_TABZusammensetzung Absolventen- und Absolventinnenbefragung", tab.id = "ab_tab", ft.align = "left"}
-grey_fill <- "#ECECEC"
+```{r studienabschluss, tab.cap = "PLACEHOLDER_TABZusammensetzung Absolvent:innenbefragung", tab.id = "ab_tab", ft.align = "left"}
 
 survey_path <- system.file(
   "rmarkdown",
   "templates",
-  "datenreport-2018",
+  "datenreport-2022",
   "skeleton",
   "survey.xlsx",
-  package = "RUBer"
+  package = "Datenreport2022"
 )
 
 studienabschluss <- readxl::read_xlsx(
@@ -581,50 +567,36 @@ studienabschluss <- readxl::read_xlsx(
   sheet = "data_ab"
   ) %>%
   dplyr::mutate(
-    row_id = dplyr::row_number()
+    row_id = dplyr::row_number(),
+    dplyr::across(
+      where(
+        is.numeric
+      ),
+      round,
+      digits = 2
     )
+  )
 
 typology <- readxl::read_xlsx(
   path = survey_path,
   sheet = "typology_ab"
   )
 
-headings <- c("Geschlecht", "Alter", "Abschlussart", "Fächergruppen", "Gesamtzahl berücksichtigter Fälle", "Rücklaufquote Studienabschlussbefragungen")
+headings <- c("Geschlecht", "Abschlussart", "Fächergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Absolvent:innen / gültige Fragebögen", "Rücklaufquote Absolvent:innenbefragungen")
 
-rows_heading <- studienabschluss %>%
-  filter(studienabschluss %in% headings) %>%
-  pull(row_id)
+RUBer::rub_table_ab(
+  df = studienabschluss,
+  typolog = typology,
+  headings = headings
+)
 
-rows_no_heading <- studienabschluss %>%
-  filter(studienabschluss %in% headings == FALSE) %>%
-  pull(row_id)
-
-flextable::flextable(studienabschluss, col_keys = c("studienabschluss", "koepfe_rub", "koepfe_rub_perc", "koepfe_bef", "koepfe_bef_perc")) %>%
-  set_header_df(mapping = typology, key = "col_keys") %>%
-  merge_h(part = "header") %>%
-  merge_v(part = "header") %>%
-  merge_h(part = "body", i = ~ koepfe_rub == "26,4 Jahre") %>%
-  merge_h(part = "body", 19) %>%
-  RUBer::rub_style_flextable() %>%
-  bold(part = "body", i = rows_heading) %>%
-  bg(part = "body", i = rows_heading, bg = grey_fill) %>%
-  align(part = "header", j = 2:5, align = "center") %>%
-  align(part = "body", i = rows_no_heading, j = "studienabschluss", align = "right") %>%
-  align(part = "body", i = rows_no_heading, j = 2:5, align = "right") %>%
-  align(part = "body", i = 18, j = 2:5, align = "right") %>%
-  align(part = "body", i = 19, j = 2:5, align = "center") %>%
-  align(part = "body", i = ~ koepfe_rub == "26,4 Jahre", j = 2:5, align = "center") %>%
-  set_formatter(
-    koepfe_rub = function(x) rub_format_mixed(x),
-    koepfe_bef = function(x) rub_format_mixed(x),
-    koepfe_rub_perc = function(x) rub_format_percent(x),
-    koepfe_bef_perc = function(x) rub_format_percent(x)
-  ) %>%
-  width(j = 1, width = 2) %>%
-  width(j = 2:5, width = 1)
 ```
 
-## Berücksichtige Fächer je Datenreport und Fächergruppengliederung gemäß Fächersystematik des statistischen Bundesamtes
+```{r pagebreak-ab}
+officer::run_pagebreak()
+```
+
+## Berücksichtige Studiengänge je Datenreport und Fächergruppengliederung gemäß Fächersystematik des statistischen Bundesamtes
 
 Auslaufende Fach-Abschluss-Kombinationen und weiterbildende Studiengänge werden bei den Datenreports grundsätzlich nicht berücksichtigt. Für sehr neue Studiengänge liegen in der Regel weder Befragungsdaten noch aussagekräftige deskriptive Statistiken aus dem Informationsmanagement-System vor, weshalb diese ebenfalls nicht berücksichtigt werden.
 
@@ -691,9 +663,11 @@ flextable::flextable(
   width(j = "head3", width = 2.25)
 ```
 
-<br>
+```{r pagebreak-studiengaenge}
+officer::run_pagebreak()
+```
 
-```{r studiengaenge_ausgeschlossen, tab.cap = "PLACEHOLDER_TABAusgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
+```{r studiengaenge-ausgeschlossen, tab.cap = "PLACEHOLDER_TABAusgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 excluded_programs_path <- system.file(
@@ -734,7 +708,11 @@ flextable::flextable(
   RUBer::rub_style_flextable()
 ```
 
-## Definitionen zur Kohortenanalyse
+```{r pagebreak-studiengaenge-ausgeschlossen}
+officer::run_pagebreak()
+```
+
+## Definitionen zur Kohortenanalyse {#Kohorte}
 
 #### Was bedeutet eine Kohortenanalyse?
 
