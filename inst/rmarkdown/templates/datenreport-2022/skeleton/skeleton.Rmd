@@ -13,7 +13,7 @@ lang: de
 output:
   officedown::rdocx_document:
     reference_docx: rub_reference_2021.docx
-    keep_md: true
+    keep_md: false
     toc: true
     toc_depth: 2
     page_size:
@@ -144,8 +144,11 @@ if(!df_stg_null) {
 ```
 
 ```{r metrics-data}
-df_metrics <- readRDS(
-  "df_metrics.Rds"
+df_metrics <- readr::read_csv(
+  "metrics_overview.csv",
+  col_types = readr::cols(
+    "character"
+  )
 )
 
 metric_image_path <- function(file_name) {
@@ -172,7 +175,8 @@ df_metrics <- tibble::tribble(
   metrics_text[2], metrics_text[2], metrics_text[2], metrics_text[2], metrics_text[2], metrics_images[2],
   metrics_images[3], metrics_text[3], metrics_text[3], metrics_text[3], NA_character_, NA_character_,
   NA_character_, NA_character_, metrics_text[4], metrics_text[4], metrics_text[4], metrics_images[4],
-  metrics_images[5], metrics_text[5], metrics_text[5], metrics_text[5], metrics_text[5], NA_character_
+  metrics_images[5], metrics_text[5], metrics_text[5], metrics_text[5], metrics_text[5], NA_character_,
+  NA_character_, metrics_text[6], metrics_text[6], metrics_text[6], metrics_text[6], metrics_images[6]
 )
 ```
 
@@ -215,7 +219,7 @@ Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts 
 officer::run_pagebreak()
 ```
 
-```{r metrics, tab.cap = "PLACEHOLDER_TABDie Daten der Lehrberichtserstattung 2021/2022 im Kurzüberblick[^icons]", tab.id = "metrics_tab", ft.align = "left"}
+```{r metrics, tab.cap = "PLACEHOLDER_TABDie Datenreporte der Lehrberichtserstattung 2021/2022 im Gesamtüberblick[^icons]", tab.id = "metrics_tab", ft.align = "left"}
 
 RUBer::rub_table_metrics(
   df_metrics
@@ -223,7 +227,7 @@ RUBer::rub_table_metrics(
 
 ```
 
-[^icons]: Die freien Icons (Pie Line Graph, Team Meeting Message Men, List Numbers, Analytics Bars Horizontal, People Man Graduate) wurden von [https://streamlinehq.com](https://streamlinehq.com) mit einer Attributionslizenz heruntergeladen.
+[^icons]: Die freien Icons (Pie Line Graph, Team Meeting Message Men, List Numbers, Analytics Bars Horizontal, User Female Teacher Math, People Man Graduate) wurden von [https://streamlinehq.com](https://streamlinehq.com) mit einer Attributionslizenz heruntergeladen.
 
 ```{r pagebreak-metrics-after}
 officer::run_pagebreak()
