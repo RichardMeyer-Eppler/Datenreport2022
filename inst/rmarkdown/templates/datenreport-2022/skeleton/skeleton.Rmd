@@ -46,7 +46,8 @@ output:
         pre: 'Abbildung '
         sep: ': '
     reference_num: false
-bibliography: [packages.bib]
+bibliography: ["packages.bib", "literature.bib"]
+csl: politische-vierteljahresschrift.csl
 link-citations: false
 toc-title: "Inhaltsverzeichnis"
 ---
@@ -213,7 +214,7 @@ Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Info
 - Übergang in ein weiteres Studium oder in den Beruf
 - Förderungen für Weiterentwicklung der Lehre
 
-Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
+Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Weiterführende Informationen zum allgemeinen Prozess der Lehrberichterstattung an der RUB sind in einem Beitrag von @Patsch.2018 veröffentlicht. Grundlegende Informationen zur Lehrberichterstattung sind auf www.rub.de/lehrberichte abrufbar. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
 ```{r pagebreak-metrics-before}
 officer::run_pagebreak()
@@ -298,9 +299,47 @@ Neben den Befragungsdaten werden in diesem Report auch ausgewählte hochschulsta
 
 Angaben zu den Studierenden beziehen sich auf die Stichtagsdaten, Angaben zu den Absolvent:innen auf die amtliche Prüfungsstatistik. Analog zur Auswertung der Befragungsdaten werden Studienfälle und nicht Köpfe betrachtet. Dies bedeutet, dass die Antworten von Studierenden in Kombinationsstudiengängen (Bachelor 2-Fächer, Master 2-Fächer, Master of Education) in Bezug auf das erste und zweite Studienfach ausgewertet werden. Der Quellenangabe jeder Abbildung ist zu entnehmen, ob die Daten aus dem Informationsmanagement-System entstammen und welches Semester bzw. Studienjahr betrachtet wurde.
 
-Abweichend zur Auswertung der Befragungsdaten werden Abbildungen mit hochschulstatistischen Daten immer ausgegeben, unabhängig davon, ob eine bestimmte Mindestanzahl von Studienfällen vorliegt. Einzige Ausnahme hiervon bildet die Kohortenanalyse, wo Auswertungen nur dann vorgenommen werden, wenn die Kohorte eine Mindestgröße von sechs Studienfällen erreicht. Welche Startsemester und wie viele Kohortensemester betrachtet werden, orientiert sich grob an der anderthalbfachen Regelstudienzeit in dem jeweiligen Studiengang bzw. den jeweiligen Studiengängen. Die betrachteten Startsemester wurden so gewählt, dass bei Bachelor-Studiengängen 10 Kohortensemester, bei Master-Studiengängen 8 Kohortensemester und bei Staatsexamens- und Magister Theologiae-Studiengängen 12 Kohortensemester betrachtet werden können.[^staatsexamen] Die wichtigsten fachlichen Konzepte der Kohortenanalyse sind im Anhang ausführlich erläutert (vgl. [Definitionen zur Kohortenanalyse](#Kohorte)).
+Abweichend zur Auswertung der Befragungsdaten werden Abbildungen mit hochschulstatistischen Daten immer ausgegeben, unabhängig davon, ob eine bestimmte Mindestanzahl von Studienfällen vorliegt. Einzige Ausnahme hiervon bildet die Kohortenanalyse, wo Auswertungen nur dann vorgenommen werden, wenn die Kohorte eine Mindestgröße von sechs Studienfällen erreicht. 
+
+Zum besseren Verständnis der Kohortenanalyse werden die wichtigsten fachlichen Konzepte und Begriffe im Folgenden näher definiert:
+
+#### Was bedeutet eine Kohortenanalyse?
+
+Bei der Kohortenanalyse werden nach ausgewählten Kriterien Gruppen von Studierenden gebildet und diese über einen definierten Zeitraum betrachtet. Hierbei können die Veränderungen innerhalb der Kohorte näher betrachtet werden und Aussagen über die Studienerfolgsquote, Studienabbruchquote getroffen werden.
+
+Der Datensatz eines Studierenden wird in eine Kohorte über das Startsemester aufgenommen, wenn dieser erstmals oder erneut mit einer geänderten bzw. neuen Fach/Abschlusskombination für das gewählte Semester geliefert wird. Die Anzahl der Fach- oder Hochschulsemester und der Status der Studierenden werden zur Bildung der Kohorte nicht berücksichtigt. Damit ist die Basis für die Kohorte festgelegt worden und im weiteren Verlauf wird betrachtet, ob die Studierenden sich exmatrikulieren, das Fach wechseln/abbrechen oder erfolgreich als Absolvent:in abschließen.
+
+Welche Startsemester und wie viele Kohortensemester betrachtet werden, orientiert sich grob an der anderthalbfachen Regelstudienzeit in dem jeweiligen Studiengang bzw. den jeweiligen Studiengängen. Die betrachteten Startsemester wurden so gewählt, dass bei Bachelor-Studiengängen 10 Kohortensemester, bei Master-Studiengängen 8 Kohortensemester und bei Staatsexamens- und Magister Theologiae-Studiengängen 12 Kohortensemester betrachtet werden können.[^staatsexamen] Die wichtigsten fachlichen Konzepte der Kohortenanalyse sind im Anhang ausführlich erläutert (vgl. [Definitionen zur Kohortenanalyse](#Kohorte)).
 
 [^staatsexamen]: In den Staatsexamens-Studiengängen der Medizin ist die Kohortenanalyse technisch leider nicht möglich, beim Staatsexamensstudiengang der Rechtswissenschaft gibt es die Einschränkung, dass nicht zwischen Absolvent:innen und Exmatrikulationen ohne Abschluss differenziert werden kann. Dies liegt in der fehlenden Informationsweitergabe durch die staatlichen Prüfungsämter begründet.
+
+#### Studienanfänger:innen
+
+Studienanfänger:innen sind entweder Studierende im ersten Hochschulsemester (Erstimmatrikulierte) oder im ersten Fachsemester eines bestimmten Studiengangs (Neuimmatrikulierte). Die Studierenden im 1. Fachsemester werden auch als Fachanfänger in einem Studiengang bezeichnet. Im Zusammenhang mit der Kohortenanalyse werden die Studienanfänger als Fachanfänger betrachtet.
+
+#### Startsemester
+
+Das Startsemester definiert den Startpunkt zu dem die Kohorte gebildet wird.
+
+#### Studierende
+
+Zu Beginn einer Kohortenbetrachtung sind dies die tatsächlichen Studienanfänger und in den folgenden Kohortensemestern die noch regulär als Studierende in einem Studiengang eingeschriebenen.
+
+#### Exmatrikulation ohne Abschluss
+
+Als Studienabbrecher:innen werden hier Studierende verstanden die an der RUB ein Studium begonnen haben, aber sich ohne einen Abschluss wieder exmatrikuliert haben und die RUB verlassen haben. In diesen Fällen kann es sich sowohl um einen Hochschulwechsler handeln als auch um jemanden der insgesamt das Studium ohne Erfolg beendet hat.
+
+#### Fachwechsler:innen
+
+Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie im aktuellen Semester noch NICHT studiert haben.
+
+#### Fachabbrecher:innen
+
+Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie bereits im aktuellen Semester studiert haben. Dies sind keine Fachwechsler, sondern werden als Fachabbrecher bezeichnet.
+
+#### Absolvent:innen
+
+Absolvent:innen sind Studierende mit bestandener Abschlussprüfung, die im Berichtssemester mindestens einen Studiengang abgeschlossen haben.
 
 ## Informationen zu den Förderungen für die Weiterentwicklung der Lehre
 
@@ -452,16 +491,6 @@ RUBer::rub_table_item(
   df = df_item
 )
 ```
-
-# Technische Angaben zur Berichtserstellung
-
-Die Datenreporte, Abbildungen und Tabellen für die neunte Lehrberichterstattung 2020/21 wurden automatisiert mit der freien Programmiersprache R generiert [@pkgbase]. Für die parametrische Erstellung von Berichten im Corporate Design der RUB wurde das Package RUBer [@pkgRUBer] entwickelt, dessen Code unter der MIT-Lizenz veröffentlicht ist. Die technischen Voraussetzungen für das RUBer Package wurden durch eine Vielzahl weiterer Autor:innen und Packages geschaffen, von denen die wichtigsten hier dankend genannt werden: das Dokumentformat R Markdown [@pkgrmarkdown] in Verbindung mit knitr [@pkgknitr], das die Kombination von dynamischem Code, Text, Tabellen und Abbildungen überhaupt erst ermöglicht, die Grafikbibliothek ggplot2 [@pkgggplot2] zur Erstellung der Abbildungen, flextable [@pkgflextable] für die Erstellung der Tabellen, officedown [@pkgofficedown] für die Erzeugung von Microsoft Word Dokumenten und devEMF [@pkgdevEMF] für die Ausgabe von Vektorgrafiken im proprietären Format von Microsoft.
-
-Anregungen und Rückfragen zur technischen Berichtserstellung sind ausdrücklich erwünscht (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
-
-# Quellenangaben
-
-<div id="refs"></div>
 
 # Anhang
 
@@ -716,44 +745,17 @@ flextable::flextable(
 officer::run_pagebreak()
 ```
 
-## Definitionen zur Kohortenanalyse {#Kohorte}
+## Technische Angaben zur Berichtserstellung
 
-#### Was bedeutet eine Kohortenanalyse?
+Die Datenreporte, Abbildungen und Tabellen für die neunte Lehrberichterstattung 2020/21 wurden automatisiert mit der freien Programmiersprache R generiert [@pkgbase]. Für die parametrische Erstellung von Berichten im Corporate Design der RUB wurde das Package RUBer [@pkgRUBer] entwickelt, dessen Code unter der MIT-Lizenz veröffentlicht ist. Die technischen Voraussetzungen für das RUBer Package wurden durch eine Vielzahl weiterer Autor:innen und Packages geschaffen, von denen die wichtigsten hier dankend genannt werden: das Dokumentformat R Markdown [@pkgrmarkdown] in Verbindung mit knitr [@pkgknitr], das die Kombination von dynamischem Code, Text, Tabellen und Abbildungen überhaupt erst ermöglicht, die Grafikbibliothek ggplot2 [@pkgggplot2] zur Erstellung der Abbildungen, flextable [@pkgflextable] für die Erstellung der Tabellen, officedown [@pkgofficedown] für die Erzeugung von Microsoft Word Dokumenten und devEMF [@pkgdevEMF] für die Ausgabe von Vektorgrafiken im proprietären Format von Microsoft.
 
-Bei der Kohortenanalyse werden nach ausgewählten Kriterien Gruppen von Studierenden gebildet und diese über einen definierten Zeitraum betrachtet. Hierbei können die Veränderungen innerhalb der Kohorte näher betrachtet werden und Aussagen über die Studienerfolgsquote, Studienabbruchquote getroffen werden.
+Anregungen und Rückfragen zur technischen Berichtserstellung sind ausdrücklich erwünscht (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
-Der Datensatz eines Studierenden wird in eine Kohorte über das Startsemester aufgenommen, wenn dieser erstmals oder erneut mit einer geänderten bzw. neuen Fach/Abschlusskombination für das gewählte Semester geliefert wird. Die Anzahl der Fach- oder Hochschulsemester und der Status der Studierenden werden zur Bildung der Kohorte nicht berücksichtigt.
-Damit ist die Basis für die Kohorte festgelegt worden und im weiteren Verlauf wird betrachtet, ob die Studierenden sich exmatrikulieren, das Fach wechseln/abbrechen oder erfolgreich als Absolvent abschließen.
+## Quellenangaben
 
-#### Studienanfänger:innen
+<div id="refs"></div>
 
-Studienanfänger:innen sind entweder Studierende im ersten Hochschulsemester (Erstimmatrikulierte) oder im ersten Fachsemester eines bestimmten Studiengangs (Neuimmatrikulierte). Die Studierenden im 1. Fachsemester werden auch als Fachanfänger in einem Studiengang bezeichnet. Im Zusammenhang mit der Kohortenanalyse werden die Studienanfänger als Fachanfänger betrachtet.
-
-#### Startsemester
-
-Das Startsemester definiert den Startpunkt zu dem die Kohorte gebildet wird.
-
-#### Studierende
-
-Zu Beginn einer Kohortenbetrachtung sind dies die tatsächlichen Studienanfänger und in den folgenden Kohortensemestern die noch regulär als Studierende in einem Studiengang eingeschriebenen.
-
-#### Exmatrikulation ohne Abschluss
-
-Als Studienabbrecher:innen werden hier Studierende verstanden die an der RUB ein Studium begonnen haben, aber sich ohne einen Abschluss wieder exmatrikuliert haben und die RUB verlassen haben. In diesen Fällen kann es sich sowohl um einen Hochschulwechsler handeln als auch um jemanden der insgesamt das Studium ohne Erfolg beendet hat.
-
-#### Fachwechsler:innen
-
-Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie im aktuellen Semester noch NICHT studiert haben.
-
-#### Fachabbrecher:innen
-
-Studierende die im Folgesemester ein anderes Fach weiterstudieren, welches sie bereits im aktuellen Semester studiert haben. Dies sind keine Fachwechsler, sondern werden als Fachabbrecher bezeichnet.
-
-#### Absolvent:innen
-
-Absolvent:innen sind Studierende mit bestandener Abschlussprüfung, die im Berichtssemester mindestens einen Studiengang abgeschlossen haben.
-
-# Ansprechpersonen und Kontakt {#Kontakt}
+## Ansprechpersonen und Kontakt {#Kontakt}
 
 Bei Fragen zum Datenreport und/oder für weitere Auswertungsinteressen können Sie uns gerne kontaktieren:
 
