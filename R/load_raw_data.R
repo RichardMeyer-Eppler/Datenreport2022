@@ -13,6 +13,7 @@ load_raw_csv <- function(
     file = path,
     col_types = readr::cols(
       REPORT_NR = readr::col_double(),
+      REPORT_TYPE_ID = readr::col_character(),
       FIGURE_COUNT = readr::col_double(),
       X = readr::col_character(),
       Y = readr::col_character(),
