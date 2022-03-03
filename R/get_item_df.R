@@ -16,6 +16,7 @@ get_item_df <- function(
   pattern <- "(?<=n\\=)[[:digit:]]{0,1}\\.?[[:digit:]]{0,3}"
   replace_pattern <- "[[:space:]]\\(.*\\)"
 
+
   df_item <- df %>%
     dplyr::filter(
       figure_type_id == 3L,
@@ -27,6 +28,7 @@ get_item_df <- function(
     ) %>%
     dplyr::distinct(
       report_nr,
+      report_type_id,
       figure_count,
       figure_caption,
       heading,
@@ -36,6 +38,7 @@ get_item_df <- function(
       y,
       fill,
       fill_label,
+      aggregation_id_1,
       aggregation_sort_1
     ) %>%
     dplyr::mutate(
@@ -75,12 +78,14 @@ get_item_df <- function(
     ) %>%
     dplyr::group_by(
       report_nr,
+      report_type_id,
       figure_count,
       figure_caption,
       heading,
       subheading,
       facet,
       y,
+      aggregation_id_1,
       aggregation_sort_1
     ) %>%
     dplyr::summarize(
@@ -94,7 +99,7 @@ get_item_df <- function(
     dplyr::arrange(
       figure_count,
       facet,
-      aggregation_sort_1
+      aggregation_id_1
     ) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(
@@ -121,7 +126,7 @@ get_item_df <- function(
       # Berichte, wo Berichtsstudiengaenge = Faechergruppe
       mean != mean_fgr,
       # M Ed Bericht und Faechergruppenbericht
-      !(report_nr %in% c(72L, 74L))
+      !(report_type_id %in% c("M_ED", "FGR"))
     ) %>%
     dplyr::group_by(
       report_nr,
