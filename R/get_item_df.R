@@ -2,6 +2,8 @@
 #'
 #' @param df Data frame with data for one report_nr
 #' @param n_items Number of items to retrieve for each degree
+#' @param cutoff Optional, when provided n_items is ignored. Keeps all rows where
+#'   distance in standard deviation is equal to or larger than the cutoff.
 #'
 #' @return Data frame
 #' @export
@@ -11,7 +13,8 @@
 #' @examples
 get_item_df <- function(
   df,
-  n_items = 8L
+  n_items = 8L,
+  cutoff = NULL
 ) {
   pattern <- "(?<=n\\=)[[:digit:]]{0,1}\\.?[[:digit:]]{0,3}"
   replace_pattern <- "[[:space:]]\\(.*\\)"
@@ -131,13 +134,29 @@ get_item_df <- function(
     dplyr::group_by(
       report_nr,
       aggregation_sort_1
-    ) %>%
-    dplyr::slice_max(
-      order_by = distance,
-      n = n_items,
-      with_ties = TRUE
-    ) %>%
-    dplyr::ungroup()
+    )
+
+  if(
+    is.null(cutoff)
+  ) {
+    return(
+      df_item %>%
+        dplyr::slice_max(
+          order_by = distance,
+          n = n_items,
+          with_ties = TRUE
+        ) %>%
+          dplyr::ungroup()
+    )
+  } else {
+    return(
+      df_item %>%
+        dplyr::filter(
+          distance >= cutoff
+        ) %>%
+      dplyr::ungroup()
+    )
+  }
 
   return(df_item)
 }
