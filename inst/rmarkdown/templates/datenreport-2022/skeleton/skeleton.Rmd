@@ -345,6 +345,69 @@ Absolvent:innen sind Studierende mit bestandener Abschlussprüfung, die im Beric
 
 Der Datenreport gibt neben den Daten zu Studierenden und ihrem Studienverlauf auch Auskunft darüber, für welche Lehrprojekte Fakultäten und ZWE, bzw. Lehrende oder Studierende dieser Einheiten, ab dem 1. April 2019 eine Förderung aus wettbewerblicher Vergabe erhalten haben. Die Lehrförderungen wurden bis zum 1. Dezember 2021 von den jeweiligen Programmverantwortlichen an das Dezernat 1 geliefert.
 
+```{r funded-projects-data}
+funded_projects_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2022",
+  "skeleton",
+  "funded_projects.csv",
+  package = "Datenreport2022"
+)
+
+# params$p_report_nr <- 2
+
+df_projects <- readr::read_csv(
+  file = funded_projects_path,
+  col_types = readr::cols(
+    report_nr = readr::col_double(),
+    forderzeitraum_von = readr::col_datetime(
+      format = ""
+    ),
+    forderzeitraum_bis = readr::col_datetime(
+      format = ""
+    ),
+    programm = readr::col_character(),
+    projekttitel = readr::col_character(),
+    antragsteller_innen_verantwortliche_personen = readr::col_character()
+  ) 
+) %>% 
+  dplyr::filter(
+    report_nr == params$p_report_nr
+  ) %>% 
+  dplyr::mutate(
+    rn = dplyr::row_number()
+  ) %>% 
+  dplyr::group_by(
+    report_nr,
+    programm
+  ) %>% 
+  dplyr::mutate(
+    is_last_row = dplyr::row_number() == max(
+      dplyr::row_number()
+    )
+  ) %>% 
+  dplyr::ungroup()
+
+df_projects_flag <- nrow(df_projects) > 0
+```
+
+```{r funded-projects-heading, results= 'asis', eval = df_projects_flag}
+cat(
+  paste(
+    "#",
+    "Förderungen für Weiterentwicklung der Lehre"
+  )
+)
+```
+
+```{r funded-projects-table, tab.cap = "PLACEHOLDER_TABFörderungen für Weiterentwicklung der Lehre", tab.id = "projects_tab", ft.align = "left", eval = df_projects_flag}
+
+RUBer::rub_table_programs(
+  df = df_projects
+)
+```
+
 ```{r create-fig-template}
 map_parameters <- Datenreport2018::get_map_parameters(df)
 chunk_label <- dplyr::pull(map_parameters, chunk_label)
@@ -415,69 +478,6 @@ out <- knitr::knit(
 cat(out, sep = '\n')
 ```
 
-```{r funded-projects-data}
-funded_projects_path <- system.file(
-  "rmarkdown",
-  "templates",
-  "datenreport-2022",
-  "skeleton",
-  "funded_projects.csv",
-  package = "Datenreport2022"
-)
-
-# params$p_report_nr <- 2
-
-df_projects <- readr::read_csv(
-  file = funded_projects_path,
-  col_types = readr::cols(
-    report_nr = readr::col_double(),
-    forderzeitraum_von = readr::col_datetime(
-      format = ""
-    ),
-    forderzeitraum_bis = readr::col_datetime(
-      format = ""
-    ),
-    programm = readr::col_character(),
-    projekttitel = readr::col_character(),
-    antragsteller_innen_verantwortliche_personen = readr::col_character()
-  ) 
-) %>% 
-  dplyr::filter(
-    report_nr == params$p_report_nr
-  ) %>% 
-  dplyr::mutate(
-    rn = dplyr::row_number()
-  ) %>% 
-  dplyr::group_by(
-    report_nr,
-    programm
-  ) %>% 
-  dplyr::mutate(
-    is_last_row = dplyr::row_number() == max(
-      dplyr::row_number()
-    )
-  ) %>% 
-  dplyr::ungroup()
-
-df_projects_flag <- nrow(df_projects) > 0
-```
-
-```{r funded-projects-heading, results= 'asis', eval = df_projects_flag}
-cat(
-  paste(
-    "#",
-    "Förderungen für Weiterentwicklung der Lehre"
-  )
-)
-```
-
-```{r funded-projects-table, tab.cap = "PLACEHOLDER_TABFörderungen für Weiterentwicklung der Lehre", tab.id = "projects_tab", ft.align = "left", eval = df_projects_flag}
-
-RUBer::rub_table_programs(
-  df = df_projects
-)
-```
-
 ```{r items-child, child = if(df_item_flag) "items.Rmd"}
 ```
 
@@ -492,9 +492,7 @@ RUBer::rub_table_item(
 )
 ```
 
-# Anhang
-
-## Zusammensetzung der Befragten mit gültigen Fragebögen im Vergleich zur Grundgesamtheit der angeschriebenen Personen
+# Zusammensetzung der Befragten mit gültigen Fragebögen im Vergleich zur Grundgesamtheit der angeschriebenen Personen
 
 ```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
 
@@ -629,7 +627,7 @@ RUBer::rub_table_ab(
 officer::run_pagebreak()
 ```
 
-## Berücksichtige Studiengänge je Datenreport und Fächergruppengliederung gemäß Fächersystematik des statistischen Bundesamtes
+# Berücksichtige Studiengänge je Datenreport und Fächergruppengliederung gemäß Fächersystematik des statistischen Bundesamtes
 
 Auslaufende Fach-Abschluss-Kombinationen und weiterbildende Studiengänge werden bei den Datenreports grundsätzlich nicht berücksichtigt. Für sehr neue Studiengänge liegen in der Regel weder Befragungsdaten noch aussagekräftige deskriptive Statistiken aus dem Informationsmanagement-System vor, weshalb diese ebenfalls nicht berücksichtigt werden.
 
@@ -745,17 +743,17 @@ flextable::flextable(
 officer::run_pagebreak()
 ```
 
-## Technische Angaben zur Berichtserstellung
+# Technische Angaben zur Berichtserstellung
 
 Die Datenreporte, Abbildungen und Tabellen für die neunte Lehrberichterstattung 2020/21 wurden automatisiert mit der freien Programmiersprache R generiert [@pkgbase]. Für die parametrische Erstellung von Berichten im Corporate Design der RUB wurde das Package RUBer [@pkgRUBer] entwickelt, dessen Code unter der MIT-Lizenz veröffentlicht ist. Die technischen Voraussetzungen für das RUBer Package wurden durch eine Vielzahl weiterer Autor:innen und Packages geschaffen, von denen die wichtigsten hier dankend genannt werden: das Dokumentformat R Markdown [@pkgrmarkdown] in Verbindung mit knitr [@pkgknitr], das die Kombination von dynamischem Code, Text, Tabellen und Abbildungen überhaupt erst ermöglicht, die Grafikbibliothek ggplot2 [@pkgggplot2] zur Erstellung der Abbildungen, flextable [@pkgflextable] für die Erstellung der Tabellen, officedown [@pkgofficedown] für die Erzeugung von Microsoft Word Dokumenten und devEMF [@pkgdevEMF] für die Ausgabe von Vektorgrafiken im proprietären Format von Microsoft.
 
 Anregungen und Rückfragen zur technischen Berichtserstellung sind ausdrücklich erwünscht (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
-## Quellenangaben
+# Quellenangaben
 
 <div id="refs"></div>
 
-## Ansprechpersonen und Kontakt {#Kontakt}
+# Ansprechpersonen und Kontakt {#Kontakt}
 
 Bei Fragen zum Datenreport und/oder für weitere Auswertungsinteressen können Sie uns gerne kontaktieren:
 
