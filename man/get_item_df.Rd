@@ -4,12 +4,15 @@
 \alias{get_item_df}
 \title{Get data frame with survey items that strongly diverge from their reference group}
 \usage{
-get_item_df(df, n_items = 8L)
+get_item_df(df, n_items = 8L, cutoff = NULL)
 }
 \arguments{
 \item{df}{Data frame with data for one report_nr}
 
 \item{n_items}{Number of items to retrieve for each degree}
+
+\item{cutoff}{Optional, when provided n_items is ignored. Keeps all rows where
+distance in standard deviation is equal to or larger than the cutoff.}
 }
 \value{
 Data frame
