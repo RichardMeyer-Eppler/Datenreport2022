@@ -214,7 +214,7 @@ Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Info
 - Übergang in ein weiteres Studium oder in den Beruf
 - Förderungen für Weiterentwicklung der Lehre
 
-Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Weiterführende Informationen zum allgemeinen Prozess der Lehrberichterstattung an der RUB sind in einem Beitrag von @Patsch.2018 veröffentlicht. Grundlegende Informationen zur Lehrberichterstattung sind auf www.rub.de/lehrberichte abrufbar. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
+Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Weiterführende Informationen zum allgemeinen Prozess der Lehrberichterstattung an der RUB sind in einem Beitrag von @Patsch.2018 veröffentlicht. Grundlegende Informationen zur Lehrberichterstattung sind auf [www.rub.de/lehrberichte](www.rub.de/lehrberichte) abrufbar. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
 ```{r pagebreak-metrics-before}
 officer::run_pagebreak()
@@ -646,33 +646,69 @@ degree_programs_path <- system.file(
 degree_programs <- readr::read_csv(
   file = degree_programs_path,
   col_types = readr::cols(
-    REPORT_NR = readr::col_double(),
+    REPORT_NR = readr::col_integer(),
+    REPORT_TYPE_ID = readr::col_character(),
     SUBJECT_DEGREE = readr::col_character(),
     SUBJECT_GROUP = readr::col_character()
   )
 ) %>%
   dplyr::mutate(
-    row_name = dplyr::row_number()
-    ) %>%
+    row_nr = dplyr::row_number()
+    ) 
+
+row_footnote_m_ed <- degree_programs %>% 
+  dplyr::filter(
+    REPORT_TYPE_ID == "M_ED" 
+  ) %>% 
+  dplyr::pull(
+    row_nr
+  )
+
+row_footnote_fgr <- degree_programs %>% 
+  dplyr::filter(
+    REPORT_TYPE_ID == "FGR" 
+  ) %>% 
+  dplyr::pull(
+    row_nr
+  )
+  
+report_nr_m_ed <- degree_programs %>% 
+  dplyr::filter(
+    REPORT_TYPE_ID == "M_ED" 
+  ) %>% 
+  dplyr::pull(
+    REPORT_NR
+  ) %>% 
+  unique(
+    .
+  )
+
+report_nr_fgr <- degree_programs %>% 
+  dplyr::filter(
+    REPORT_TYPE_ID == "FGR" 
+  ) %>% 
+  dplyr::pull(
+    REPORT_NR
+  ) %>% 
+  unique(
+    .
+  )
+
+degree_programs <- degree_programs %>%
   dplyr::select(
-    row_name,
+    row_nr,
     head1 = REPORT_NR,
     head2 = SUBJECT_DEGREE,
     head3 = SUBJECT_GROUP
     )
 
-footnote_text_med <- "Im Datenreport Nr. 72 sind fächergruppenübergreifend alle Master of Education Studiengänge berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+footnote_text_m_ed <- glue::glue(
+  "Im Datenreport Nr. {report_nr_m_ed} sind fächergruppenübergreifend alle Master of Education Studiengänge berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+  )
 
-footnote_text_fgr <- "Im Datenreport Nr. 74 sind alle Studiengänge je Fächergruppe berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
-
-rows_footnote_med <- degree_programs %>%
-  dplyr::filter(head1 %in% c(72)) %>%
-  dplyr::pull(row_name)
-
-
-rows_footnote_fgr <- degree_programs %>%
-  dplyr::filter(head1 %in% c(74)) %>%
-  dplyr::pull(row_name)
+footnote_text_fgr <- glue::glue(
+  "Im Datenreport Nr. {report_nr_fgr} sind alle Studiengänge je Fächergruppe berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+)
 
 flextable::flextable(
     degree_programs,
@@ -682,16 +718,29 @@ flextable::flextable(
     even_body = grey_fill,
     odd_body = "transparent"
   ) %>%
-  flextable::footnote(i = rows_footnote_med, value = as_paragraph(footnote_text_med), ref_symbols = "*", part = "body") %>%
-    flextable::footnote(i = rows_footnote_fgr, value = as_paragraph(footnote_text_fgr), ref_symbols = "**", part = "body") %>%
-  flextable::colformat_int(j = "head1", big.mark = "") %>%
+  flextable::footnote(
+    i = row_footnote_m_ed,
+    value = flextable::as_paragraph(footnote_text_m_ed),
+    ref_symbols = "*",
+    part = "body"
+  ) %>%
+  flextable::footnote(
+    i = row_footnote_fgr,
+    value = flextable::as_paragraph(footnote_text_fgr),
+    ref_symbols = "**",
+    part = "body"
+  ) %>%
   RUBer::rub_style_flextable() %>%
-  flextable::set_header_labels(head1 = "Datenreport Nr.", head2 = "Fach-Abschluss-Kombinationen", head3 = "Fächergruppe") %>%
-  align(j = "head1", align = "center", part = "body") %>%
-  align(j = "head1", align = "center", part = "header") %>%
-  width(j = "head1", width = 1) %>%
-  width(j = "head2", width = 3.63) %>%
-  width(j = "head3", width = 2.25)
+  flextable::set_header_labels(
+    head1 = "Datenreport Nr.",
+    head2 = "Fach-Abschluss-Kombinationen",
+    head3 = "Fächergruppe"
+  ) %>%
+  flextable::align(j = "head1", align = "center", part = "body") %>%
+  flextable::align(j = "head1", align = "center", part = "header") %>%
+  flextable::width(j = "head1", width = 1) %>%
+  flextable::width(j = "head2", width = 3.63) %>%
+  flextable::width(j = "head3", width = 2.25)
 ```
 
 ```{r pagebreak-studiengaenge}
