@@ -53,20 +53,21 @@ toc-title: "Inhaltsverzeichnis"
 ---
 
 ```{r setup, include=FALSE}
-library(bookdown)
+# library(bookdown)
 library(Datenreport2022)
 library(devEMF)
 library(dplyr)
 library(extrafont)
 library(flextable)
-library(ggplot2)
+# library(ggplot2)
+library(gtsummary)
 library(here)
 library(knitr)
-library(magrittr)
+# library(magrittr)
 library(officer)
 library(purrr)
 library(RUBer)
-library(scales)
+# library(scales)
 
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -86,6 +87,13 @@ extrafont::loadfonts(
   device = "win",
   quiet = TRUE
 )
+
+gtsummary::theme_gtsummary_language(
+  language = "de",
+  decimal.mark = ",",
+  big.mark = "."
+)
+
 ```
 
 ```{r data}
