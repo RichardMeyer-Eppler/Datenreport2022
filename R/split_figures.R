@@ -165,7 +165,7 @@ split_figures <- function(
         shard = dplyr::if_else(
           (
             cumsum_variable_height < (binding_upper_bound + p_offset) |
-              near(cumsum_variable_height, (binding_upper_bound + p_offset))
+              dplyr::near(cumsum_variable_height, (binding_upper_bound + p_offset))
           ) &
             is.na(shard),
           p_shard,
