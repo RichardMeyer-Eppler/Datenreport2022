@@ -53,21 +53,17 @@ toc-title: "Inhaltsverzeichnis"
 ---
 
 ```{r setup, include=FALSE}
-# library(bookdown)
 library(Datenreport2022)
 library(devEMF)
 library(dplyr)
 library(extrafont)
 library(flextable)
-# library(ggplot2)
 library(gtsummary)
 library(here)
 library(knitr)
-# library(magrittr)
 library(officer)
 library(purrr)
 library(RUBer)
-# library(scales)
 
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -222,7 +218,7 @@ Der vorliegende Datenreport enthält sowohl hochschulstatistische Daten des Info
 - Übergang in ein weiteres Studium oder in den Beruf
 - Förderungen für Weiterentwicklung der Lehre
 
-Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Weiterführende Informationen zum allgemeinen Prozess der Lehrberichterstattung an der RUB sind in einem Beitrag von @Patsch.2018 veröffentlicht. Grundlegende Informationen zur Lehrberichterstattung sind auf [www.rub.de/lehrberichte](www.rub.de/lehrberichte) abrufbar. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
+Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts und schließt daher inhaltlich an die Fragestellungen des Lehrberichts an. Weiterführende Informationen zum allgemeinen Prozess der Lehrberichterstattung an der RUB sind in einem Beitrag von @Patsch.2018 veröffentlicht. Grundlegende Informationen zur Lehrberichterstattung sind auf [https://www.rub.de/lehrberichte](https://www.rub.de/lehrberichte) abrufbar. Die Bereitstellung weiterer Daten oder tiefergehende Auswertungen spezifischer Fragestellungen ist auf Anfrage möglich (vgl. [Ansprechpersonen und Kontakt](#Kontakt)).
 
 ```{r pagebreak-metrics-before}
 officer::run_pagebreak()
