@@ -20,6 +20,28 @@ wrangle_response_rates <- function(
           is.character
         ),
         forcats::as_factor
+      ),
+      # Order of fachsemester needs to be overwritten manually
+      fachsemester = factor(
+        fachsemester,
+        levels = c(
+          "NA. Fachsemester",
+          "2. Fachsemester",
+          "5. Fachsemester"
+        )
+      ),
+      # Order of Abschluss needs to be overwritten manually
+      abschluss_dtxt = factor(
+        abschluss_dtxt,
+        levels = c(
+          "Bachelor 1-Fach",
+          "Bachelor 2-Fächer",
+          "Staatsexamen",
+          "Magister Theologiae",
+          "Master 1-Fach",
+          "Master 2-Fächer",
+          "Master of Education"
+        )
       )
     )
 
