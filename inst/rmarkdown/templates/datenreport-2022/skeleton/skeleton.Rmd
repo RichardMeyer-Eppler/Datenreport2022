@@ -500,42 +500,43 @@ RUBer::rub_table_item(
 
 ```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
 
-survey_path <- system.file(
+typology_path <- system.file(
   "rmarkdown",
   "templates",
   "datenreport-2022",
   "skeleton",
-  "survey.xlsx",
+  "response_rates_typologies.xlsx",
   package = "Datenreport2022"
 )
 
-studieneingang <- readxl::read_xlsx(
-  path = survey_path,
-  sheet = "data_eb"
-  ) %>%
-  dplyr::mutate(
-    row_id = dplyr::row_number(),
-    dplyr::across(
-      where(
-        is.numeric
-      ),
-      round,
-      digits = 2
-    )
-  )
+response_rates_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2022",
+  "skeleton",
+  "response_rates.csv",
+  package = "Datenreport2022"
+)
 
 typology <- readxl::read_xlsx(
-  path = survey_path,
+  path = typology_path,
   sheet = "typology_eb"
   )
 
-headings <- c("Geschlecht", "Abschlussart", "Fächergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Studierende / gültige Fragebögen", "Rücklaufquote Studieneingangsbefragungen")
+headings <- c("Geschlecht", "Abschlussart", "F\u00E4chergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Studierende / g\u00FCltige Frageb\u00F6gen", "R\u00FCcklaufquote Studieneingangsbefragungen")
+
+studieneingang <- Datenreport2022::get_response_rate_data(
+  path = response_rates_path,
+  survey_type_id = "EB",
+  label = "Studieneingang"
+)
 
 RUBer::rub_table_eb(
   df = studieneingang,
-  typolog = typology,
+  typology = typology,
   headings = headings
 )
+
 ```
 
 ```{r pagebreak-eb}
@@ -544,42 +545,67 @@ officer::run_pagebreak()
 
 ```{r studienverlauf, tab.cap = "PLACEHOLDER_TABZusammensetzung Studienverlaufsbefragung", tab.id = "vb_tab", ft.align = "left"}
 
-survey_path <- system.file(
+typology_path <- system.file(
   "rmarkdown",
   "templates",
   "datenreport-2022",
   "skeleton",
-  "survey.xlsx",
+  "response_rates_typologies.xlsx",
   package = "Datenreport2022"
 )
 
-studienverlauf <- readxl::read_xlsx(
-  path = survey_path,
-  sheet = "data_vb"
-  ) %>%
-  dplyr::mutate(
-    row_id = dplyr::row_number(),
-    dplyr::across(
-      where(
-        is.numeric
-      ),
-      round,
-      digits = 2
-    )
-  )
+response_rates_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2022",
+  "skeleton",
+  "response_rates.csv",
+  package = "Datenreport2022"
+)
 
 typology <- readxl::read_xlsx(
-  path = survey_path,
+  path = typology_path,
   sheet = "typology_vb"
   )
 
-headings <- c("Geschlecht", "Abschlussart", "Fächergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Studierende / gültige Fragebögen", "Rücklaufquote Studienverlaufsbefragungen")
+headings <- c("Geschlecht", "Abschlussart", "F\u00E4chergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Studierende / g\u00FCltige Frageb\u00F6gen", "R\u00FCcklaufquote Studienverlaufsbefragungen")
+
+studienverlauf <- Datenreport2022::get_response_rate_data(
+  path = response_rates_path,
+  survey_type_id = "VB",
+  label = "Studienverlauf",
+  col_index = c(
+    2L,
+    4L,
+    6L,
+    8L
+  ),
+  into_list = list(
+    c(
+      "koepfe_2fs_rub",
+      "koepfe_2fs_rub_perc"
+    ),
+    c(
+      "koepfe_2fs_bef",
+      "koepfe_2fs_bef_perc"
+    ),
+    c(
+      "koepfe_5fs_rub",
+      "koepfe_5fs_rub_perc"
+    ),
+    c(
+      "koepfe_5fs_bef",
+      "koepfe_5fs_bef_perc"
+    )
+  )
+)
 
 RUBer::rub_table_vb(
   df = studienverlauf,
   typolog = typology,
   headings = headings
 )
+
 ```
 
 ```{r pagebreak-vb}
@@ -588,36 +614,36 @@ officer::run_pagebreak()
 
 ```{r studienabschluss, tab.cap = "PLACEHOLDER_TABZusammensetzung Absolvent:innenbefragung", tab.id = "ab_tab", ft.align = "left"}
 
-survey_path <- system.file(
+typology_path <- system.file(
   "rmarkdown",
   "templates",
   "datenreport-2022",
   "skeleton",
-  "survey.xlsx",
+  "response_rates_typologies.xlsx",
   package = "Datenreport2022"
 )
 
-studienabschluss <- readxl::read_xlsx(
-  path = survey_path,
-  sheet = "data_ab"
-  ) %>%
-  dplyr::mutate(
-    row_id = dplyr::row_number(),
-    dplyr::across(
-      where(
-        is.numeric
-      ),
-      round,
-      digits = 2
-    )
-  )
+response_rates_path <- system.file(
+  "rmarkdown",
+  "templates",
+  "datenreport-2022",
+  "skeleton",
+  "response_rates.csv",
+  package = "Datenreport2022"
+)
 
 typology <- readxl::read_xlsx(
-  path = survey_path,
+  path = typology_path,
   sheet = "typology_ab"
   )
 
-headings <- c("Geschlecht", "Abschlussart", "Fächergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Absolvent:innen / gültige Fragebögen", "Rücklaufquote Absolvent:innenbefragungen")
+headings <- c("Geschlecht", "Abschlussart", "F\u00E4chergruppe (erstes Studienfach)", "Gesamtzahl angeschriebene Absolvent:innen / gültige Frageb\u00F6gen", "R\u00FCcklaufquote Absolvent:innenbefragungen")
+
+studienabschluss <- Datenreport2022::get_response_rate_data(
+  path = response_rates_path,
+  survey_type_id = "AB",
+  label = "Studienabschluss"
+)
 
 RUBer::rub_table_ab(
   df = studienabschluss,
