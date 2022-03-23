@@ -12,7 +12,7 @@ load_raw_csv <- function(
   df <- readr::read_csv(
     file = path,
     col_types = readr::cols(
-      REPORT_NR = readr::col_double(),
+      REPORT_NR = readr::col_integer(),
       REPORT_TYPE_ID = readr::col_character(),
       FIGURE_COUNT = readr::col_double(),
       X = readr::col_character(),
@@ -106,4 +106,35 @@ load_raw_response_rates <- function(
     janitor::clean_names()
 
   return(df_response)
+}
+
+#' Loads csv file with information on reports
+#'
+#' @param path Path to csv file with raw data
+#'
+#' @return Data frame
+#' @export
+#'
+#' @examples
+load_raw_reports <- function(
+  path
+) {
+  df_reports <- readr::read_csv(
+    file = path,
+    col_types = readr::cols(
+      REPORT_NR = readr::col_integer(),
+      REPORT_TYPE_ID = readr::col_character(),
+      REPORT_TITLE = readr::col_character(),
+      REPORT_AUTHOR = readr::col_character(),
+      FILE_NAME = readr::col_character(),
+      SUBFOLDER = readr::col_character(),
+      FAK_RUB_ID_3 = readr::col_character(),
+      FAK_RUB_DTXT_3 = readr::col_character(),
+      FGR_NRWBUND_ID = readr::col_character(),
+      FGR_NRWBUND_LTXT = readr::col_character()
+    )
+  ) %>%
+    janitor::clean_names()
+
+  return(df_reports)
 }
