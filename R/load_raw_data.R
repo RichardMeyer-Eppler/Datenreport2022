@@ -79,3 +79,31 @@ load_raw_studienfaelle <- function(
 
   return(df_faelle)
 }
+
+#' Loads csv file with information on response rates
+#'
+#' @param path Path to csv file with raw data
+#'
+#' @return Data frame
+#' @export
+#'
+#' @examples
+load_raw_response_rates <- function(
+  path
+) {
+  df_response <- readr::read_csv(
+    file = path,
+    col_types = readr::cols(
+      BEFRAGUNG_TYP_ID = readr::col_character(),
+      FGR_NRWBUND_LTXT = readr::col_character(),
+      ABSCHLUSS_DTXT = readr::col_character(),
+      GESCHLECHT_LTXT = readr::col_character(),
+      FACHSEMESTER = readr::col_integer(),
+      KOEPFE = readr::col_double(),
+      KOEPFE_RUECKLAUF = readr::col_double()
+    )
+  ) %>%
+    janitor::clean_names()
+
+  return(df_response)
+}
