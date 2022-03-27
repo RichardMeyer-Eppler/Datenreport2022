@@ -14,7 +14,7 @@ load_raw_csv <- function(
     col_types = readr::cols(
       REPORT_NR = readr::col_integer(),
       REPORT_TYPE_ID = readr::col_character(),
-      FIGURE_COUNT = readr::col_double(),
+      FIGURE_COUNT = readr::col_integer(),
       X = readr::col_character(),
       Y = readr::col_character(),
       Y_LABEL = readr::col_character(),
@@ -35,10 +35,10 @@ load_raw_csv <- function(
       REPORT_AUTHOR = readr::col_character(),
       REPORT_TITLE = readr::col_character(),
       FILE_NAME = readr::col_character(),
-      FIGURE_FILTER_FLAG = readr::col_double(),
-      AGGREGATION_SORT_1 = readr::col_double(),
-      ABBILDUNG_MAP_SORT = readr::col_double(),
-      WERT_SORT = readr::col_double()
+      FIGURE_FILTER_FLAG = readr::col_integer(),
+      AGGREGATION_SORT_1 = readr::col_integer(),
+      ABBILDUNG_MAP_SORT = readr::col_integer(),
+      WERT_SORT = readr::col_integer()
     )
   ) %>%
     janitor::clean_names()
