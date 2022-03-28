@@ -91,7 +91,7 @@ gtsummary::theme_gtsummary_language(
 )
 
 # https://bookdown.org/yihui/bookdown/cross-references.html
-
+# https://ardata-fr.github.io/officeverse/officedown-for-word.html
 ```
 
 ```{r data}
@@ -222,7 +222,7 @@ Der Datenreport liefert die Datengrundlage für die Erstellung des Lehrberichts 
 officer::run_pagebreak()
 ```
 
-```{r metrics, tab.cap = "PLACEHOLDER_TABDie Datenreporte der Lehrberichtserstattung 2021/2022 im Gesamtüberblick[^icons]", tab.id = "metrics_tab", ft.align = "left"}
+```{r metrics, tab.cap = "PLACEHOLDER_TABDie Datenreporte der Lehrberichtserstattung 2021/2022 im Gesamtüberblick[^icons]", tab.id = "metrics-tab", ft.align = "left"}
 
 RUBer::rub_table_metrics(
   df_metrics
@@ -403,7 +403,7 @@ cat(
 )
 ```
 
-```{r funded-projects-table, tab.cap = "PLACEHOLDER_TABFörderungen für Weiterentwicklung der Lehre", tab.id = "projects_tab", ft.align = "left", eval = df_projects_flag}
+```{r funded-projects-table, tab.cap = "PLACEHOLDER_TABFörderungen für Weiterentwicklung der Lehre", tab.id = "projects-tab", ft.align = "left", eval = df_projects_flag}
 
 RUBer::rub_table_programs(
   df = df_projects
@@ -487,7 +487,7 @@ cat(out, sep = '\n')
 officer::run_pagebreak()
 ```
 
-```{r items-table, tab.cap = "PLACEHOLDER_TABAcht Items je Abschlussart mit besonders großen Abweichungen zur Fächergruppe", tab.id = "items_tab", ft.align = "left", eval = df_item_flag}
+```{r items-table, tab.cap = "PLACEHOLDER_TABAcht Items je Abschlussart mit besonders großen Abweichungen zur Fächergruppe", tab.id = "items-tab", ft.align = "left", eval = df_item_flag}
 
 RUBer::rub_table_item(
   df = df_item
@@ -496,9 +496,9 @@ RUBer::rub_table_item(
 
 # Zusammensetzung der Befragten mit gültigen Fragebögen im Vergleich zur Grundgesamtheit der angeschriebenen Personen
 
-Die Grundgesamtheit und die gültigen Fragebögen für die drei Rücklauftabellen beziehen sich auf die in den Datenreporten berücksichtigten Studiengänge (vgl. Tabelle \@ref(tab:stg_tab)), ausgeschlossene Studiengänge (vgl. Tabelle \@ref(tab:stg_excluded_tab)) wurden nicht berücksichtigt.
+Die Grundgesamtheit und die gültigen Fragebögen für die drei Rücklauftabellen beziehen sich auf die in den Datenreporten berücksichtigten Studiengänge (vgl. Tabelle \@ref(tab:stg-tab)), ausgeschlossene Studiengänge (vgl. Tabelle \@ref(tab:stg-excluded-tab)) wurden nicht berücksichtigt.
 
-```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
+```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb-tab", ft.align = "left"}
 
 typology_path <- system.file(
   "rmarkdown",
@@ -543,7 +543,7 @@ RUBer::rub_table_eb(
 officer::run_pagebreak()
 ```
 
-```{r studienverlauf, tab.cap = "PLACEHOLDER_TABZusammensetzung Studienverlaufsbefragung", tab.id = "vb_tab", ft.align = "left"}
+```{r studienverlauf, tab.cap = "PLACEHOLDER_TABZusammensetzung Studienverlaufsbefragung", tab.id = "vb-tab", ft.align = "left"}
 
 typology_path <- system.file(
   "rmarkdown",
@@ -612,7 +612,7 @@ RUBer::rub_table_vb(
 officer::run_pagebreak()
 ```
 
-```{r studienabschluss, tab.cap = "PLACEHOLDER_TABZusammensetzung Absolvent:innenbefragung", tab.id = "ab_tab", ft.align = "left"}
+```{r studienabschluss, tab.cap = "PLACEHOLDER_TABZusammensetzung Absolvent:innenbefragung", tab.id = "ab-tab", ft.align = "left"}
 
 typology_path <- system.file(
   "rmarkdown",
@@ -661,7 +661,7 @@ officer::run_pagebreak()
 
 Auslaufende Fach-Abschluss-Kombinationen und weiterbildende Studiengänge werden bei den Datenreports grundsätzlich nicht berücksichtigt. Für sehr neue Studiengänge liegen in der Regel weder Befragungsdaten noch aussagekräftige deskriptive Statistiken aus dem Informationsmanagement-System vor, weshalb diese ebenfalls nicht berücksichtigt werden.
 
-```{r studiengaenge, tab.cap = "PLACEHOLDER_TABBerücksichtigte Studiengänge", tab.id = "stg_tab", ft.align = "left"}
+```{r studiengaenge, tab.cap = "PLACEHOLDER_TABBerücksichtigte Studiengänge", tab.id = "stg-tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 degree_programs_path <- system.file(
@@ -777,7 +777,7 @@ flextable::flextable(
 officer::run_pagebreak()
 ```
 
-```{r studiengaenge-ausgeschlossen, tab.cap = "PLACEHOLDER_TABAusgeschlossene Studiengänge", tab.id = "stg_excluded_tab", ft.align = "left"}
+```{r studiengaenge-ausgeschlossen, tab.cap = "PLACEHOLDER_TABAusgeschlossene Studiengänge", tab.id = "stg-excluded-tab", ft.align = "left"}
 grey_fill <- "#ECECEC"
 
 excluded_programs_path <- system.file(
