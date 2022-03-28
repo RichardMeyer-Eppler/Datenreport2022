@@ -90,16 +90,11 @@ gtsummary::theme_gtsummary_language(
   big.mark = "."
 )
 
+# https://bookdown.org/yihui/bookdown/cross-references.html
+
 ```
 
 ```{r data}
-# df <- as_tibble(readr::read_rds(here("data", "df.rds")))
-# df <- translate_df(df)
-# df <- RUB::sort_report(df)
-# df <- RUB::filter_report(df, 37)
-
-# df <- report_1
-
 df <- params$p_df
 
 n_items <- 8L
@@ -120,6 +115,7 @@ df_stg_null <- is.null(
 label_ab <- "Absolvent:innenbefragung"
 label_eb <- "Studieneingangsbefragung"
 label_vb <- "Studienverlaufsbefragung"
+report_type_id <- df[["report_type_id"]][1]
 
 if(!df_stg_null) {
   df_ab <- params$p_df_stg %>% 
@@ -134,7 +130,10 @@ if(!df_stg_null) {
       befragung_typ_dtxt == label_eb
     )
   
-  df_eb_flag <- nrow(df_eb) > 0
+  df_eb_flag <- nrow(
+      df_eb
+    ) > 0 &
+    report_type_id != "M_ED"
   
   df_vb <- params$p_df_stg %>% 
     dplyr::filter(
@@ -144,8 +143,7 @@ if(!df_stg_null) {
   df_vb_flag <- nrow(df_vb) > 0
 }
 
-# df <- df_fake_complete
-# https://bookdown.org/yihui/bookdown/cross-references.html
+
 ```
 
 ```{r metrics-data}
@@ -497,6 +495,8 @@ RUBer::rub_table_item(
 ```
 
 # Zusammensetzung der Befragten mit gültigen Fragebögen im Vergleich zur Grundgesamtheit der angeschriebenen Personen
+
+Die Grundgesamtheit und die gültigen Fragebögen für die drei Rücklauftabellen beziehen sich auf die in den Datenreporten berücksichtigten Studiengänge (vgl. Tabelle \@ref(tab:stg_tab)), ausgeschlossene Studiengänge (vgl. Tabelle \@ref(tab:stg_excluded_tab)) wurden nicht berücksichtigt.
 
 ```{r eingangsbefragung, tab.cap = "PLACEHOLDER_TABZusammensetzung Studieneingangsbefragung", tab.id = "eb_tab", ft.align = "left"}
 
