@@ -58,6 +58,7 @@ library(devEMF)
 library(dplyr)
 library(extrafont)
 library(flextable)
+library(forcats)
 library(gtsummary)
 library(here)
 library(knitr)
@@ -121,6 +122,11 @@ if(!df_stg_null) {
   df_ab <- params$p_df_stg %>% 
     dplyr::filter(
       befragung_typ_dtxt == label_ab
+    ) %>% 
+    dplyr::mutate(
+      studiengang = forcats::fct_drop(
+        studiengang
+      )
     )
   
   df_ab_flag <- nrow(df_ab) > 0
@@ -128,6 +134,11 @@ if(!df_stg_null) {
   df_eb <- params$p_df_stg %>% 
     dplyr::filter(
       befragung_typ_dtxt == label_eb
+    ) %>% 
+    dplyr::mutate(
+      studiengang = forcats::fct_drop(
+        studiengang
+      )
     )
   
   df_eb_flag <- nrow(
@@ -138,11 +149,15 @@ if(!df_stg_null) {
   df_vb <- params$p_df_stg %>% 
     dplyr::filter(
       befragung_typ_dtxt == label_vb
+    ) %>% 
+    dplyr::mutate(
+      studiengang = forcats::fct_drop(
+        studiengang
+      )
     )
   
   df_vb_flag <- nrow(df_vb) > 0
 }
-
 
 ```
 
