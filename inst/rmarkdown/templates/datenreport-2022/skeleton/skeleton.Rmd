@@ -374,20 +374,8 @@ funded_projects_path <- system.file(
 
 # params$p_report_nr <- 2
 
-df_projects <- readr::read_csv(
-  file = funded_projects_path,
-  col_types = readr::cols(
-    report_nr = readr::col_double(),
-    forderzeitraum_von = readr::col_datetime(
-      format = ""
-    ),
-    forderzeitraum_bis = readr::col_datetime(
-      format = ""
-    ),
-    programm = readr::col_character(),
-    projekttitel = readr::col_character(),
-    antragsteller_innen_verantwortliche_personen = readr::col_character()
-  ) 
+df_projects <- Datenreport2022::get_funded_projects(
+  path = funded_projects_path
 ) %>% 
   dplyr::filter(
     report_nr == params$p_report_nr
@@ -482,9 +470,6 @@ src <- readLines(
   here::here("fig_template.Rmd"),
   encoding = "UTF-8"
 )
-
-# knitr::pat_md()
-# knitr::render_markdown()
 
 out <- knitr::knit(
   text = src

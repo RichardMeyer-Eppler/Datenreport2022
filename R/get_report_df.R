@@ -26,4 +26,3 @@ get_report_df <- function(
 
   return(df_report)
 }
-
