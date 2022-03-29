@@ -1,4 +1,11 @@
 ^Datenreport2022\.Rproj$
 ^\.Rproj\.user$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^data-raw$
 ^LICENSE\.md$
+^doc$
+^Meta$
+^\.github$
