@@ -4,10 +4,12 @@
 \alias{get_funded_projects}
 \title{Get data frame of funded projects}
 \usage{
-get_funded_projects(path)
+get_funded_projects(df, report_nr = NULL)
 }
 \arguments{
-\item{path}{Character, path to csv file}
+\item{df}{Data frame retrieved by \code{load_raw_funded_projects}}
+
+\item{report_nr}{Optional integer, result set will be filtered to these report numbers}
 }
 \value{
 Data frame

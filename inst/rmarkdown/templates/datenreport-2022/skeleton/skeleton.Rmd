@@ -374,27 +374,16 @@ funded_projects_path <- system.file(
 
 # params$p_report_nr <- 2
 
-df_projects <- Datenreport2022::get_funded_projects(
+df_projects <- Datenreport2022::load_raw_funded_projects(
   path = funded_projects_path
 ) %>% 
-  dplyr::filter(
-    report_nr == params$p_report_nr
-  ) %>% 
-  dplyr::mutate(
-    rn = dplyr::row_number()
-  ) %>% 
-  dplyr::group_by(
-    report_nr,
-    programm
-  ) %>% 
-  dplyr::mutate(
-    is_last_row = dplyr::row_number() == max(
-      dplyr::row_number()
-    )
-  ) %>% 
-  dplyr::ungroup()
+  Datenreport2022::get_funded_projects(
+    df = .,
+    report_nr = params$p_report_nr
+  )
 
 df_projects_flag <- nrow(df_projects) > 0
+
 ```
 
 ```{r funded-projects-heading, results= 'asis', eval = df_projects_flag}

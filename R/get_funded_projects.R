@@ -1,28 +1,39 @@
 #' Get data frame of funded projects
 #'
-#' @param path Character, path to csv file
+#' @param df Data frame retrieved by `load_raw_funded_projects`
+#' @param report_nr Optional integer, result set will be filtered to these report numbers
 #'
 #' @return Data frame
 #' @export
 #'
 #' @examples
 get_funded_projects <- function(
-  path
+  df,
+  report_nr = NULL
 ) {
-  df_funded_projects <- readr::read_csv(
-    file = path,
-    col_types = readr::cols(
-      report_nr = readr::col_double(),
-      forderzeitraum_von = readr::col_datetime(
-        format = ""
-      ),
-      forderzeitraum_bis = readr::col_datetime(
-        format = ""
-      ),
-      programm = readr::col_character(),
-      projekttitel = readr::col_character(),
-      antragsteller_innen_verantwortliche_personen = readr::col_character()
-    )
-  )
-    return(df_funded_projects)
+  p_report_nr <- report_nr
+
+  if(!is.null(report_nr)) {
+    df <- df %>%
+      dplyr::filter(
+        report_nr %in% p_report_nr
+      )
+  }
+
+  df_wrangled <- df %>%
+    dplyr::mutate(
+      rn = dplyr::row_number()
+    ) %>%
+    dplyr::group_by(
+      report_nr,
+      programm
+    ) %>%
+    dplyr::mutate(
+      is_last_row = dplyr::row_number() == max(
+        dplyr::row_number()
+      )
+    ) %>%
+    dplyr::ungroup()
+
+  return(df_wrangled)
 }
