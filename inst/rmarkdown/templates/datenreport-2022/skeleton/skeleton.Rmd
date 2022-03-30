@@ -73,8 +73,10 @@ knitr::opts_chunk$set(
   dev = "emf",
   dev.args = list(
     emfPlus = TRUE,
-    emfPlusFont = TRUE,
-    emfPlusRaster = TRUE
+  #  emfPlusFont = TRUE,
+    emfPlusRaster = TRUE,
+  # https://cran.r-project.org/web/packages/devEMF/NEWS, see v4.0 
+    emfPlusFontToPath = TRUE
   ),
   fig.width = 6.8,
   fig.ext = "emf"
