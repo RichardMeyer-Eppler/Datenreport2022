@@ -20,6 +20,12 @@ get_chunk_parameters <- function(
     ) %>%
     dplyr::distinct(
       .data[["figure_count"]],
+      .data[["is_heading"]],
+      .data[["is_subheading"]],
+      .data[["heading"]],
+      .data[["subheading"]],
+      .data[["figure_caption"]],
+      .data[["figure_height"]],
     ) %>%
     dplyr::mutate(
       chunk_label = .data[["figure_count"]],
@@ -28,15 +34,57 @@ get_chunk_parameters <- function(
       ),
       function_call = glue::glue(
         "{function_call}({function_parameters})"
-      )
+      ),
+      .before = .data[["is_heading"]]
     ) %>%
     dplyr::select(
       -.data[["figure_count"]]
-    )
+    ) %>%
+    dplyr::rowwise() %>%
+    dplyr::mutate(
+      chunk_figure_df = list(
+        tpl_get_figure_df(
+          chunk_label = chunk_label,
+          function_params = function_parameters
+        )
+      )
+      # ,
+      # chunk_heading = dplyr::if_else(
+      #   is_heading,
+      #   Datenreport2022::tpl_heading(),
+      #   NA_character_
+      # ),
+      # chunk_subheading = dplyr::if_else(
+      #   is_subheading,
+      #   Datenreport2022::tpl_subheading(),
+      #   NA_character_
+      # ),
+      # chunk_plot_figure = Datenreport2022::tpl_plot_figure()
+    ) %>%
+    dplyr::ungroup()
 
   return(chunk_parameters)
 }
 
+#
+# Datenreport2022::tpl_get_figure_df()
+# Datenreport2022::tpl_heading()
+# Datenreport2022::tpl_subheading()
+# Datenreport2022::tpl_plot_figure()
+#
+#
+# debugonce(tpl_get_figure_df)
+#
+# test <- get_chunk_parameters(
+#   RUBer::df_example %>%
+#     dplyr::filter(
+#       report_nr == 1L
+#     )
+#   )
+# test
+#
+# test$chunk_figure_df
+#
 # RUBer::df_example %>%
 #   dplyr::group_by(
 #     report_nr,

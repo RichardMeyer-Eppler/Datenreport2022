@@ -1,14 +1,31 @@
 #' Returns a character vector for the code chunk to retrieve the figure data
 #' frame using `Datenreport2022::get_figure_df`
 #'
+#' @param chunk_label Character
+#' @param function_call Character
+#' @param function_params Character
+#' @
 #' @return Character vector
 #' @export
 #'
 #' @examples
-#' writeLines(tpl_get_figure_df())
-tpl_get_figure_df <- function() {
+#' writeLines(tpl_get_figure_df(chunk_label = 1L, function_params = "df, figure_count = 1L))
+tpl_get_figure_df <- function(
+  chunk_label,
+  function_call = "Datenreport2022::get_figure_df",
+  function_params
+) {
   template <- c(
-    "\n```{r prep-fig-{{label}}, include = FALSE}", "df_fig <- Datenreport2022::get_figure_df{{func}}",
+    glue::glue(
+      "\n```{r prep-fig-<<chunk_label>>, include = FALSE}",
+      .open = "<<",
+      .close = ">>"
+    ),
+    glue::glue(
+      "df_fig <-<<function_call>>(<<function_params>>)",
+      .open = "<<",
+      .close = ">>"
+    ),
     "```"
   )
 

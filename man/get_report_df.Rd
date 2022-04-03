@@ -4,10 +4,12 @@
 \alias{get_report_df}
 \title{Cleans up the report data}
 \usage{
-get_report_df(df)
+get_report_df(df, max_file_name_length = 75L)
 }
 \arguments{
 \item{df}{Data frame obtained by load_raw_reports}
+
+\item{max_file_name_length}{Integer, maximum length of file names}
 }
 \value{
 Data frame
