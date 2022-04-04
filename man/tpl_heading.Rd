@@ -4,10 +4,15 @@
 \alias{tpl_heading}
 \title{Returns a character vector for the code chunk to insert a heading}
 \usage{
-tpl_heading()
+tpl_heading(chunk_label, heading)
+}
+\arguments{
+\item{chunk_label}{Character, chunk label}
+
+\item{heading}{Character, heading text}
 }
 \value{
-Character vector
+List of character vectors with chunk texts
 }
 \description{
 Returns a character vector for the code chunk to insert a heading

@@ -3,17 +3,25 @@
 \name{tpl_get_figure_df}
 \alias{tpl_get_figure_df}
 \title{Returns a character vector for the code chunk to retrieve the figure data
-frame using \code{Datenreport2022::get_figure_df}}
+frame}
 \usage{
-tpl_get_figure_df()
+tpl_get_figure_df(
+  chunk_label,
+  function_params,
+  function_call = "Datenreport2022::get_figure_df"
+)
+}
+\arguments{
+\item{chunk_label}{Character, chunk label}
+
+\item{function_params}{Character}
+
+\item{function_call}{Character, defaults to \code{Datenreport2022::get_figure_df}}
 }
 \value{
-Character vector
+List of character vectors with chunk texts
 }
 \description{
 Returns a character vector for the code chunk to retrieve the figure data
-frame using \code{Datenreport2022::get_figure_df}
-}
-\examples{
-writeLines(tpl_get_figure_df())
+frame
 }
