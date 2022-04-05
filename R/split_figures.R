@@ -11,55 +11,57 @@ update_figure_count <- function(
   ) {
   df_updated <- df %>%
     dplyr::group_by(
-      report_nr,
-      figure_count
+      .data[["report_nr"]],
+      .data[["figure_count"]]
     ) %>%
     dplyr::group_modify(
       ~ split_figures(.x)
     ) %>%
     dplyr::group_by(
-      report_nr,
-      figure_count,
-      shard
+      .data[["report_nr"]],
+      .data[["figure_count"]],
+      .data[["shard"]]
     ) %>%
     dplyr::mutate(
       first_row_within_split = dplyr::row_number() == 1L,
       figure_count_addend = dplyr::if_else(
-        first_row_within_split &
-          shard > 0,
-        1,
-        0
+        .data[["first_row_within_split"]] &
+          .data[["shard"]] > 0L,
+        1L,
+        0L
       )
     ) %>%
     dplyr::group_by(
-      report_nr,
-      figure_count,
+      .data[["report_nr"]],
+      .data[["figure_count"]]
     ) %>%
     dplyr::mutate(
       figure_caption = dplyr::if_else(
-        split_flag &
-          figure_type_id == 3,
+        .data[["split_flag"]] &
+          .data[["figure_type_id"]] == 3L,
         glue::glue(
           "{figure_caption} ({shard + 1}/{max_shard + 1})"
         ),
-        figure_caption
+        .data[["figure_caption"]]
       ),
       is_heading = dplyr::if_else(
-        figure_count_addend > 0,
-        FALSE,
-        is_heading
+        .data[["shard"]] == 0L,
+        .data[["is_heading"]],
+        FALSE
       ),
       is_subheading = dplyr::if_else(
-        figure_count_addend > 0,
-        FALSE,
-        is_subheading
+        .data[["shard"]] == 0L,
+        .data[["is_subheading"]],
+        FALSE
       )
     ) %>%
     dplyr::group_by(
-      report_nr
+      .data[["report_nr"]]
     ) %>%
     dplyr::mutate(
-      figure_count = figure_count + cumsum(figure_count_addend)
+      figure_count = .data[["figure_count"]] + cumsum(
+        .data[["figure_count_addend"]]
+      )
     ) %>%
     dplyr::ungroup()
 
@@ -102,10 +104,10 @@ split_figures <- function(
   ) {
     df <- df %>%
       dplyr::mutate(
-        shard = 0,
+        shard = 0L,
         figure_height = 4,
         split_flag = FALSE,
-        max_shard = 0,
+        max_shard = 0L,
 
       )
     return(df)
@@ -122,10 +124,10 @@ split_figures <- function(
       dplyr::mutate(
         shard = dplyr::dense_rank(
           abbildung_map_sort
-        ) - 1,
+        ) - 1L,
         split_flag = dplyr::dense_rank(
           abbildung_map_sort
-        ) != 0,
+        ) != 0L,
         max_shard = length(degree_groups),
       ) %>%
       dplyr::group_by(
@@ -165,7 +167,10 @@ split_figures <- function(
         shard = dplyr::if_else(
           (
             cumsum_variable_height < (binding_upper_bound + p_offset) |
-              dplyr::near(cumsum_variable_height, (binding_upper_bound + p_offset))
+              dplyr::near(
+                cumsum_variable_height,
+                (binding_upper_bound + p_offset)
+              )
           ) &
             is.na(shard),
           p_shard,
@@ -202,6 +207,10 @@ split_figures <- function(
         )
       )
 
-    split_figures(df_shard_offset, p_shard + 1L, offset)
+    split_figures(
+      df_shard_offset,
+      p_shard + 1L,
+      offset
+    )
   }
 }
