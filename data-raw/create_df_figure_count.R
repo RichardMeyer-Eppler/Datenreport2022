@@ -19,12 +19,12 @@ df <- Datenreport2022::load_raw_csv(
   )
 )
 
-# Add height columns
+# Add figure height columns (long running time!)
 df_height <- Datenreport2022::add_variable_and_static_height(
   df
 )
 
-# Update figure count column
+# Update figure count column (long running time!)
 df_figures <- Datenreport2022::update_figure_count(
   df_height
 )

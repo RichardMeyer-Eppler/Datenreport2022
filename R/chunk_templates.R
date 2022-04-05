@@ -120,7 +120,7 @@ tpl_subheading <- function(
         ),
        # "cat(paste(\"##\", df_fig$subheading[[1]]))",
         glue::glue(
-          "cat(paste(\"#\", \"{subheading}\"))"
+          "cat(paste(\"##\", \"{subheading}\"))"
         ),
         "```"
       )
