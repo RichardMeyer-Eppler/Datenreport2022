@@ -25,7 +25,8 @@ tpl_get_figure_df <- function(
       glue::glue(
         "\n```{r prep-fig-<<chunk_label>>, include = FALSE}",
         .open = "<<",
-        .close = ">>"
+        .close = ">>",
+        .trim = FALSE
       ),
       glue::glue(
         "df_fig <- <<function_call>>(<<function_params>>)",
@@ -72,7 +73,8 @@ tpl_heading <- function(
         glue::glue(
           "\n```{r heading-fig-<<chunk_label>>, results= 'asis'}",
           .open = "<<",
-          .close = ">>"
+          .close = ">>",
+          .trim = FALSE
         ),
       #  "cat(paste(\"#\", df_fig$heading[[1]]))",
         glue::glue(
@@ -116,7 +118,8 @@ tpl_subheading <- function(
         glue::glue(
           "\n```{r subheading-fig-<<chunk_label>>, results= 'asis'}",
           .open = "<<",
-          .close = ">>"
+          .close = ">>",
+          .trim = FALSE
         ),
        # "cat(paste(\"##\", df_fig$subheading[[1]]))",
         glue::glue(
@@ -175,7 +178,8 @@ tpl_plot_figure <- function(
         glue::glue(
           "\n```{r fig-<<chunk_label>>, fig.cap = '<<tab_placeholder>><<figure_caption>>', fig.height= <<figure_height>>, warning = <<suppress_warnings>>}",
           .open = "<<",
-          .close = ">>"
+          .close = ">>",
+          .trim = FALSE
         ),
         glue::glue(
           "{function_call}(df_fig)"
