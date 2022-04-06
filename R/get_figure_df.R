@@ -13,16 +13,18 @@ get_figure_df <- function(df, figure_count) {
   figure_df <- dplyr::filter(
     df,
     figure_count == {{ figure_count }}
-  ) %>%
-    dplyr::arrange(
-      report_nr,
-      figure_count,
-      aggregation_sort_1,
-      abbildung_map_sort,
-      wert_sort
-    )
+  )
 
-  figure_df <- set_factors(figure_df)
+  # %>%
+  #   dplyr::arrange(
+  #     report_nr,
+  #     figure_count,
+  #     aggregation_sort_1,
+  #     abbildung_map_sort,
+  #     wert_sort
+  #   )
+
+  #figure_df <- set_factors(figure_df)
 
   return(figure_df)
 }
@@ -54,59 +56,60 @@ set_factors <- function(df) {
     )
   }
 
-  if(df[[1, "figure_type_id"]] == 3) {
+  #
+  # if(df[[1, "figure_type_id"]] == 3) {
+  #
+  #   df[["x"]] <- as.numeric(
+  #     df[["x"]]
+  #   )
 
-    df[["x"]] <- as.numeric(
-      df[["x"]]
-    )
+    # df[["y"]] <- factor(
+    #   df[["y"]],
+    #   levels = unique(
+    #     df[["y"]]
+    #   )
+    # )
+    #
+    # df[["y"]] <- forcats::fct_rev(
+    #   df[["y"]]
+    # )
+ # }
 
-    df[["y"]] <- factor(
-      df[["y"]],
-      levels = unique(
-        df[["y"]]
-      )
-    )
+  # df[["fill"]] <- factor(
+  #   df[["fill"]],
+  #   levels = unique(
+  #     df[["fill"]]
+  #   )
+  # )
+  #
+  # df[["fill_label"]] <- factor(
+  #   df[["fill_label"]],
+  #   levels = unique(
+  #     df[["fill_label"]]
+  #   )
+  # )
 
-    df[["y"]] <- forcats::fct_rev(
-      df[["y"]]
-    )
-  }
+  # df[["group"]] <- factor(
+  #   df[["group"]],
+  #   levels = unique(
+  #     df[["group"]]
+  #   )
+  # )
 
-  df[["fill"]] <- factor(
-    df[["fill"]],
-    levels = unique(
-      df[["fill"]]
-    )
-  )
+  # if(df[[1, "fill_reverse"]]) {
 
-  df[["fill_label"]] <- factor(
-    df[["fill_label"]],
-    levels = unique(
-      df[["fill_label"]]
-    )
-  )
-
-  df[["group"]] <- factor(
-    df[["group"]],
-    levels = unique(
-      df[["group"]]
-    )
-  )
-
-  if(df[[1, "fill_reverse"]]) {
-
-    df[["fill"]] <- forcats::fct_rev(
-      df[["fill"]]
-    )
-
-    df[["fill_label"]] <- rev(
-      df[["fill_label"]]
-    )
-
-    df[["group"]] <- rev(
-      df[["group"]]
-    )
-  }
+    # df[["fill"]] <- forcats::fct_rev(
+    #   df[["fill"]]
+    # )
+    #
+    # df[["fill_label"]] <- rev(
+    #   df[["fill_label"]]
+    # )
+#
+#     df[["group"]] <- rev(
+#       df[["group"]]
+#     )
+#   }
 
   return(df)
 }
