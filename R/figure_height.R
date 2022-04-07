@@ -51,8 +51,10 @@ add_variable_and_static_height <- function(
     dplyr::arrange(
       report_nr,
       figure_count,
-      abbildung_map_sort,
+#      abbildung_map_sort, old sort order
+#      aggregation_sort_1, old sort order
       aggregation_sort_1,
+      abbildung_map_sort,
       wert_sort
     ) %>%
     dplyr::mutate(
