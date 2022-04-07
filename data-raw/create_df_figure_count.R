@@ -3,7 +3,7 @@ library(extrafont) # Required to correctly calculate graphics::strwidth()
 
 # Load R Environment for file paths
 readRenviron(
-  file.path(".Renviron")
+  file.path(path.expand("~"), ".Renviron")
 )
 
 # File paths
@@ -28,6 +28,22 @@ df_height <- Datenreport2022::add_variable_and_static_height(
 df_figures <- Datenreport2022::update_figure_count(
   df_height
 )
+
+# Ggf. in update_figure_count ergänzen!
+df_figures <- df_figures %>%
+  dplyr::mutate(
+    figure_height = round(
+      figure_height,
+      digits = 2L
+    )
+  ) %>%
+  dplyr::arrange(
+    report_nr,
+    figure_count,
+    aggregation_sort_1,
+    abbildung_map_sort,
+    wert_sort
+  )
 
 # Save data frame as Rda file
 save(
