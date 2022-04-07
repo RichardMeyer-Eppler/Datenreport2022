@@ -16,6 +16,7 @@ load_raw_csv <- function(
       REPORT_TYPE_ID = readr::col_character(),
       FIGURE_COUNT = readr::col_integer(),
       X = readr::col_character(),
+      X_LABEL = readr::col_character(),
       Y = readr::col_character(),
       Y_LABEL = readr::col_character(),
       FILL = readr::col_double(),
