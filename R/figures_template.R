@@ -34,7 +34,7 @@ get_figure_chunk_df <- function(
         pad = "0"
       ),
       function_parameters = glue::glue(
-        "df, figure_count = {figure_count}"
+        "df, figure_count == {figure_count}"
       ),
       .before = .data[["is_heading"]]
     ) %>%

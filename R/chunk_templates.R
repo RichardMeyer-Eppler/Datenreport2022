@@ -2,7 +2,7 @@
 #' frame
 #'
 #' @param chunk_label Character, chunk label
-#' @param function_call Character, defaults to `Datenreport2022::get_figure_df`
+#' @param function_call Character, defaults to `dplyr::filter`
 #' @param function_params Character
 #'
 #' @return List of character vectors with chunk texts
@@ -13,7 +13,7 @@
 tpl_get_figure_df <- function(
   chunk_label,
   function_params,
-  function_call = "Datenreport2022::get_figure_df"
+  function_call = "dplyr::filter"
 ) {
 
   get_chunk_texts <- function(
