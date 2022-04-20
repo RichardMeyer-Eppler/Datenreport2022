@@ -14,14 +14,13 @@ load_raw_csv <- function(
     col_types = readr::cols(
       REPORT_NR = readr::col_integer(),
       REPORT_TYPE_ID = readr::col_character(),
-      FIGURE_COUNT = readr::col_integer(),
+      FIGURE_NR = readr::col_integer(),
       X = readr::col_character(),
       X_LABEL = readr::col_character(),
       Y = readr::col_character(),
-      Y_LABEL = readr::col_character(),
+      Y_AXIS_LABEL = readr::col_character(),
       FILL = readr::col_double(),
       FILL_LABEL = readr::col_character(),
-      FILL_REVERSE = readr::col_logical(),
       FACET = readr::col_character(),
       GROUP = readr::col_double(),
       GROUP_LABEL = readr::col_character(),
@@ -36,7 +35,6 @@ load_raw_csv <- function(
       REPORT_AUTHOR = readr::col_character(),
       REPORT_TITLE = readr::col_character(),
       FILE_NAME = readr::col_character(),
-      FIGURE_FILTER_FLAG = readr::col_integer(),
       AGGREGATION_SORT_1 = readr::col_integer(),
       ABBILDUNG_MAP_SORT = readr::col_integer(),
       WERT_SORT = readr::col_integer()
@@ -167,4 +165,74 @@ load_raw_funded_projects <- function(
     )
   )
   return(df_funded_projects)
+}
+
+#' Load csv file on included programs
+#'
+#' @param path Character, path to csv file
+#'
+#' @return Data frame
+#' @export
+#'
+#' @examples
+load_raw_included_programs <- function(
+  path
+) {
+  df_included_programs <- readr::read_csv(
+    file = path,
+    col_types = readr::cols(
+      REPORT_NR = readr::col_integer(),
+      REPORT_TYPE_ID = readr::col_character(),
+      SUBJECT_DEGREE = readr::col_character(),
+      SUBJECT_GROUP = readr::col_character()
+    )
+  ) %>%
+    janitor::clean_names()
+
+  return(df_included_programs)
+}
+
+#' Load csv file on excluded programs
+#'
+#' @param path Character, path to csv file
+#'
+#' @return Data frame
+#' @export
+#'
+#' @examples
+load_raw_excluded_programs <- function(
+  path
+) {
+  df_excluded_programs <- readr::read_csv(
+    file = path,
+    col_types = readr::cols(
+      EXCLUSION_CRITERION = readr::col_character(),
+      SUBJECT_DEGREE = readr::col_character(),
+      SUBJECT_GROUP = readr::col_character()
+    )
+  ) %>%
+    janitor::clean_names()
+
+  return(df_excluded_programs)
+}
+
+#' Load csv file on metrics
+#'
+#' @param path Character, path to csv file
+#'
+#' @return Data frame
+#' @export
+#'
+#' @examples
+load_raw_metrics <- function(
+  path
+) {
+  df_metrics <- readr::read_csv(
+    "metrics_overview.csv",
+    col_types = readr::cols(
+      "character"
+    )
+  )
+
+  return(df_metrics)
 }
