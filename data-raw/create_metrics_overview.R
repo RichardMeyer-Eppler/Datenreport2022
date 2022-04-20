@@ -36,7 +36,6 @@ anzahl_studiengaenge <- Datenreport2022::get_stg_df(
   Datenreport2022::load_raw_studienfaelle(
     path = paste0(
       Sys.getenv("DIR_INPUT_DWH"),
-    #  Sys.getenv("DIR_GIT_DATA"),
       Sys.getenv("FILE_STUDENT_CASES")
     )
   ),
@@ -64,7 +63,7 @@ anzahl_berichte <- df_figures %>%
 anzahl_abbildungen <- df_figures %>%
   dplyr::distinct(
     report_nr,
-    figure_count
+    figure_nr
   ) %>%
   nrow(
     .
@@ -76,7 +75,6 @@ anzahl_befragte <- Datenreport2022::get_stg_df(
   Datenreport2022::load_raw_studienfaelle(
     path = paste0(
       Sys.getenv("DIR_INPUT_DWH"),
-      #Sys.getenv("DIR_GIT_DATA"),
       Sys.getenv("FILE_STUDENT_CASES")
     )
   ),
@@ -222,11 +220,11 @@ df_studierende <- df_figures %>%
   dplyr::filter(
     figure_type_id == 1L,
     report_nr == report_nr_fgr,
-    figure_count %in% c(1L),
+    figure_nr %in% c(1L),
     is.na(group)
   ) %>%
   dplyr::group_by(
-    figure_count,
+    figure_nr,
     fill_label
   ) %>%
   dplyr::slice_max(
@@ -243,11 +241,11 @@ df_absolvent_innen <- df_figures %>%
   dplyr::filter(
     figure_type_id == 1L,
     report_nr == report_nr_fgr,
-    figure_count %in% c(2),
+    figure_nr %in% c(2),
     is.na(group)
   ) %>%
   dplyr::group_by(
-    figure_count,
+    figure_nr,
     fill_label
   ) %>%
   dplyr::slice_max(
@@ -312,12 +310,12 @@ metrics_text <- c(
 df_metrics <- tibble::tibble(
   metrics_text,
   metrics_images = c(
-    "streamline-icon-pie-line-graph@48x48.png",
-    "streamline-icon-team-meeting-message-men-question@48x48.png",
-    "streamline-icon-list-numbers@48x48.png",
-    "streamline-icon-analytics-bars-horizontal@48x48.png",
-    "streamline-icon-user-female-teacher-math@48x48.png",
-    "streamline-icon-people-man-graduate@48x48.png"
+    "pie-line-graph.png",
+    "team-meeting-message-men-question.png",
+    "list-numbers.png",
+    "analytics-bars-horizontal.png",
+    "user-female-teacher-math.png",
+    "people-man-graduate.png"
   ),
   image_attribution = c(
     '<a href="https://www.streamlinehq.com">Free Pie Line Graph PNG icon by Streamline</a>',

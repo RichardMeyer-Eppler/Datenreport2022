@@ -7,7 +7,7 @@ readRenviron(
 )
 
 # File paths
-folder <- Sys.getenv("DIR_GIT_DATA") # Sys.getenv("DIR_INPUT_DWH")
+folder <- Sys.getenv("DIR_INPUT_DWH")
 file <- Sys.getenv("FILE_DATENREPORT")
 
 
@@ -25,7 +25,7 @@ df_height <- Datenreport2022::add_variable_and_static_height(
 )
 
 # Update figure count column (long running time!)
-df_figures <- Datenreport2022::update_figure_count(
+df_figures <- Datenreport2022::update_figure_nr(
   df_height
 )
 
@@ -39,7 +39,7 @@ df_figures <- df_figures %>%
   ) %>%
   dplyr::arrange(
     report_nr,
-    figure_count,
+    figure_nr,
     aggregation_sort_1,
     abbildung_map_sort,
     wert_sort
