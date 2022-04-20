@@ -6,25 +6,25 @@
 #' @export
 #'
 #' @examples
-update_figure_count <- function(
+update_figure_nr <- function(
   df
   ) {
   df_updated <- df %>%
     dplyr::group_by(
       .data[["report_nr"]],
-      .data[["figure_count"]]
+      .data[["figure_nr"]]
     ) %>%
     dplyr::group_modify(
       ~ split_figures(.x)
     ) %>%
     dplyr::group_by(
       .data[["report_nr"]],
-      .data[["figure_count"]],
+      .data[["figure_nr"]],
       .data[["shard"]]
     ) %>%
     dplyr::mutate(
       first_row_within_split = dplyr::row_number() == 1L,
-      figure_count_addend = dplyr::if_else(
+      figure_nr_addend = dplyr::if_else(
         .data[["first_row_within_split"]] &
           .data[["shard"]] > 0L,
         1L,
@@ -33,7 +33,7 @@ update_figure_count <- function(
     ) %>%
     dplyr::group_by(
       .data[["report_nr"]],
-      .data[["figure_count"]]
+      .data[["figure_nr"]]
     ) %>%
     dplyr::mutate(
       figure_caption = dplyr::if_else(
@@ -59,8 +59,8 @@ update_figure_count <- function(
       .data[["report_nr"]]
     ) %>%
     dplyr::mutate(
-      figure_count = .data[["figure_count"]] + cumsum(
-        .data[["figure_count_addend"]]
+      figure_nr = .data[["figure_nr"]] + cumsum(
+        .data[["figure_nr_addend"]]
       )
     ) %>%
     dplyr::ungroup()
