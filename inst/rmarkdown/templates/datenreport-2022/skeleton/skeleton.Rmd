@@ -55,16 +55,16 @@ toc-title: "Inhaltsverzeichnis"
 ```{r setup, include=FALSE}
 library(Datenreport2022)
 library(devEMF)
-library(dplyr)
 library(extrafont)
-library(flextable)
-library(forcats)
-library(gtsummary)
-library(here)
-library(knitr)
-library(officer)
-library(purrr)
 library(RUBer)
+# library(dplyr)
+# library(flextable)
+# library(forcats)
+# library(gtsummary)
+# library(here)
+# library(knitr)
+# library(officer)
+# library(purrr)
 
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -163,43 +163,6 @@ if(!df_stg_null) {
 
 ```
 
-```{r metrics-data}
-df_metrics <- readr::read_csv(
-  "metrics_overview.csv",
-  col_types = readr::cols(
-    "character"
-  )
-)
-
-metric_image_path <- function(file_name) {
-  system.file(
-    "rmarkdown",
-    "templates",
-    "datenreport-2022",
-    "skeleton",
-    file_name,
-    package = "Datenreport2022"
-  )
-}
-
-metrics_images <- purrr::map_chr(
-  df_metrics$metrics_images,
-  metric_image_path
-)
-
-metrics_text <- df_metrics[["metrics_text"]]
-
-df_metrics <- tibble::tribble(
-  ~col1, ~col2, ~col3, ~col4, ~col5, ~col6,
-  metrics_images[1], metrics_text[1], metrics_text[1], metrics_text[1], NA_character_, NA_character_,
-  metrics_text[2], metrics_text[2], metrics_text[2], metrics_text[2], metrics_text[2], metrics_images[2],
-  metrics_images[3], metrics_text[3], metrics_text[3], metrics_text[3], NA_character_, NA_character_,
-  NA_character_, NA_character_, metrics_text[4], metrics_text[4], metrics_text[4], metrics_images[4],
-  metrics_images[5], metrics_text[5], metrics_text[5], metrics_text[5], metrics_text[5], NA_character_,
-  NA_character_, metrics_text[6], metrics_text[6], metrics_text[6], metrics_text[6], metrics_images[6]
-)
-```
-
 # Abbildungsverzeichnis
 
 ```{r}
@@ -241,9 +204,11 @@ officer::run_pagebreak()
 
 ```{r metrics, tab.cap = "PLACEHOLDER_TABDie Datenreporte der Lehrberichtserstattung 2021/2022 im Gesamtüberblick[^icons]", tab.id = "metrics-tab", ft.align = "left"}
 
-RUBer::rub_table_metrics(
-  df_metrics
-)
+Datenreport2022::load_raw_metrics(
+  "metrics_overview.csv"
+) %>% 
+  Datenreport2022::get_metric_df() %>% 
+  RUBer::rub_table_metrics()
 
 ```
 
@@ -653,9 +618,8 @@ officer::run_pagebreak()
 Auslaufende Fach-Abschluss-Kombinationen und weiterbildende Studiengänge werden bei den Datenreports grundsätzlich nicht berücksichtigt. Für sehr neue Studiengänge liegen in der Regel weder Befragungsdaten noch aussagekräftige deskriptive Statistiken aus dem Informationsmanagement-System vor, weshalb diese ebenfalls nicht berücksichtigt werden.
 
 ```{r studiengaenge, tab.cap = "PLACEHOLDER_TABBerücksichtigte Studiengänge", tab.id = "stg-tab", ft.align = "left"}
-grey_fill <- "#ECECEC"
 
-degree_programs_path <- system.file(
+included_programs_path <- system.file(
   "rmarkdown",
   "templates",
   "datenreport-2022",
@@ -664,104 +628,14 @@ degree_programs_path <- system.file(
   package = "Datenreport2022"
 )
 
-degree_programs <- readr::read_csv(
-  file = degree_programs_path,
-  col_types = readr::cols(
-    REPORT_NR = readr::col_integer(),
-    REPORT_TYPE_ID = readr::col_character(),
-    SUBJECT_DEGREE = readr::col_character(),
-    SUBJECT_GROUP = readr::col_character()
-  )
-) %>%
-  dplyr::mutate(
-    row_nr = dplyr::row_number()
-    ) 
-
-row_footnote_m_ed <- degree_programs %>% 
-  dplyr::filter(
-    REPORT_TYPE_ID == "M_ED" 
-  ) %>% 
-  dplyr::pull(
-    row_nr
-  )
-
-row_footnote_fgr <- degree_programs %>% 
-  dplyr::filter(
-    REPORT_TYPE_ID == "FGR" 
-  ) %>% 
-  dplyr::pull(
-    row_nr
-  )
-  
-report_nr_m_ed <- degree_programs %>% 
-  dplyr::filter(
-    REPORT_TYPE_ID == "M_ED" 
-  ) %>% 
-  dplyr::pull(
-    REPORT_NR
-  ) %>% 
-  unique(
-    .
-  )
-
-report_nr_fgr <- degree_programs %>% 
-  dplyr::filter(
-    REPORT_TYPE_ID == "FGR" 
-  ) %>% 
-  dplyr::pull(
-    REPORT_NR
-  ) %>% 
-  unique(
-    .
-  )
-
-degree_programs <- degree_programs %>%
-  dplyr::select(
-    row_nr,
-    head1 = REPORT_NR,
-    head2 = SUBJECT_DEGREE,
-    head3 = SUBJECT_GROUP
-    )
-
-footnote_text_m_ed <- glue::glue(
-  "Im Datenreport Nr. {report_nr_m_ed} sind fächergruppenübergreifend alle Master of Education Studiengänge berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
-  )
-
-footnote_text_fgr <- glue::glue(
-  "Im Datenreport Nr. {report_nr_fgr} sind alle Studiengänge je Fächergruppe berücksichtigt, weshalb der Datenreport mehrfach aufgeführt wird."
+included_programs <- Datenreport2022::load_raw_included_programs(
+  path = included_programs_path
 )
 
-flextable::flextable(
-    degree_programs,
-    col_keys = c("head1", "head2", "head3")
-  ) %>%
-  flextable::theme_zebra(
-    even_body = grey_fill,
-    odd_body = "transparent"
-  ) %>%
-  flextable::footnote(
-    i = row_footnote_m_ed,
-    value = flextable::as_paragraph(footnote_text_m_ed),
-    ref_symbols = "*",
-    part = "body"
-  ) %>%
-  flextable::footnote(
-    i = row_footnote_fgr,
-    value = flextable::as_paragraph(footnote_text_fgr),
-    ref_symbols = "**",
-    part = "body"
-  ) %>%
-  RUBer::rub_style_flextable() %>%
-  flextable::set_header_labels(
-    head1 = "Datenreport Nr.",
-    head2 = "Fach-Abschluss-Kombinationen",
-    head3 = "Fächergruppe"
-  ) %>%
-  flextable::align(j = "head1", align = "center", part = "body") %>%
-  flextable::align(j = "head1", align = "center", part = "header") %>%
-  flextable::width(j = "head1", width = 1) %>%
-  flextable::width(j = "head2", width = 3.63) %>%
-  flextable::width(j = "head3", width = 2.25)
+RUBer::rub_table_included_programs(
+  df = included_programs
+)
+
 ```
 
 ```{r pagebreak-studiengaenge}
@@ -769,7 +643,6 @@ officer::run_pagebreak()
 ```
 
 ```{r studiengaenge-ausgeschlossen, tab.cap = "PLACEHOLDER_TABAusgeschlossene Studiengänge", tab.id = "stg-excluded-tab", ft.align = "left"}
-grey_fill <- "#ECECEC"
 
 excluded_programs_path <- system.file(
   "rmarkdown",
@@ -780,33 +653,19 @@ excluded_programs_path <- system.file(
   package = "Datenreport2022"
 )
 
-excluded_programs <- readr::read_csv(
-  file = excluded_programs_path,
-  col_types = readr::cols(
-    EXCLUSION_CRITERION = readr::col_character(),
-    SUBJECT_DEGREE = readr::col_character(),
-    SUBJECT_GROUP = readr::col_character()
-  )
+excluded_programs <- Datenreport2022::load_raw_excluded_programs(
+  path = excluded_programs_path
 ) %>%
   dplyr::select(
-    head1 = EXCLUSION_CRITERION,
-    head2 = SUBJECT_GROUP,
-    head3 = SUBJECT_DEGREE
-    )
+    head1 = .data[["exclusion_criterion"]],
+    head2 = .data[["subject_group"]],
+    head3 = .data[["subject_degree"]]
+  )
 
-flextable::flextable(
-    excluded_programs,
-    col_keys = c("head1", "head2", "head3")
-  ) %>%
-  flextable::theme_zebra(
-    even_body = grey_fill,
-    odd_body = "transparent"
-  ) %>%
-  set_header_labels(head1 = "Ausschlussgrund", head2 = "Fächergruppe", head3 = "Fach-Abschluss-Kombinationen") %>%
-  width(j = "head1", width = 1.1) %>%
-  width(j = "head2", width = 2.15) %>%
-  width(j = "head3", width = 3.63) %>%
-  RUBer::rub_style_flextable()
+RUBer::rub_table_excluded_programs(
+  excluded_programs
+)
+
 ```
 
 ```{r pagebreak-studiengaenge-ausgeschlossen}
