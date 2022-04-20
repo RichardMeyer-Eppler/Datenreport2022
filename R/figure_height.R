@@ -21,7 +21,7 @@ add_variable_and_static_height <- function(
   ) %>%
     dplyr::group_by(
       report_nr,
-      figure_count
+      figure_nr
     ) %>%
     dplyr::group_modify(
       ~ get_static_height(.x)
@@ -31,7 +31,7 @@ add_variable_and_static_height <- function(
     ) %>%
     dplyr::group_by(
       report_nr,
-      figure_count,
+      figure_nr,
       facet,
       upper_bound
     ) %>%
@@ -46,11 +46,11 @@ add_variable_and_static_height <- function(
     ) %>%
     dplyr::group_by(
       report_nr,
-      figure_count
+      figure_nr
     ) %>%
     dplyr::arrange(
       report_nr,
-      figure_count,
+      figure_nr,
       abbildung_map_sort, #old sort order
       aggregation_sort_1, #old sort order
     #  aggregation_sort_1, # new order, created problems
