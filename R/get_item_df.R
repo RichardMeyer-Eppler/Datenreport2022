@@ -32,7 +32,7 @@ get_item_df <- function(
     dplyr::distinct(
       report_nr,
       report_type_id,
-      figure_count,
+      figure_nr,
       figure_caption,
       heading,
       subheading,
@@ -67,7 +67,7 @@ get_item_df <- function(
     ) %>%
     # Alle Items mit 0 Fällen ausschließen
     dplyr::group_by(
-      figure_count,
+      figure_nr,
       facet
     ) %>%
     dplyr::filter(
@@ -82,7 +82,7 @@ get_item_df <- function(
     dplyr::group_by(
       report_nr,
       report_type_id,
-      figure_count,
+      figure_nr,
       figure_caption,
       heading,
       subheading,
@@ -100,7 +100,7 @@ get_item_df <- function(
       )
     ) %>%
     dplyr::arrange(
-      figure_count,
+      figure_nr,
       facet,
       aggregation_id_1
     ) %>%
