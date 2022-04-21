@@ -4,8 +4,10 @@ params:
     p_title:
     p_author:
     p_date:
+    p_path_figure_template: "fig_template.Rmd"
     p_df:
     p_df_stg:
+    p_font_file: "RubFlama-Regular.ttf"
 title: "`r params$p_title`"
 author: "`r params$p_author`"
 date: "`r params$p_date`"
@@ -57,14 +59,6 @@ library(Datenreport2022)
 library(devEMF)
 library(extrafont)
 library(RUBer)
-# library(dplyr)
-# library(flextable)
-# library(forcats)
-# library(gtsummary)
-# library(here)
-# library(knitr)
-# library(officer)
-# library(purrr)
 
 knitr::opts_chunk$set(
   echo = FALSE,
@@ -160,6 +154,29 @@ if(!df_stg_null) {
   
   df_vb_flag <- nrow(df_vb) > 0
 }
+
+
+figure_chunks <- df %>% 
+  RUBer::get_figure_chunk_df() %>% 
+  RUBer::get_figure_chunk_text()
+
+```
+
+```{r figure_template, eval = !is.null(params$p_path_figure_template)}
+
+# If the p_path_figure_template parameter is defined, the code chunks for the 
+# figures and headings will be written to file.
+con <- file(
+  params$p_path_figure_template,
+  encoding = "UTF-8"
+)
+  
+writeLines(
+  text = figure_chunks,
+  con = con
+)
+  
+close(con)
 
 ```
 
@@ -369,71 +386,19 @@ RUBer::rub_table_programs(
 )
 ```
 
-```{r create-fig-template}
-map_parameters <- Datenreport2018::get_map_parameters(df)
-chunk_label <- dplyr::pull(map_parameters, chunk_label)
-function_parameters <- dplyr::pull(map_parameters, function_parameters)
-
-# Caution: This is knit_expand syntax and not curly curly from rlang!
-tpl_chunk_1 <- c(
-  "\n```{r prep-fig-{{label}}, include = FALSE}", "df_fig <- Datenreport2022::get_figure_df{{func}}",
-  "```"
-)
-
-tpl_chunk_2 <- c(
-  "\n```{r heading-fig-{{label}}, results= 'asis', eval = df_fig$is_heading[[1]]}",
-  "cat(paste(\"#\", df_fig$heading[[1]]))",
-  "```"
-)
-
-tpl_chunk_3 <- c(
-  "\n```{r subheading-fig-{{label}}, results= 'asis', eval = df_fig$is_subheading[[1]]}",
-  "cat(paste(\"##\", df_fig$subheading[[1]]))",
-  "```"
-)
-
-tpl_chunk_4 <- c(
-  "\n```{r fig{{label}}, fig.cap = paste0('PLACEHOLDER_TAB',df_fig$figure_caption[[1]]), fig.height=df_fig$figure_height[[1]], warning = FALSE}",
-  "RUBer::plot_figure(df_fig)",
-  "```"
-)
-
-tpl <- c(
-  tpl_chunk_1, tpl_chunk_2, tpl_chunk_3, tpl_chunk_4
-)
-
-src <- purrr::map2(
-  chunk_label,
-  function_parameters,
-  function(i, m) {
-    knitr::knit_expand(
-      text = tpl,
-      label = i,
-      func = m
-    )
-  }
-)
-
-src_unlisted <- unlist(src)
-
-con <- file(here::here("fig_template.Rmd"), encoding = "UTF-8")
-writeLines(text = src_unlisted, con = con)
-close(con)
-```
-
 ```{r create-figures, include = FALSE}
-src <- readLines(
-  here::here("fig_template.Rmd"),
-  encoding = "UTF-8"
-)
 
-out <- knitr::knit(
-  text = src
+figure_output <- knitr::knit(
+  text = figure_chunks
 )
 ```
 
-```{r paste-figures, results = 'asis', echo = FALSE}
-cat(out, sep = '\n')
+```{r paste-figures, results = 'asis'}
+
+cat(
+  figure_output,
+  sep = '\n'
+)
 ```
 
 ```{r items-child, child = if(df_item_flag) "items.Rmd"}
