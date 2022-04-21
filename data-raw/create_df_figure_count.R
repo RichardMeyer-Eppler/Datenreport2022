@@ -29,7 +29,7 @@ df_figures <- Datenreport2022::update_figure_nr(
   df_height
 )
 
-# Ggf. in update_figure_count ergänzen!
+# Ggf. in update_figure_nr ergänzen!
 df_figures <- df_figures %>%
   dplyr::mutate(
     figure_height = round(
