@@ -3,7 +3,9 @@
 #' @param df Data frame with data for one report_nr
 #' @param n_items Number of items to retrieve for each degree
 #' @param cutoff Optional, when provided n_items is ignored. Keeps all rows where
-#'   distance in standard deviation is equal to or larger than the cutoff.
+#'    distance in standard deviation is equal to or larger than the cutoff.
+#' @param excluded_reports Character vector containing values for report_type_id that should be
+#'    excluded.
 #'
 #' @return Data frame
 #' @export
@@ -14,7 +16,10 @@
 get_item_df <- function(
   df,
   n_items = 8L,
-  cutoff = NULL
+  cutoff = NULL,
+  excluded_reports = c(
+    "M_ED", "FGR", "SZMA"
+  )
 ) {
   pattern <- "(?<=n\\=)[[:digit:]]{0,1}\\.?[[:digit:]]{0,3}"
   replace_pattern <- "[[:space:]]\\(.*\\)"
@@ -23,6 +28,10 @@ get_item_df <- function(
   df_item <- df %>%
     dplyr::filter(
       figure_type_id == 3L,
+      # M Ed Bericht und Faechergruppenbericht
+      !(
+        report_type_id %in% excluded_reports
+      ),
       stringr::str_starts(
         string = .data$source_caption,
         pattern = "Informationsmanagement-System",
@@ -127,9 +136,7 @@ get_item_df <- function(
     ) %>%
     dplyr::filter(
       # Berichte, wo Berichtsstudiengaenge = Faechergruppe
-      mean != mean_fgr,
-      # M Ed Bericht und Faechergruppenbericht
-      !(report_type_id %in% c("M_ED", "FGR"))
+      mean != mean_fgr
     ) %>%
     dplyr::group_by(
       report_nr,

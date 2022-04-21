@@ -4,7 +4,12 @@
 \alias{get_item_df}
 \title{Get data frame with survey items that strongly diverge from their reference group}
 \usage{
-get_item_df(df, n_items = 8L, cutoff = NULL)
+get_item_df(
+  df,
+  n_items = 8L,
+  cutoff = NULL,
+  excluded_reports = c("M_ED", "FGR", "SZMA")
+)
 }
 \arguments{
 \item{df}{Data frame with data for one report_nr}
@@ -13,6 +18,9 @@ get_item_df(df, n_items = 8L, cutoff = NULL)
 
 \item{cutoff}{Optional, when provided n_items is ignored. Keeps all rows where
 distance in standard deviation is equal to or larger than the cutoff.}
+
+\item{excluded_reports}{Character vector containing values for report_type_id that should be
+excluded.}
 }
 \value{
 Data frame
