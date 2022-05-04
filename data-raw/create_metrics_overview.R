@@ -30,6 +30,11 @@ report_nr_fgr <- RUBer::get_report_nr_by_id(
   "FGR"
 )
 
+report_nr_szma <- RUBer::get_report_nr_by_id(
+  df_figures,
+  "SZMA"
+)
+
 # Studiengänge ------------------------------------------------------------
 
 anzahl_studiengaenge <- Datenreport2022::get_stg_df(
@@ -158,7 +163,7 @@ anzahl_items <- df_figures %>%
 anzahl_antworten <- df_figures %>%
   dplyr::filter(
     figure_type_id == 3L,
-    !(report_nr %in% c(report_nr_fgr, report_nr_m_ed)),
+    !(report_nr %in% c(report_nr_fgr, report_nr_m_ed, report_nr_szma)),
     stringr::str_starts(
       string = .data$source_caption,
       pattern = "Informationsmanagement-System",
@@ -327,7 +332,7 @@ df_metrics <- tibble::tibble(
   )
 )
 
-# df_metrics
+df_metrics
 
 readr::write_csv(
   df_metrics,
