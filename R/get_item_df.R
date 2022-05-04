@@ -25,7 +25,7 @@ get_item_df <- function(
   replace_pattern <- "[[:space:]]\\(.*\\)"
 
 
-  df_item <- df %>%
+  df_filtered <- df %>%
     dplyr::filter(
       figure_type_id == 3L,
       # M Ed Bericht und Faechergruppenbericht
@@ -37,7 +37,17 @@ get_item_df <- function(
         pattern = "Informationsmanagement-System",
         negate = TRUE
       )
-    ) %>%
+    )
+
+  if(
+    nrow(
+      df_filtered
+    ) == 0L
+  ) {
+    return(df_filtered)
+  }
+
+  df_item <- df_filtered %>%
     dplyr::distinct(
       report_nr,
       report_type_id,
