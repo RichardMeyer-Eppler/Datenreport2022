@@ -20,6 +20,8 @@ get_funded_projects <- function(
       )
   }
 
+  if(nrow(df) == 0L) return(df)
+
   df_wrangled <- df %>%
     dplyr::mutate(
       rn = dplyr::row_number()
