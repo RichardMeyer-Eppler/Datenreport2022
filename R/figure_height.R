@@ -219,6 +219,12 @@ get_static_height <- function(
   ) %/% 70
 
   if(
+    vctrs::vec_is_empty(
+      question_extra_rows
+    )
+  ) {
+    question_extra_rows <- 0
+  } else if(
     is.na(
       question_extra_rows
     )

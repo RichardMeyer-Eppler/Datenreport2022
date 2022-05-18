@@ -19,7 +19,8 @@ Imports:
     janitor,
     magrittr,
     readr,
-    stringr
+    stringr,
+    vctrs
 Encoding: UTF-8
 Language: en
 LazyData: true
